@@ -51,9 +51,119 @@
     .rework-id-list{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;max-height:240px;overflow:auto;padding-right:4px}.rework-id-list .pill{background:#FFF0EF;color:#B42318}
     .alert-center{display:grid;gap:10px;margin:12px 0 16px}.alert-title{font-weight:900;font-size:14px;margin:0 0 8px;display:flex;align-items:center;gap:8px}.auto-alert{border-radius:15px;border:1px solid var(--line);background:#fff;padding:13px 14px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start}.auto-alert i{font-size:20px}.auto-alert.crit{border-left:6px solid var(--red);background:#FFF7F6}.auto-alert.warn{border-left:6px solid var(--orange);background:#FFFBF2}.auto-alert.info{border-left:6px solid var(--teal);background:#F0FDFF}.auto-alert.ok{border-left:6px solid var(--green);background:#F0FDF4}.auto-alert strong{display:block;margin-bottom:3px}.auto-alert .alert-action{color:var(--muted);font-size:12px;line-height:1.35}.alert-chip{border-radius:999px;padding:4px 8px;font-size:10px;font-weight:900;text-transform:uppercase;white-space:nowrap}.alert-chip.crit{background:#FDE9E8;color:#B42318}.alert-chip.warn{background:#FFF4DA;color:#9A5F00}.alert-chip.info{background:#E0F7FA;color:#006C7A}.alert-chip.ok{background:#E7F7EF;color:#087843}
     @media(min-width:721px){.analyst-row{grid-template-columns:1fr 90px 90px 90px 80px 90px}}@media(max-width:720px){.auto-alert{grid-template-columns:auto 1fr}.auto-alert .alert-chip{grid-column:2}}
+
+    /* Rodape personalizado da tela inicial: cubo + credito */
+    .start-credit-cube{position:fixed;right:24px;bottom:22px;z-index:160;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+    .start-credit-cube[hidden]{display:none!important}
+    .cube-credit-btn{width:52px;height:52px;border:0;background:transparent;padding:0;cursor:pointer;filter:drop-shadow(0 10px 18px rgba(0,0,0,.25));transition:transform .18s ease,filter .18s ease;outline:none}
+    .cube-credit-btn:hover,.cube-credit-btn:focus-visible{transform:translateY(-2px) scale(1.06);filter:drop-shadow(0 14px 24px rgba(0,0,0,.32))}
+    .cube-credit-btn:focus-visible{outline:3px solid rgba(255,255,255,.85);outline-offset:4px;border-radius:12px}
+    .cube-credit-popup{display:none;position:absolute;right:0;bottom:64px;width:245px;background:#fff;color:var(--ink);border:2px solid #B8860B;border-radius:18px;box-shadow:0 22px 55px rgba(32,26,26,.28);padding:16px 16px 14px;text-align:center;animation:cubeCreditIn .22s ease both}
+    .cube-credit-popup.show{display:block}
+    .cube-credit-popup:after{content:"";position:absolute;right:17px;bottom:-10px;width:18px;height:18px;background:#fff;border-right:2px solid #B8860B;border-bottom:2px solid #B8860B;transform:rotate(45deg)}
+    .cube-credit-close{position:absolute;top:8px;right:10px;border:0;background:#FFF7D6;color:#8B6508;border-radius:999px;width:24px;height:24px;font-size:18px;line-height:20px;font-weight:900;cursor:pointer;display:grid;place-items:center}
+    .cube-credit-close:hover{background:#FFE08A;color:#DA291C}
+    .cube-credit-title{font-weight:900;font-size:14px;margin:10px 22px 10px;letter-spacing:-.01em}
+    .cube-credit-yoshi{width:62px;height:62px;margin:0 auto 2px;display:block;cursor:pointer;transition:transform .16s ease,filter .16s ease}
+    .cube-credit-yoshi:hover,.cube-credit-yoshi:focus-visible{transform:translateY(-2px) scale(1.06);filter:drop-shadow(0 6px 10px rgba(17,156,91,.25));outline:none}
+    .cube-credit-yoshi:active{transform:translateY(1px) scale(.98)}
+    @keyframes cubeCreditIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @media(max-width:720px){.start-credit-cube{right:14px;bottom:14px}.cube-credit-btn{width:46px;height:46px}.cube-credit-popup{width:225px;bottom:58px}}
+
+
+    /* Tema escuro + alternancia de tema */
+    body{transition:background-color .25s ease,color .25s ease}
+    body.dark-theme{
+      --ink:#F8FAFC; --muted:#A7B0C0; --line:#263244; --bg:#0B1220; --card:#111827;
+      --shadow:0 18px 44px rgba(0,0,0,.36);
+      color-scheme:dark;
+    }
+    .theme-toggle-btn{border-radius:999px;padding:10px 13px;gap:7px;min-width:128px;justify-content:center;white-space:nowrap}
+    .theme-toggle-btn .theme-label{font-weight:850}
+    .start-theme-toggle{width:100%;justify-content:center;padding:13px 16px;border-radius:16px;background:#F8FAFC;color:#201A1A;border:1px solid var(--line)}
+    .start-theme-toggle:hover{background:#FFF7F6;color:var(--red)}
+    body.dark-theme .app{background:var(--bg)}
+    body.dark-theme .hero{background:linear-gradient(135deg,#111827 0%,#1F2937 52%,#3B0B10 100%)}
+    body.dark-theme .panel,
+    body.dark-theme .chart-card,
+    body.dark-theme .table-card,
+    body.dark-theme .detail-box,
+    body.dark-theme .map-side,
+    body.dark-theme .exec-section,
+    body.dark-theme .exec-action,
+    body.dark-theme .insight,
+    body.dark-theme .auto-alert{background:var(--card);border-color:var(--line);color:var(--ink)}
+    body.dark-theme .start-card{background:rgba(17,24,39,.98);color:var(--ink);border-color:#334155;box-shadow:0 30px 90px rgba(0,0,0,.48)}
+    body.dark-theme .start-hero{background:linear-gradient(160deg,#111827 0%,#1F2937 100%)}
+    body.dark-theme .start-actions{background:#0F172A}
+    body.dark-theme .start-hero p,
+    body.dark-theme .start-actions .hint,
+    body.dark-theme .start-note,
+    body.dark-theme .meta,
+    body.dark-theme .chart-sub,
+    body.dark-theme .kpi-sub,
+    body.dark-theme .map-note,
+    body.dark-theme .exec-kpi small,
+    body.dark-theme .exec-row span,
+    body.dark-theme .exec-action span{color:var(--muted)}
+    body.dark-theme .start-benefit{color:#D8DEE9}
+    body.dark-theme .start-note,
+    body.dark-theme .mini,
+    body.dark-theme .exec-kpi,
+    body.dark-theme .map-mini{background:#0B1220;border-color:var(--line);color:var(--ink)}
+    body.dark-theme .btn-line,
+    body.dark-theme .chart-export-btn,
+    body.dark-theme .tab,
+    body.dark-theme .pill,
+    body.dark-theme .field select,
+    body.dark-theme .field input,
+    body.dark-theme .search input,
+    body.dark-theme .map-zoom-btn,
+    body.dark-theme .map-zoom-controls{background:#0B1220;color:var(--ink);border-color:var(--line)}
+    body.dark-theme .btn-light{background:#F8FAFC;color:var(--red)}
+    body.dark-theme .tab.active{background:#F8FAFC;color:#111827;border-color:#F8FAFC}
+    body.dark-theme table{background:var(--card);color:var(--ink)}
+    body.dark-theme th{background:#0B1220;color:#F8FAFC;border-bottom:1px solid var(--line)}
+    body.dark-theme td{border-bottom-color:#1F2937}
+    body.dark-theme tbody tr:hover,
+    body.dark-theme .analyst-row:hover,
+    body.dark-theme .analyst-row.active{background:#172033}
+    body.dark-theme .loading{background:rgba(11,18,32,.86)}
+    body.dark-theme .upload-icon{background:#2A1518;color:#FF827A}
+    body.dark-theme .export-toast{background:#F8FAFC;color:#0B1220}
+    body.dark-theme .b-ok{background:#123524;color:#74F0A5}.dark-theme .b-wait{background:#3A2A10;color:#FFD36A}.dark-theme .b-bad{background:#3A1718;color:#FF8B83}.dark-theme .b-neutral{background:#1F2937;color:#CBD5E1}
+    body.dark-theme .auto-alert.crit,
+    body.dark-theme .exec-section.risk-box{background:#2B1215}
+    body.dark-theme .auto-alert.warn,
+    body.dark-theme .exec-section.warn-box{background:#2A2110}
+    body.dark-theme .auto-alert.info{background:#0B2B33}
+    body.dark-theme .auto-alert.ok{background:#0F2D1D}
+    body.dark-theme .cube-credit-popup{background:#111827;color:#F8FAFC;border-color:#D4A01D}
+    body.dark-theme .cube-credit-popup:after{background:#111827;border-right-color:#D4A01D;border-bottom-color:#D4A01D}
+
+
+    /* Microinteracoes do botão de tema */
+    .theme-toggle-btn{position:relative;overflow:hidden;isolation:isolate;transition:background .32s ease,color .32s ease,border-color .32s ease,transform .18s ease,box-shadow .32s ease}
+    .theme-toggle-btn:hover{transform:translateY(-1px)}
+    .theme-toggle-btn:active{transform:translateY(0) scale(.98)}
+    .theme-icon-stack{position:relative;width:22px;height:22px;display:inline-grid;place-items:center;flex:0 0 22px}
+    .theme-icon{position:absolute;font-size:18px;line-height:1;transition:opacity .32s ease,transform .38s cubic-bezier(.2,.8,.2,1),filter .32s ease}
+    .theme-icon-moon{opacity:1;transform:rotate(0deg) scale(1);filter:drop-shadow(0 0 0 rgba(96,165,250,0))}
+    .theme-icon-sun{opacity:0;transform:rotate(-90deg) scale(.55);filter:drop-shadow(0 0 0 rgba(251,191,36,0))}
+    body.dark-theme .theme-icon-moon{opacity:0;transform:rotate(90deg) scale(.55)}
+    body.dark-theme .theme-icon-sun{opacity:1;transform:rotate(0deg) scale(1);color:#FCD34D;filter:drop-shadow(0 0 8px rgba(251,191,36,.45))}
+    .theme-toggle-btn.is-animating .theme-icon-stack{animation:themeIconPop .42s ease both}
+    body.theme-changing:before{content:"";position:fixed;right:26px;top:26px;width:18px;height:18px;border-radius:999px;pointer-events:none;z-index:100000;background:radial-gradient(circle,rgba(255,255,255,.28) 0%,rgba(255,255,255,.12) 46%,rgba(255,255,255,0) 70%);animation:themePageWash .62s ease-out both}
+    body.dark-theme.theme-changing:before{background:radial-gradient(circle,rgba(252,211,77,.2) 0%,rgba(96,165,250,.14) 45%,rgba(15,23,42,0) 72%)}
+    .panel,.tab,.btn,.kpi,.chart-card,.table-card,.exec-section,.exec-action,.mini,.map-side,.start-card,.start-hero,.start-actions,.start-note,.field input,.field select,.search input,table,th,td{transition:background-color .32s ease,color .32s ease,border-color .32s ease,box-shadow .32s ease,transform .18s ease}
+    @keyframes themeIconPop{0%{transform:scale(.82) rotate(-8deg)}55%{transform:scale(1.18) rotate(8deg)}100%{transform:scale(1) rotate(0deg)}}
+    @keyframes themePageWash{0%{opacity:.9;transform:scale(0)}85%{opacity:.18;transform:scale(115)}100%{opacity:0;transform:scale(140)}}
+    @media(prefers-reduced-motion:reduce){.theme-toggle-btn,.theme-icon,.panel,.tab,.btn,.kpi,.chart-card,.table-card,.exec-section,.exec-action,.mini,.map-side,.start-card,.start-hero,.start-actions,.start-note,.field input,.field select,.search input,table,th,td{transition:none!important}.theme-toggle-btn.is-animating .theme-icon-stack,body.theme-changing:before{animation:none!important}}
+
   </style>
  </head>
  <body>
+  <script>try{if(localStorage.getItem("dashboard-theme")==="dark")document.body.classList.add("dark-theme");}catch(e){}</script>
   <div class="app">
    <div class="loading" id="loading">
     <div>
@@ -121,12 +231,58 @@
        </i>
        Carregar base interna (JUL/2026)
       </button>
+      <button class="btn start-theme-toggle theme-toggle-btn" id="themeToggleStart" type="button" title="Alternar tema claro ou escuro">
+       <span class="theme-icon-stack" aria-hidden="true">
+        <i class="bi bi-moon-stars theme-icon theme-icon-moon"></i>
+        <i class="bi bi-sun-fill theme-icon theme-icon-sun"></i>
+       </span>
+       <span class="theme-label">Tema escuro</span>
+      </button>
       <div class="start-note">
        <strong>
         Observação:
        </strong>
        após o carregamento, você ainda poderá substituir a base pelo botão “Nova(s) Base(s) de Dados” no topo do dashboard.
       </div>
+     </div>
+    </div>
+
+    <div class="start-credit-cube" id="startCreditCube">
+     <button aria-controls="cubeCreditPopup" aria-expanded="false" aria-label="Sobre o desenvolvedor" class="cube-credit-btn" id="cubeCreditBtn" title="Sobre o desenvolvedor">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+       <defs>
+        <linearGradient id="cubeGold" x1="12" x2="50" y1="8" y2="56" gradientUnits="userSpaceOnUse">
+         <stop offset="0" stop-color="#FFE37A"/>
+         <stop offset="0.52" stop-color="#FFC928"/>
+         <stop offset="1" stop-color="#E19A13"/>
+        </linearGradient>
+       </defs>
+       <path d="M12 9h40l6 8v34l-7 6H13l-7-7V17l6-8Z" fill="url(#cubeGold)" stroke="#8B5E00" stroke-width="3" stroke-linejoin="round"/>
+       <path d="M13 10h38l5 7H8l5-7Z" fill="#FFF18F" opacity=".92"/>
+       <path d="M18 20h28v27H18z" fill="#FFD744" stroke="#A06D00" stroke-width="2.6"/>
+       <path d="M27 26c1.2-4.5 9.8-4.2 10.8.1.7 3.1-1.4 4.9-3.8 6.5-1.4.9-1.9 1.9-1.9 3.8" fill="none" stroke="#7A4F00" stroke-width="4" stroke-linecap="round"/>
+       <circle cx="32" cy="42.5" r="2.4" fill="#7A4F00"/>
+       <path d="M6 17h52" stroke="#8B5E00" stroke-width="2.6" opacity=".55"/>
+       <path d="M52 9v48" stroke="#8B5E00" stroke-width="2.4" opacity=".35"/>
+      </svg>
+     </button>
+     <div aria-hidden="true" aria-live="polite" class="cube-credit-popup" id="cubeCreditPopup" role="dialog">
+      <button aria-label="Fechar popup" class="cube-credit-close" id="cubeCreditClose" type="button">×</button>
+      <div class="cube-credit-title">Desenvolvido por<br>Felipe Oliveira</div>
+      <svg aria-label="Yoshi: tocar música em 8 bits" class="cube-credit-yoshi" id="cubeYoshi" role="button" tabindex="0" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+       <ellipse cx="51" cy="55" rx="31" ry="29" fill="#53C84F" stroke="#1E7B2F" stroke-width="3"/>
+       <ellipse cx="57" cy="46" rx="24" ry="19" fill="#75DB64"/>
+       <ellipse cx="38" cy="59" rx="18" ry="20" fill="#F7FFF1"/>
+       <circle cx="45" cy="35" r="12" fill="#fff" stroke="#1E7B2F" stroke-width="2"/>
+       <circle cx="64" cy="35" r="12" fill="#fff" stroke="#1E7B2F" stroke-width="2"/>
+       <circle cx="48" cy="36" r="3.6" fill="#201A1A"/>
+       <circle cx="67" cy="36" r="3.6" fill="#201A1A"/>
+       <ellipse cx="68" cy="55" rx="17" ry="11" fill="#F7FFF1" stroke="#1E7B2F" stroke-width="2"/>
+       <circle cx="77" cy="52" r="2.2" fill="#1E7B2F"/>
+       <path d="M54 64c5 4 13 4 18 0" fill="none" stroke="#1E7B2F" stroke-width="3" stroke-linecap="round"/>
+       <path d="M31 24l-8-10M39 21l-2-13M48 24l7-11" stroke="#E63B2E" stroke-width="6" stroke-linecap="round"/>
+       <path d="M26 70c-6 2-11 6-14 12M47 82c-1 5-4 8-8 10M73 75c5 2 9 6 11 11" stroke="#1E7B2F" stroke-width="5" stroke-linecap="round"/>
+      </svg>
      </div>
     </div>
    </section>
@@ -154,6 +310,13 @@
         --/--/----
        </div>
       </div>
+      <button class="btn btn-dark theme-toggle-btn" id="themeToggleBtn" type="button" title="Alternar tema claro ou escuro">
+       <span class="theme-icon-stack" aria-hidden="true">
+        <i class="bi bi-moon-stars theme-icon theme-icon-moon"></i>
+        <i class="bi bi-sun-fill theme-icon theme-icon-sun"></i>
+       </span>
+       <span class="theme-label">Tema escuro</span>
+      </button>
       <button class="btn btn-dark" id="btnExportCsv">
        <i class="bi bi-download">
        </i>
@@ -661,6 +824,16 @@ const TIPO_DEMANDA_COLORS = {
 function colorTipoDemanda(tipo){
   return TIPO_DEMANDA_COLORS[n(tipo)] || COLORS.gray;
 }
+function isDarkTheme(){return document.body.classList.contains('dark-theme');}
+function themeTextColor(){return isDarkTheme() ? '#E5E7EB' : '#201A1A';}
+function themeGridColor(){return isDarkTheme() ? '#263244' : '#F0F1F3';}
+function applyChartThemeDefaults(){
+  if(typeof Chart==='undefined') return;
+  Chart.defaults.color=themeTextColor();
+  Chart.defaults.borderColor=themeGridColor();
+  Chart.defaults.plugins.legend.labels.color=themeTextColor();
+}
+applyChartThemeDefaults();
 const state = {raw:[], data:[], charts:{}, sort:{key:'DATA',dir:'desc'}, page:1, pageSize:80, selectedAnalyst:null, sourceUpdatedAt:GENERATED_AT};
 const fields = ['ID_DEMANDA','DATA','TIPO_DEMANDA','FILA','CIDADE','REGIONAL','TIPO_MDU','ANALISTA','AGING_DIAS','AGING_HORAS','STATUS','ANALISTA ANDAMENTO'];
 const filterMap = {fStatus:'STATUS_N',fTipo:'TIPO_DEMANDA_N',fFila:'FILA_N',fRegional:'REGIONAL_SIGLA',fCidade:'CIDADE_N',fAnalista:'ANALISTA_N'};
@@ -704,7 +877,7 @@ function dataInfo(){
   const srcInfo=state.sourceFiles&&state.sourceFiles.length?` | origem: ${state.sourceFiles.length} arquivo(s) (${state.sourceFiles.join(', ')})`:'';
   loadMeta.textContent=`${fmt(state.raw.length)} linhas carregadas | ${fmt(state.data.length)} no filtro atual | atualização do arquivo: ${state.sourceUpdatedAt || GENERATED_AT}${srcInfo}`;
 }
-function chart(id,type,labels,data,opt={}){if(state.charts[id]) state.charts[id].destroy(); const ctx=document.getElementById(id); if(!ctx)return; const durationLabel=(v)=>opt.duration?fmtDurationHours(v):fmt(v,opt.decimals||0); const durationScale=opt.duration?{ticks:{callback:(v)=>fmtDurationHours(Number(v))}}:{}; const valueAxis=opt.axis==='y'?'x':'y'; const scales=opt.scales===false?{}:{x:{grid:{display:false},...(valueAxis==='x'?durationScale:{})},y:{beginAtZero:true,grid:{color:'#F0F1F3'},...(valueAxis==='y'?durationScale:{})}}; state.charts[id]=new Chart(ctx,{type,data:{labels,datasets:opt.datasets||[{label:opt.label||'Demandas',data,backgroundColor:opt.colors||COLORS.palette,borderColor:opt.borderColor||COLORS.red,borderWidth:opt.borderWidth??1,borderRadius:6,fill:opt.fill||false,tension:.35}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:opt.axis||'x',plugins:{legend:{display:opt.legend??false,position:'bottom'},tooltip:{callbacks:{label:(c)=>`${c.dataset.label||c.label}: ${durationLabel(c.raw)}`}}},scales}});}
+function chart(id,type,labels,data,opt={}){if(state.charts[id]) state.charts[id].destroy(); const ctx=document.getElementById(id); if(!ctx)return; const durationLabel=(v)=>opt.duration?fmtDurationHours(v):fmt(v,opt.decimals||0); const durationScale=opt.duration?{ticks:{callback:(v)=>fmtDurationHours(Number(v))}}:{}; const valueAxis=opt.axis==='y'?'x':'y'; const scales=opt.scales===false?{}:{x:{grid:{display:false},...(valueAxis==='x'?durationScale:{})},y:{beginAtZero:true,grid:{color:themeGridColor()},...(valueAxis==='y'?durationScale:{})}}; state.charts[id]=new Chart(ctx,{type,data:{labels,datasets:opt.datasets||[{label:opt.label||'Demandas',data,backgroundColor:opt.colors||COLORS.palette,borderColor:opt.borderColor||COLORS.red,borderWidth:opt.borderWidth??1,borderRadius:6,fill:opt.fill||false,tension:.35}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:opt.axis||'x',plugins:{legend:{display:opt.legend??false,position:'bottom'},tooltip:{callbacks:{label:(c)=>`${c.dataset.label||c.label}: ${durationLabel(c.raw)}`}}},scales}});}
 
 function rankedLabelsByTotal(rows,key,limit=10){
   return topEntries(group(rows,key),limit).map(x=>x[0]);
@@ -737,7 +910,7 @@ function renderStackedBar(id,labels,series,datasetsData,colors,axis='x'){
       },
       scales:{
         x:{stacked:true,grid:{display:false}},
-        y:{stacked:true,beginAtZero:true,grid:{color:'#F0F1F3'}}
+        y:{stacked:true,beginAtZero:true,grid:{color:themeGridColor()}}
       }
     }
   });
@@ -772,7 +945,7 @@ function renderComparativeCharts(){
         responsive:true,
         maintainAspectRatio:false,
         plugins:{legend:{display:true,position:'bottom'}},
-        scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:'#F0F1F3'}}}
+        scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:themeGridColor()}}}
       }
     });
   }
@@ -804,7 +977,7 @@ function renderComparativeCharts(){
         },
         scales:{
           x:{grid:{display:false}},
-          y:{beginAtZero:true,position:'left',grid:{color:'#F0F1F3'}},
+          y:{beginAtZero:true,position:'left',grid:{color:themeGridColor()}},
           y1:{beginAtZero:true,position:'right',grid:{drawOnChartArea:false},ticks:{callback:(v)=>fmtDurationHours(Number(v))}}
         }
       }
@@ -1181,6 +1354,232 @@ Object.keys(filterMap).forEach(id=>document.getElementById(id).onchange=applyFil
 const embeddedRows=JSON.parse(document.getElementById('embedded-data').textContent);
 btnStartUpload.onclick=()=>fileInput.click();
 btnUseInternal.onclick=()=>{state.sourceUpdatedAt=GENERATED_AT; state.sourceFiles=['Base interna JUL/2026']; loadRows(embeddedRows,{files:['Base interna JUL/2026']}); hideStart();};
+
+
+// Alternancia de tema claro/escuro
+(function(){
+  const buttons=[document.getElementById('themeToggleBtn'),document.getElementById('themeToggleStart')].filter(Boolean);
+  function updateThemeButtons(){
+    const dark=document.body.classList.contains('dark-theme');
+    buttons.forEach(btn=>{
+      const label=btn.querySelector('.theme-label');
+      if(label) label.textContent=dark?'Tema claro':'Tema escuro';
+      btn.setAttribute('aria-pressed',String(dark));
+      btn.title=dark?'Alternar para tema claro':'Alternar para tema escuro';
+    });
+  }
+  function playThemeAnimation(){
+    document.body.classList.remove('theme-changing');
+    void document.body.offsetWidth;
+    document.body.classList.add('theme-changing');
+    buttons.forEach(btn=>{
+      btn.classList.remove('is-animating');
+      void btn.offsetWidth;
+      btn.classList.add('is-animating');
+    });
+    window.setTimeout(()=>{
+      document.body.classList.remove('theme-changing');
+      buttons.forEach(btn=>btn.classList.remove('is-animating'));
+    },680);
+  }
+  function playThemeSound(dark){
+    try{
+      const AudioCtx=window.AudioContext||window.webkitAudioContext;
+      if(!AudioCtx) return;
+      const audioCtx=playThemeSound.ctx||(playThemeSound.ctx=new AudioCtx());
+      if(audioCtx.state==='suspended') audioCtx.resume();
+      const now=audioCtx.currentTime;
+      const master=audioCtx.createGain();
+      master.gain.setValueAtTime(0.0001,now);
+      master.gain.exponentialRampToValueAtTime(0.055,now+0.018);
+      master.gain.exponentialRampToValueAtTime(0.0001,now+0.34);
+      master.connect(audioCtx.destination);
+      const freqs=dark?[523.25,392.00,261.63]:[392.00,523.25,659.25];
+      freqs.forEach((freq,i)=>{
+        const osc=audioCtx.createOscillator();
+        const gain=audioCtx.createGain();
+        osc.type=i===1?'triangle':'sine';
+        osc.frequency.setValueAtTime(freq,now+i*0.055);
+        gain.gain.setValueAtTime(0.0001,now+i*0.055);
+        gain.gain.exponentialRampToValueAtTime(i===2?0.42:0.34,now+i*0.055+0.012);
+        gain.gain.exponentialRampToValueAtTime(0.0001,now+i*0.055+0.18);
+        osc.connect(gain);
+        gain.connect(master);
+        osc.start(now+i*0.055);
+        osc.stop(now+i*0.055+0.2);
+      });
+    }catch(e){}
+  }
+  function setTheme(mode){
+    const dark=mode==='dark';
+    document.body.classList.toggle('dark-theme',dark);
+    try{localStorage.setItem('dashboard-theme',dark?'dark':'light');}catch(e){}
+    applyChartThemeDefaults();
+    updateThemeButtons();
+    playThemeAnimation();
+    playThemeSound(dark);
+    if(state && state.raw && state.raw.length){
+      renderAll();
+    }else if(state && state.charts){
+      Object.values(state.charts).forEach(c=>c.update());
+    }
+  }
+  buttons.forEach(btn=>btn.addEventListener('click',()=>setTheme(document.body.classList.contains('dark-theme')?'light':'dark')));
+  updateThemeButtons();
+})();
+
+// Popup do cubo de credito da tela inicial
+(function(){
+  const startCreditCube=document.getElementById('startCreditCube');
+  const cubeCreditBtn=document.getElementById('cubeCreditBtn');
+  const cubeCreditPopup=document.getElementById('cubeCreditPopup');
+  const cubeCreditClose=document.getElementById('cubeCreditClose');
+  const cubeYoshi=document.getElementById('cubeYoshi');
+  const startScreenEl=document.getElementById('startScreen');
+  if(!startCreditCube||!cubeCreditBtn||!cubeCreditPopup||!cubeCreditClose) return;
+  function setPopup(open){
+    cubeCreditPopup.classList.toggle('show',open);
+    cubeCreditPopup.setAttribute('aria-hidden',String(!open));
+    cubeCreditBtn.setAttribute('aria-expanded',String(open));
+  }
+  function playCubeCoinSound(){
+    try{
+      const AudioCtx=window.AudioContext||window.webkitAudioContext;
+      if(!AudioCtx) return;
+      const audioCtx=playCubeCoinSound.ctx||(playCubeCoinSound.ctx=new AudioCtx());
+      if(audioCtx.state==='suspended') audioCtx.resume();
+      const now=audioCtx.currentTime;
+      const master=audioCtx.createGain();
+      master.gain.setValueAtTime(0.0001,now);
+      master.gain.exponentialRampToValueAtTime(0.075,now+0.012);
+      master.gain.exponentialRampToValueAtTime(0.0001,now+0.42);
+      master.connect(audioCtx.destination);
+      const notes=[987.77,1318.51,1760.00,2093.00];
+      notes.forEach((freq,i)=>{
+        const osc=audioCtx.createOscillator();
+        const gain=audioCtx.createGain();
+        osc.type=i<2?'square':'triangle';
+        osc.frequency.setValueAtTime(freq,now+i*0.045);
+        osc.frequency.exponentialRampToValueAtTime(freq*1.035,now+i*0.045+0.055);
+        gain.gain.setValueAtTime(0.0001,now+i*0.045);
+        gain.gain.exponentialRampToValueAtTime(i===0?0.22:0.18,now+i*0.045+0.007);
+        gain.gain.exponentialRampToValueAtTime(0.0001,now+i*0.045+0.13);
+        osc.connect(gain);
+        gain.connect(master);
+        osc.start(now+i*0.045);
+        osc.stop(now+i*0.045+0.15);
+      });
+    }catch(e){}
+  }
+  function playYoshi8BitMusic(){
+    try{
+      const AudioCtx=window.AudioContext||window.webkitAudioContext;
+      if(!AudioCtx) return;
+      const audioCtx=playYoshi8BitMusic.ctx||(playYoshi8BitMusic.ctx=new AudioCtx());
+      if(audioCtx.state==='suspended') audioCtx.resume();
+      const now=audioCtx.currentTime;
+      if(playYoshi8BitMusic.lastStart && now-playYoshi8BitMusic.lastStart<0.9) return;
+      playYoshi8BitMusic.lastStart=now;
+      const master=audioCtx.createGain();
+      master.gain.setValueAtTime(0.0001,now);
+      master.gain.exponentialRampToValueAtTime(0.06,now+0.018);
+      master.gain.exponentialRampToValueAtTime(0.0001,now+1.42);
+      master.connect(audioCtx.destination);
+      const notes=[
+        {f:523.25,d:.11},{f:659.25,d:.11},{f:783.99,d:.11},{f:1046.50,d:.18},
+        {f:987.77,d:.10},{f:783.99,d:.10},{f:880.00,d:.13},{f:1174.66,d:.18},
+        {f:1046.50,d:.10},{f:880.00,d:.10},{f:783.99,d:.13},{f:659.25,d:.18},
+        {f:783.99,d:.11},{f:987.77,d:.11},{f:1318.51,d:.22}
+      ];
+      let t=now;
+      notes.forEach((note,i)=>{
+        const osc=audioCtx.createOscillator();
+        const gain=audioCtx.createGain();
+        osc.type=i%3===0?'square':'triangle';
+        osc.frequency.setValueAtTime(note.f,t);
+        if(i%4===3) osc.frequency.exponentialRampToValueAtTime(note.f*1.015,t+note.d*.7);
+        gain.gain.setValueAtTime(0.0001,t);
+        gain.gain.exponentialRampToValueAtTime(i%4===3?0.34:0.26,t+0.01);
+        gain.gain.setValueAtTime(i%4===3?0.27:0.20,t+Math.max(0.015,note.d-0.035));
+        gain.gain.exponentialRampToValueAtTime(0.0001,t+note.d);
+        osc.connect(gain);
+        gain.connect(master);
+        osc.start(t);
+        osc.stop(t+note.d+0.018);
+        t+=note.d*0.88;
+      });
+      const bass=[261.63,329.63,392.00,329.63];
+      bass.forEach((freq,i)=>{
+        const osc=audioCtx.createOscillator();
+        const gain=audioCtx.createGain();
+        const bt=now+i*0.28;
+        osc.type='square';
+        osc.frequency.setValueAtTime(freq,bt);
+        gain.gain.setValueAtTime(0.0001,bt);
+        gain.gain.exponentialRampToValueAtTime(0.11,bt+0.012);
+        gain.gain.exponentialRampToValueAtTime(0.0001,bt+0.16);
+        osc.connect(gain);
+        gain.connect(master);
+        osc.start(bt);
+        osc.stop(bt+0.18);
+      });
+    }catch(e){}
+  }
+  function playPopupErrorSound(){
+    try{
+      const AudioCtx=window.AudioContext||window.webkitAudioContext;
+      if(!AudioCtx) return;
+      const audioCtx=playPopupErrorSound.ctx||(playPopupErrorSound.ctx=new AudioCtx());
+      if(audioCtx.state==='suspended') audioCtx.resume();
+      const now=audioCtx.currentTime;
+      const master=audioCtx.createGain();
+      master.gain.setValueAtTime(0.0001,now);
+      master.gain.exponentialRampToValueAtTime(0.07,now+0.01);
+      master.gain.exponentialRampToValueAtTime(0.0001,now+0.38);
+      master.connect(audioCtx.destination);
+      [220,165,110].forEach((freq,i)=>{
+        const osc=audioCtx.createOscillator();
+        const gain=audioCtx.createGain();
+        osc.type='sawtooth';
+        osc.frequency.setValueAtTime(freq,now+i*0.07);
+        gain.gain.setValueAtTime(0.0001,now+i*0.07);
+        gain.gain.exponentialRampToValueAtTime(0.19,now+i*0.07+0.008);
+        gain.gain.exponentialRampToValueAtTime(0.0001,now+i*0.07+0.11);
+        osc.connect(gain);
+        gain.connect(master);
+        osc.start(now+i*0.07);
+        osc.stop(now+i*0.07+0.13);
+      });
+    }catch(e){}
+  }
+  function closePopupWithError(focusCube=false){
+    if(cubeCreditPopup.classList.contains('show')) playPopupErrorSound();
+    setPopup(false);
+    if(focusCube) cubeCreditBtn.focus();
+  }
+  cubeCreditBtn.addEventListener('click',e=>{
+    e.stopPropagation();
+    const isOpen=cubeCreditPopup.classList.contains('show');
+    if(isOpen){closePopupWithError(false);return;}
+    playCubeCoinSound();
+    setPopup(true);
+  });
+  if(cubeYoshi){
+    cubeYoshi.addEventListener('click',e=>{e.stopPropagation();playYoshi8BitMusic();});
+    cubeYoshi.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();playYoshi8BitMusic();}});
+  }
+  cubeCreditClose.addEventListener('click',e=>{e.stopPropagation();closePopupWithError(true);});
+  cubeCreditPopup.addEventListener('click',e=>e.stopPropagation());
+  document.addEventListener('click',()=>closePopupWithError(false));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape') closePopupWithError(false);});
+  const observer=new MutationObserver(()=>{
+    const hidden=!startScreenEl||getComputedStyle(startScreenEl).display==='none';
+    startCreditCube.hidden=hidden;
+    if(hidden) setPopup(false);
+  });
+  if(startScreenEl) observer.observe(startScreenEl,{attributes:true,attributeFilter:['style','class']});
+})();
+
   </script>
  </body>
 </html>
