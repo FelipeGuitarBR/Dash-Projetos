@@ -211,6 +211,18 @@
     @keyframes claroSplashGlow{0%,100%{opacity:.6;transform:scale(.88)}50%{opacity:1;transform:scale(1.06)}}
     @media (prefers-reduced-motion:reduce){.claro-splash,.claro-splash:before,.claro-splash:after,.claro-splash-content,.claro-splash-logo,.claro-splash-loader span,.claro-loading-dots i{animation:none!important}.claro-splash-loader span{transform:scaleX(1)}.claro-loading-dots i{opacity:1}}
 
+    /* Seletor de idioma centralizado na parte inferior do campo branco */
+    .start-actions{position:relative;padding-bottom:86px}
+    .language-toggle{position:absolute;left:50%;bottom:24px;z-index:5;display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin:0;transform:translateX(-50%);width:max-content;max-width:calc(100% - 48px)}
+    .language-toggle .language-btn{justify-content:center;border-radius:999px;padding:10px 14px;min-width:70px;font-size:12px;font-weight:900;background:#F8FAFC;color:#201A1A;border:1px solid var(--line);box-shadow:0 8px 18px rgba(32,26,26,.08)}
+    .language-toggle .language-btn:hover{background:#FFF7F6;color:var(--red);border-color:#FFD4D0;transform:translateY(-1px)}
+    .language-toggle .language-btn.active{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 10px 22px rgba(218,41,28,.22)}
+    body.dark-theme .language-toggle .language-btn{background:#0B1220;color:var(--ink);border-color:var(--line)}
+    body.dark-theme .language-toggle .language-btn:hover{background:#172033;color:#FFB4AE;border-color:#502227}
+    body.dark-theme .language-toggle .language-btn.active{background:#DA291C;color:#fff;border-color:#DA291C}
+    @media(max-width:860px){.start-actions{padding-bottom:78px}.language-toggle{bottom:20px;max-width:calc(100% - 40px)}}
+    @media(max-width:430px){.language-toggle{left:20px;right:20px;width:auto;max-width:none;transform:none}.language-toggle .language-btn{flex:1;min-width:0;padding:9px 10px}}
+
   </style>
  </head>
  <body>
@@ -227,7 +239,7 @@
   </div>
   <script>
    (function(){
-     var splashDuration=6000;
+     var splashDuration=5500;
      var fadeDuration=650;
      var claroOpeningSoundPlayed=false;
      var claroAudioCtx=null;
@@ -394,6 +406,11 @@
       </h3>
       <div class="hint">
        Carregue uma ou mais bases Excel recentes ou utilize a base interna (Relatório JUL/2026).
+      </div>
+      <div class="language-toggle" role="group" aria-label="Selecionar idioma">
+       <button class="btn language-btn active" type="button" data-lang="pt-BR" aria-pressed="true">PT-BR</button>
+       <button class="btn language-btn" type="button" data-lang="es-MX" aria-pressed="false">ES-MX</button>
+       <button class="btn language-btn" type="button" data-lang="en-US" aria-pressed="false">EN-US</button>
       </div>
       <button class="btn btn-primary-red start-action" id="btnStartUpload">
        <i class="bi bi-upload">
@@ -1076,7 +1093,8 @@ function hours(row){
 function regSigla(v){ const s=n(v); const m=s.match(/^([A-Z]{2,4})\s*-/); return m?m[1]:s.substring(0,12); }
 function analyst(row){ let a=n(row.ANALISTA); if(a.includes('NÃO ATRIBUÍDO')) return 'NÃO ATRIBUÍDO'; if(a.includes('SEM ANALISTA')) return 'CONCLUÍDO SEM ANALISTA'; if(a==='#N/A') return 'NÃO ATRIBUÍDO'; return a; }
 function normalize(rows){return rows.filter(r=>r && r.ID_DEMANDA!==undefined && r.ID_DEMANDA!==null && r.ID_DEMANDA!=='').map((r,i)=>{const d=parseDate(r.DATA); const h=hours(r); return {...r, __idx:i, ID:String(r.ID_DEMANDA), DATA_ISO:d, DATA_BR:brDate(d), STATUS_N:n(r.STATUS), TIPO_DEMANDA_N:n(r.TIPO_DEMANDA), FILA_N:n(r.FILA), CIDADE_N:n(r.CIDADE), REGIONAL_SIGLA:regSigla(r.REGIONAL), ANALISTA_N:analyst(r), TIPO_MDU_N:n(r.TIPO_MDU), AGING_H:h, AGING_D:num(r.AGING_DIAS)};});}
-function fmt(n,dec=0){return (n||0).toLocaleString('pt-BR',{minimumFractionDigits:dec,maximumFractionDigits:dec})}
+function getDashboardLocale(){try{return localStorage.getItem('dashboard-language') || 'pt-BR';}catch(e){return 'pt-BR';}}
+function fmt(n,dec=0){return (n||0).toLocaleString(getDashboardLocale(),{minimumFractionDigits:dec,maximumFractionDigits:dec})}
 function fmtDurationHours(value){
   const h=num(value);
   if(h===null) return '-';
@@ -1085,7 +1103,7 @@ function fmtDurationHours(value){
   const minutes=totalMinutes%60;
   return `${hours}h ${String(minutes).padStart(2,'0')}min`;
 }
-function pct(a,b){return b?`${fmt(a/b*100,1)}%`:'0,0%'}
+function pct(a,b){return b?`${fmt(a/b*100,1)}%`:`${fmt(0,1)}%`}
 function selected(id){return Array.from(document.getElementById(id).selectedOptions).map(o=>o.value)}
 function group(data,key){return data.reduce((a,r)=>{const k=typeof key==='function'?key(r):r[key]; a[k]=(a[k]||0)+1; return a;},{});}
 function topEntries(obj,limit=10){return Object.entries(obj).sort((a,b)=>b[1]-a[1]).slice(0,limit)}
@@ -1745,7 +1763,7 @@ async function exportAllChartsZip(){
       if(blob) zip.file(filename,blob);
     }
     zip.file('README.txt',`Exportação de gráficos do Dashboard SGD
-Versão do Dashboard: [v3.1]
+Versão do Dashboard: [v3.2]
 Total de gráficos: ${usedNames.size}
 Gerado em: ${new Date().toLocaleString('pt-BR')}
 Desenvolvido por Felipe Oliveira
@@ -1802,7 +1820,7 @@ async function readExcelFiles(fileList){
       newest=Math.max(newest,file.lastModified||0);
     }
     if(!allRows.length){alert('Nenhuma linha válida foi encontrada nos arquivos selecionados.'); return;}
-    state.sourceUpdatedAt=newest?new Date(newest).toLocaleString('pt-BR'):'Arquivos selecionados';
+    state.sourceUpdatedAt=newest?new Date(newest).toLocaleString(getDashboardLocale()):'Arquivos selecionados';
     loadRows(allRows,{files:names});
     hideStart();
   }catch(err){
@@ -1817,8 +1835,9 @@ function updateRealTimeClock(){
   const timeEl=document.getElementById('realTimeClock');
   const dateEl=document.getElementById('realTimeDate');
   if(!timeEl||!dateEl) return;
-  timeEl.textContent=now.toLocaleTimeString('pt-BR',{timeZone:'America/Sao_Paulo',hour:'2-digit',minute:'2-digit',second:'2-digit'});
-  dateEl.textContent=now.toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'long',day:'2-digit',month:'2-digit',year:'numeric'});
+  const locale=getDashboardLocale();
+  timeEl.textContent=now.toLocaleTimeString(locale,{timeZone:'America/Sao_Paulo',hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  dateEl.textContent=now.toLocaleDateString(locale,{timeZone:'America/Sao_Paulo',weekday:'long',day:'2-digit',month:'2-digit',year:'numeric'});
 }
 updateRealTimeClock();
 setInterval(updateRealTimeClock,1000);
@@ -2091,6 +2110,188 @@ btnUseInternal.onclick=()=>{state.sourceUpdatedAt=GENERATED_AT; state.sourceFile
     if(hidden) setPopup(false);
   });
   if(startScreenEl) observer.observe(startScreenEl,{attributes:true,attributeFilter:['style','class']});
+})();
+
+
+// Suporte multilíngue PT-BR / EN-US / ES-MX
+(function(){
+  const LANG_KEY='dashboard-language';
+  const supported=['pt-BR','en-US','es-MX'];
+  const names={'pt-BR':'Português (Brasil)','en-US':'English (US)','es-MX':'Español (México)'};
+  const dict={
+    'Dashboard SGD | Gestão de Demandas':{'en-US':'SGD Dashboard | Demand Management','es-MX':'Panel SGD | Gestión de Demandas'},
+    'Carregando Dashboard':{'en-US':'Loading Dashboard','es-MX':'Cargando Panel'},
+    'Processando dados...':{'en-US':'Processing data...','es-MX':'Procesando datos...'},
+    'Dashboard Projetos SGD':{'en-US':'SGD Project Dashboard','es-MX':'Panel de Proyectos SGD'},
+    'Gestão de Demandas - Análise de Performance':{'en-US':'Demand Management - Performance Analysis','es-MX':'Gestión de Demandas - Análisis de Desempeño'},
+    'PROJETO F':{'en-US':'PROJECT F','es-MX':'PROYECTO F'},
+    'NOVOS EMPREENDIMENTOS':{'en-US':'NEW DEVELOPMENTS','es-MX':'NUEVOS DESARROLLOS'},
+    'EMPRESARIAL & PJ COLETIVO':{'en-US':'BUSINESS & PJ COLLECTIVE','es-MX':'EMPRESARIAL Y PJ COLECTIVO'},
+    'Escolha como deseja iniciar':{'en-US':'Choose how you want to start','es-MX':'Elija cómo desea iniciar'},
+    'Carregue uma ou mais bases Excel recentes ou utilize a base interna (Relatório JUL/2026).':{'en-US':'Upload one or more recent Excel data files or use the internal base (JUL/2026 report).','es-MX':'Suba una o más bases de Excel recientes o utilice la base interna (Reporte JUL/2026).'},
+    'Inserir base(s) Excel atualizada(s)':{'en-US':'Upload updated Excel base(s)','es-MX':'Subir base(s) de Excel actualizada(s)'},
+    'ou':{'en-US':'or','es-MX':'o'},
+    'Carregar base interna (JUL/2026)':{'en-US':'Load internal base (JUL/2026)','es-MX':'Cargar base interna (JUL/2026)'},
+    'Tema escuro':{'en-US':'Dark theme','es-MX':'Tema oscuro'},
+    'Tema claro':{'en-US':'Light theme','es-MX':'Tema claro'},
+    'Observação:':{'en-US':'Note:','es-MX':'Observación:'},
+    'após o carregamento, você ainda poderá substituir a base pelo botão “Nova(s) Base(s) de Dados” no topo do dashboard.':{'en-US':'after loading, you can still replace the base using the “New Data Base(s)” button at the top of the dashboard.','es-MX':'después de cargar, aún podrá reemplazar la base con el botón “Nueva(s) Base(s) de Datos” en la parte superior del panel.'},
+    'Dashboard Projetos | Esteira SGD':{'en-US':'Projects Dashboard | SGD Pipeline','es-MX':'Panel de Proyectos | Flujo SGD'},
+    'Olá, bom trabalho!':{'en-US':'Hello, good work!','es-MX':'Hola, buen trabajo!'},
+    'Sons ligados':{'en-US':'Sounds on','es-MX':'Sonidos activados'},
+    'Sons desligados':{'en-US':'Sounds off','es-MX':'Sonidos desactivados'},
+    'Exportar Excel':{'en-US':'Export Excel','es-MX':'Exportar Excel'},
+    'Exportar Gráficos':{'en-US':'Export Charts','es-MX':'Exportar Gráficos'},
+    'Limpar filtros':{'en-US':'Clear filters','es-MX':'Limpiar filtros'},
+    'Base carregada com sucesso!':{'en-US':'Base loaded successfully!','es-MX':'Base cargada correctamente!'},
+    'Arquivo de referência incorporado. Você também pode carregar um ou mais arquivos Excel para atualizar a análise.':{'en-US':'Reference file embedded. You can also upload one or more Excel files to update the analysis.','es-MX':'Archivo de referencia incorporado. También puede subir uno o más archivos de Excel para actualizar el análisis.'},
+    'Nova(s) Base(s) de Dados':{'en-US':'New Data Base(s)','es-MX':'Nueva(s) Base(s) de Datos'},
+    'Status':{'en-US':'Status','es-MX':'Estado'},
+    'Tipo Demanda':{'en-US':'Demand Type','es-MX':'Tipo de Demanda'},
+    'Fila SGD':{'en-US':'SGD Queue','es-MX':'Fila SGD'},
+    'Regional':{'en-US':'Region','es-MX':'Regional'},
+    'Cidade / UF':{'en-US':'City / State','es-MX':'Ciudad / Estado'},
+    'Analista':{'en-US':'Analyst','es-MX':'Analista'},
+    'Data inicial':{'en-US':'Start date','es-MX':'Fecha inicial'},
+    'Data final':{'en-US':'End date','es-MX':'Fecha final'},
+    'SLA máximo (h)':{'en-US':'Maximum SLA (h)','es-MX':'SLA máximo (h)'},
+    'Nome da visão':{'en-US':'View name','es-MX':'Nombre de la vista'},
+    'Visão salva':{'en-US':'Saved view','es-MX':'Vista guardada'},
+    'Ações de visão':{'en-US':'View actions','es-MX':'Acciones de vista'},
+    'Salvar':{'en-US':'Save','es-MX':'Guardar'},
+    'Excluir':{'en-US':'Delete','es-MX':'Eliminar'},
+    'Carregar visão salva':{'en-US':'Load saved view','es-MX':'Cargar vista guardada'},
+    'Visão Geral':{'en-US':'Overview','es-MX':'Visión General'},
+    'Comparativos':{'en-US':'Comparisons','es-MX':'Comparativos'},
+    'Analistas':{'en-US':'Analysts','es-MX':'Analistas'},
+    'Demandas':{'en-US':'Requests','es-MX':'Demandas'},
+    'Insights':{'en-US':'Insights','es-MX':'Insights'},
+    'Distribuição por Status':{'en-US':'Distribution by Status','es-MX':'Distribución por Estado'},
+    'Concluído, andamento e pendente':{'en-US':'Completed, in progress and pending','es-MX':'Concluido, en proceso y pendiente'},
+    'Demandas por Regional':{'en-US':'Requests by Region','es-MX':'Demandas por Regional'},
+    'Ranking de volume':{'en-US':'Volume ranking','es-MX':'Ranking de volumen'},
+    'Evolução Diária':{'en-US':'Daily Evolution','es-MX':'Evolución Diaria'},
+    'Demandas por Data':{'en-US':'Requests by Date','es-MX':'Demandas por Fecha'},
+    'Tipos e Filas':{'en-US':'Types and Queues','es-MX':'Tipos y Filas'},
+    'Composição da Esteira':{'en-US':'Pipeline composition','es-MX':'Composición del Flujo'},
+    'Ranking Cidades':{'en-US':'City Ranking','es-MX':'Ranking de Ciudades'},
+    'Concentração Geográfica':{'en-US':'Geographic concentration','es-MX':'Concentración Geográfica'},
+    'Faixas de Aging':{'en-US':'Aging Ranges','es-MX':'Rangos de Aging'},
+    'Tempo de tratativa em horas':{'en-US':'Handling time in hours','es-MX':'Tiempo de atención en horas'},
+    'Volume por Analista':{'en-US':'Volume by Analyst','es-MX':'Volumen por Analista'},
+    'Ranking de produtividade por volume':{'en-US':'Productivity ranking by volume','es-MX':'Ranking de productividad por volumen'},
+    'Tempo Médio de Atendimento (TMA) - horas':{'en-US':'Average Handling Time (AHT) - hours','es-MX':'Tiempo Medio de Atención (TMA) - horas'},
+    'Comparativo de tempo médio por analista':{'en-US':'Average time comparison by analyst','es-MX':'Comparativo de tiempo medio por analista'},
+    'Status por Tipo Demanda':{'en-US':'Status by Demand Type','es-MX':'Estado por Tipo de Demanda'},
+    'Distribuição de demandas por tipo':{'en-US':'Request distribution by type','es-MX':'Distribución de demandas por tipo'},
+    'Fila por Status':{'en-US':'Queue by Status','es-MX':'Fila por Estado'},
+    'Composição das principais filas':{'en-US':'Main queue composition','es-MX':'Composición de las principales filas'},
+    'Mapa por Cidade e Regional':{'en-US':'Map by City and Region','es-MX':'Mapa por Ciudad y Regional'},
+    'Volume e percentual por cidade e quantidade':{'en-US':'Volume and percentage by city and quantity','es-MX':'Volumen y porcentaje por ciudad y cantidad'},
+    'CONCLUÍDO':{'en-US':'COMPLETED','es-MX':'CONCLUIDO'},
+    'ANDAMENTO':{'en-US':'IN PROGRESS','es-MX':'EN PROCESO'},
+    'PENDENTE':{'en-US':'PENDING','es-MX':'PENDIENTE'},
+    'NÃO ATRIBUÍDO':{'en-US':'NOT ASSIGNED','es-MX':'NO ASIGNADO'},
+    '[NÃO ATRIBUÍDO]':{'en-US':'[NOT ASSIGNED]','es-MX':'[NO ASIGNADO]'},
+    'NÃO INFORMADO':{'en-US':'NOT INFORMED','es-MX':'NO INFORMADO'},
+    'Pedidos GED':{'en-US':'GED Requests','es-MX':'Solicitudes GED'},
+    'Validação Vistoria':{'en-US':'Inspection Validation','es-MX':'Validación de Inspección'},
+    'Validação Construção':{'en-US':'Construction Validation','es-MX':'Validación de Construcción'},
+    'Novos Empreendimentos':{'en-US':'New Developments','es-MX':'Nuevos Desarrollos'},
+    'Projeto F':{'en-US':'Project F','es-MX':'Proyecto F'},
+    'Empresarial':{'en-US':'Business','es-MX':'Empresarial'},
+    'PJ Coletivos':{'en-US':'Collective PJ','es-MX':'PJ Colectivos'},
+    'Desenvolvido por':{'en-US':'Developed by','es-MX':'Desarrollado por'},
+    'Felipe Oliveira':{'en-US':'Felipe Oliveira','es-MX':'Felipe Oliveira'},
+    'baixar':{'en-US':'download','es-MX':'descargar'}
+  };
+  const attrDict={
+    'Selecionar idioma':{'en-US':'Select language','es-MX':'Seleccionar idioma'},
+    'Carregando dashboard Claro':{'en-US':'Loading Claro dashboard','es-MX':'Cargando panel Claro'},
+    'Processando dados':{'en-US':'Processing data','es-MX':'Procesando datos'},
+    'Alternar tema claro ou escuro':{'en-US':'Toggle light or dark theme','es-MX':'Alternar tema claro u oscuro'},
+    'Ativar ou desativar sons do dashboard':{'en-US':'Turn dashboard sounds on or off','es-MX':'Activar o desactivar sonidos del panel'},
+    'Exportar análise executiva em Excel':{'en-US':'Export executive analysis to Excel','es-MX':'Exportar análisis ejecutivo a Excel'},
+    'Exportar todos os gráficos em arquivo ZIP':{'en-US':'Export all charts as a ZIP file','es-MX':'Exportar todos los gráficos en archivo ZIP'},
+    'Limpar todos os filtros aplicados':{'en-US':'Clear all applied filters','es-MX':'Limpiar todos los filtros aplicados'},
+    'Ex.: 24':{'en-US':'Ex.: 24','es-MX':'Ej.: 24'},
+    'Ex.: Pendências SP':{'en-US':'Ex.: Pending SP','es-MX':'Ej.: Pendientes SP'},
+    'Nome da visão salva':{'en-US':'Saved view name','es-MX':'Nombre de la vista guardada'},
+    'Visões salvas':{'en-US':'Saved views','es-MX':'Vistas guardadas'},
+    'Salvar visão atual':{'en-US':'Save current view','es-MX':'Guardar vista actual'},
+    'Excluir visão selecionada':{'en-US':'Delete selected view','es-MX':'Eliminar vista seleccionada'},
+    'Sobre o desenvolvedor':{'en-US':'About the developer','es-MX':'Acerca del desarrollador'},
+    'Fechar popup':{'en-US':'Close popup','es-MX':'Cerrar popup'},
+    'Yoshi: tocar música em 8 bits':{'en-US':'Yoshi: play 8-bit music','es-MX':'Yoshi: reproducir música de 8 bits'}
+  };
+  const reverse={};
+  Object.entries(dict).forEach(([pt,tr])=>{reverse[pt]=pt; Object.values(tr).forEach(v=>reverse[v]=pt);});
+  const reverseAttr={};
+  Object.entries(attrDict).forEach(([pt,tr])=>{reverseAttr[pt]=pt; Object.values(tr).forEach(v=>reverseAttr[v]=pt);});
+  function getLang(){try{return supported.includes(localStorage.getItem(LANG_KEY))?localStorage.getItem(LANG_KEY):'pt-BR';}catch(e){return 'pt-BR';}}
+  function setLang(lang, silent){
+    if(!supported.includes(lang)) lang='pt-BR';
+    try{localStorage.setItem(LANG_KEY,lang);}catch(e){}
+    window.DASHBOARD_LANG=lang;
+    document.documentElement.lang=lang;
+    document.title=translate('Dashboard SGD | Gestão de Demandas',lang);
+    applyTranslations(document.body,lang);
+    updateLanguageButtons(lang);
+    updateRealTimeClock?.();
+    Object.values(state?.charts||{}).forEach(ch=>{try{ch.update('none');}catch(e){}});
+    if(!silent && typeof dashboardNotify==='function') dashboardNotify(lang==='pt-BR'?'Idioma alterado para Português.':lang==='en-US'?'Language changed to English.':'Idioma cambiado a Español.');
+  }
+  function translate(pt,lang){return lang==='pt-BR'?pt:(dict[pt]?.[lang] || pt);}
+  function translateAttr(pt,lang){return lang==='pt-BR'?pt:(attrDict[pt]?.[lang] || pt);}
+  function applyTranslations(root,lang){
+    if(!root) return;
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(node){
+      const p=node.parentElement;
+      if(!p || ['SCRIPT','STYLE','TEXTAREA'].includes(p.tagName)) return NodeFilter.FILTER_REJECT;
+      return node.nodeValue.trim()?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+    }});
+    const textNodes=[];
+    while(walker.nextNode()) textNodes.push(walker.currentNode);
+    textNodes.forEach(node=>{
+      const raw=node.nodeValue;
+      const trimmed=raw.trim().replace(/\s+/g,' ');
+      const key=reverse[trimmed];
+      if(key){
+        const lead=raw.match(/^\s*/)[0], trail=raw.match(/\s*$/)[0];
+        node.nodeValue=lead+translate(key,lang)+trail;
+      }
+    });
+    root.querySelectorAll('*').forEach(el=>{
+      ['title','aria-label','placeholder'].forEach(attr=>{
+        if(!el.hasAttribute(attr)) return;
+        const raw=el.getAttribute(attr);
+        const key=reverseAttr[String(raw).trim()] || reverse[String(raw).trim()];
+        if(key) el.setAttribute(attr, attrDict[key]?translateAttr(key,lang):translate(key,lang));
+      });
+    });
+  }
+  function updateLanguageButtons(lang){
+    document.querySelectorAll('[data-lang]').forEach(btn=>{
+      const active=btn.getAttribute('data-lang')===lang;
+      btn.classList.toggle('active',active);
+      btn.setAttribute('aria-pressed',String(active));
+      btn.setAttribute('title',names[btn.getAttribute('data-lang')]||btn.getAttribute('data-lang'));
+    });
+  }
+  document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>setLang(btn.getAttribute('data-lang'))));
+  const schedule=()=>setTimeout(()=>applyTranslations(document.body,getLang()),0);
+  ['renderAll','renderTable','renderInsights','renderAnalysts','renderBrazilMap','addChartExportButtons'].forEach(fn=>{
+    if(typeof window[fn]==='function'){
+      const original=window[fn];
+      window[fn]=function(){const result=original.apply(this,arguments); schedule(); return result;};
+    }
+  });
+  const originalNotify=window.dashboardNotify;
+  if(typeof originalNotify==='function'){
+    window.dashboardNotify=function(msg){return originalNotify.call(this,translate(reverse[msg]||msg,getLang()));};
+  }
+  window.setLanguage=setLang;
+  setLang(getLang(),true);
 })();
 
   </script>
