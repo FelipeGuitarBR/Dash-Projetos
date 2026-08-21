@@ -223,7 +223,47 @@
     @media(max-width:860px){.start-actions{padding-bottom:78px}.language-toggle{bottom:20px;max-width:calc(100% - 40px)}}
     @media(max-width:430px){.language-toggle{left:20px;right:20px;width:auto;max-width:none;transform:none}.language-toggle .language-btn{flex:1;min-width:0;padding:9px 10px}}
 
-  </style>
+  
+/* ===== Modulo Checklist de Revisoes de Rede ===== */
+.review-shell{display:grid;gap:16px}.review-hero{padding:22px;background:linear-gradient(135deg,#201a1a 0%,#5b1a1e 58%,#da291c 100%);color:#fff;border-radius:20px;display:flex;justify-content:space-between;gap:18px;align-items:center;box-shadow:0 12px 28px rgba(80,18,18,.18)}.review-hero h2{margin:0 0 6px;font-size:24px}.review-hero p{margin:0;color:rgba(255,255,255,.82)}.review-actions{display:flex;gap:9px;flex-wrap:wrap}.review-actions .btn{white-space:nowrap}.review-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.review-field{display:flex;flex-direction:column;gap:6px}.review-field.span-2{grid-column:span 2}.review-field.span-4{grid-column:1/-1}.review-field label{font-size:12px;font-weight:850;color:var(--muted);text-transform:uppercase;letter-spacing:.035em}.review-field input,.review-field select,.review-field textarea{width:100%;min-height:43px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;color:var(--ink);font:inherit;outline:none}.review-field textarea{min-height:110px;resize:vertical}.review-link-field{width:100%;min-height:43px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#f8fafc;display:flex;align-items:center;overflow:hidden}.review-link-field a{color:#2563eb;font-weight:800;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.review-link-field a:hover{text-decoration:underline}.dark-theme .review-link-field a{color:#ff5a5f}.dark-theme .review-link-field a:hover{color:#ff7a7e}.review-link-field span{color:var(--muted);font-size:12px}.review-field-label-row{display:flex;align-items:center;justify-content:space-between;gap:8px}.review-copy-btn{border:0;background:transparent;color:#2563eb;font:inherit;font-size:11px;font-weight:850;cursor:pointer;padding:2px 4px;border-radius:6px;display:inline-flex;align-items:center;gap:4px;text-transform:none;letter-spacing:0}.review-copy-btn:hover{background:#eff6ff;color:#1d4ed8}.review-copy-btn.copied{color:#087843;background:#e7f7ef}.review-grid>.review-field:not(.review-planner-card){background:linear-gradient(135deg,#f5f6f8 0%,#eceff3 100%);border:1px solid #d9dee7;border-radius:14px;padding:10px;box-shadow:0 3px 10px rgba(15,23,42,.06)}.review-grid>.review-field:not(.review-planner-card) label{color:#596273}.review-grid>.review-budget-card{background:linear-gradient(135deg,#e1f5e7 0%,#cfead8 100%);border:1px solid #a8d5b6;border-radius:14px;padding:10px;box-shadow:0 3px 10px rgba(22,128,60,.12)}.review-grid>.review-budget-card label{color:#216e3a}.review-grid>.review-budget-card input{background:#fff;border-color:#a8d5b6}.review-planner-card{background:linear-gradient(135deg,#f3f0ff 0%,#e8e3ff 100%);border:1px solid #d8cff8;border-radius:14px;padding:10px;box-shadow:0 3px 10px rgba(93,76,180,.08)}.review-planner-card label{color:#4f3aa6}.review-planner-card .review-link-field{background:#fff}.dark-theme .review-grid>.review-field:not(.review-planner-card){background:linear-gradient(135deg,#202938 0%,#182130 100%);border-color:#364254}.dark-theme .review-grid>.review-field:not(.review-planner-card) label{color:#c4ccd8}.dark-theme .review-grid>.review-budget-card{background:linear-gradient(135deg,#173326 0%,#1d402e 100%);border:1px solid #2f6948;border-radius:14px;padding:10px;box-shadow:0 3px 10px rgba(0,0,0,.18)}.dark-theme .review-grid>.review-budget-card label{color:#a9dfba}.dark-theme .review-grid>.review-budget-card input{background:#111827;border-color:#2f6948}.dark-theme .review-planner-card{background:linear-gradient(135deg,#2b2350 0%,#342864 100%);border-color:#5f50a8}.dark-theme .review-planner-card label{color:#d8d0ff}.review-field input:focus,.review-field select:focus,.review-field textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(218,41,28,.10)}.review-required:after{content:' *';color:var(--red)}.review-form-head,.review-admin-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:16px}.review-session{display:flex;align-items:center;gap:8px;background:#f5f6f8;border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:12px;font-weight:800}.review-session i{color:var(--green)}.review-form-footer{margin-top:18px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.review-save-btn{background:#16803c;color:#fff;border:1px solid #16803c;box-shadow:0 5px 14px rgba(22,128,60,.22)}.review-save-btn:hover{background:#116b32;border-color:#116b32}.review-cancel-btn{background:#d92d20;color:#fff;border:1px solid #d92d20;box-shadow:0 5px 14px rgba(217,45,32,.18)}.review-cancel-btn:hover{background:#b42318;border-color:#b42318}.review-hint{font-size:12px;color:var(--muted)}.review-admin{display:none}.review-admin.open{display:block}.review-admin-filters{display:grid;grid-template-columns:2fr repeat(3,minmax(130px,1fr));gap:10px;margin:12px 0}.review-admin-filters input,.review-admin-filters select{border:1px solid var(--line);border-radius:11px;padding:10px;background:#fff;color:var(--ink)}.review-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.review-stat{padding:13px;border:1px solid var(--line);border-radius:14px;background:#f8fafc}.review-stat span{display:block;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase}.review-stat b{display:block;font-size:22px;margin-top:4px}.review-table-wrap{overflow:auto;max-height:520px;border:1px solid var(--line);border-radius:14px}.review-table{min-width:1320px}.review-table th{cursor:default}.review-empty{padding:34px;text-align:center;color:var(--muted)}.review-login-overlay{position:fixed;inset:0;background:rgba(18,15,15,.72);backdrop-filter:blur(7px);display:none;align-items:center;justify-content:center;z-index:10000;padding:20px}.review-login-overlay.open{display:flex}.review-login-card{width:min(430px,100%);background:#fff;border-radius:22px;padding:24px;box-shadow:0 26px 70px rgba(0,0,0,.32);position:relative}.review-login-icon{width:52px;height:52px;border-radius:16px;background:#fde9e8;color:var(--red);display:grid;place-items:center;font-size:24px;margin-bottom:14px}.review-login-card h3{margin:0 0 6px}.review-login-card p{margin:0 0 16px;color:#667085}.review-login-card .review-field{margin-bottom:12px}.review-login-buttons{display:flex;gap:9px;justify-content:flex-end;margin-top:16px}.review-login-note{font-size:11px;color:#667085;background:#f8fafc;border-radius:10px;padding:10px;margin-top:14px}.review-error{display:none;color:#b42318;background:#fde9e8;border-radius:10px;padding:9px 11px;font-size:12px;font-weight:750;margin-top:10px}.review-error.show{display:block}.review-status{font-size:11px;font-weight:850;border-radius:999px;padding:5px 8px;display:inline-flex}.review-status.concluido{background:#e7f7ef;color:#087843}.review-status.pendente{background:#fff4da;color:#9a5f00}.review-status.cancelado{background:#eef2f7;color:#475569}.review-delete{border:0;background:#fde9e8;color:#b42318;border-radius:8px;padding:6px 8px;cursor:pointer}.dark-theme .review-field input,.dark-theme .review-field select,.dark-theme .review-field textarea,.dark-theme .review-link-field,.dark-theme .review-admin-filters input,.dark-theme .review-admin-filters select{background:#111827;color:#e5e7eb;border-color:#334155}.dark-theme .review-session,.dark-theme .review-stat{background:#111827}.dark-theme .review-login-card{background:#172033;color:#e5e7eb}.dark-theme .review-login-card p,.dark-theme .review-login-note{color:#b7c1d1}.dark-theme .review-login-note{background:#111827}.dark-theme .review-table{background:#111827}.dark-theme .review-table td{border-color:#263244}
+@media(max-width:1100px){.review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.review-field.span-4{grid-column:1/-1}.review-stat-grid{grid-template-columns:repeat(2,1fr)}.review-admin-filters{grid-template-columns:1fr 1fr}.review-hero{align-items:flex-start;flex-direction:column}}@media(max-width:640px){.review-grid{grid-template-columns:1fr}.review-field.span-2,.review-field.span-4{grid-column:auto}.review-stat-grid,.review-admin-filters{grid-template-columns:1fr}.review-hero{padding:18px}.review-form-head,.review-admin-head{flex-direction:column}}
+
+
+/* ===== Login inicial por perfil ===== */
+.role-login-screen{position:fixed;inset:0;z-index:9000;display:flex;align-items:center;justify-content:center;padding:22px;background:linear-gradient(135deg,#201a1a 0%,#5b1014 48%,#da291c 100%);opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease}.role-login-screen.open{opacity:1;visibility:visible}.role-login-card{width:min(920px,100%);display:grid;grid-template-columns:1fr .85fr;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.38)}.role-login-brand{padding:38px;background:linear-gradient(150deg,#fff 0%,#fff0ef 100%);display:flex;flex-direction:column;justify-content:center}.role-login-logo{width:62px;height:62px;border-radius:20px;background:var(--red);color:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 14px 30px rgba(218,41,28,.28);margin-bottom:20px}.role-login-brand h2{margin:0 0 10px;font-size:30px;letter-spacing:-.035em}.role-login-brand p{margin:0;color:#667085;line-height:1.55}.role-login-route{display:grid;gap:10px;margin-top:24px}.role-route{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#344054}.role-route i{color:var(--green);font-size:18px}.role-login-form-wrap{padding:38px;display:flex;flex-direction:column;justify-content:center}.role-login-form-wrap h3{margin:0 0 5px;font-size:21px}.role-login-form-wrap>p{margin:0 0 20px;color:#667085;font-size:13px}.role-login-form .review-field{margin-bottom:13px}.role-login-submit{width:100%;justify-content:center;margin-top:5px}.role-login-error{display:none;margin:12px 0 0;padding:10px 12px;border-radius:11px;background:#fde9e8;color:#b42318;font-size:12px;font-weight:800}.role-login-error.show{display:block}.role-login-help{margin-top:16px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#f8fafc;color:#667085;font-size:11px;line-height:1.5}.admin-review-start-btn{width:100%;justify-content:center;padding:14px 16px;border-radius:16px;background:#eefaf4;color:#087843;border:1px solid #bde8d1}.admin-review-start-btn:hover{background:#e2f7ec}.dark-theme .role-login-card{background:#0f172a;color:#e5e7eb}.dark-theme .role-login-brand{background:linear-gradient(150deg,#111827,#1f2937)}.dark-theme .role-login-brand p,.dark-theme .role-login-form-wrap>p,.dark-theme .role-login-help,.dark-theme .role-route{color:#b7c1d1}.dark-theme .role-login-help{background:#111827;border-color:#334155}
+@media(max-width:760px){.role-login-card{grid-template-columns:1fr}.role-login-brand,.role-login-form-wrap{padding:25px}.role-login-brand h2{font-size:25px}.role-login-route{display:none}}
+
+
+/* ===== Visibilidade por perfil ===== */
+body.analyst-mode .upload-panel,
+body.analyst-mode .filters,
+body.analyst-mode #kpis,
+body.analyst-mode .tabs .tab:not([data-tab="revisoes"]),
+body.analyst-mode .hero-actions #btnExportExcel,
+body.analyst-mode .hero-actions #btnExportCharts,
+body.analyst-mode .hero-actions #btnClear,
+body.analyst-mode .hero-actions #btnClearFilters,
+body.analyst-mode .hero-actions [aria-label*="Limpar"],
+body.analyst-mode .hero-actions [title*="Limpar"],
+body.analyst-mode #reviewAdminBtn,
+body.analyst-mode #reviewContinueBaseBtn{display:none!important}
+body.analyst-mode .tabs{display:flex;justify-content:flex-start}
+body.analyst-mode .tabs .tab[data-tab="revisoes"]{display:inline-flex!important}
+body.analyst-mode .tab-content:not(#tab-revisoes){display:none!important}
+body.analyst-mode #tab-revisoes{display:block!important}
+body.analyst-mode main{padding-top:18px}
+body.analyst-mode .review-hero{margin-top:0}
+
+
+/* ===== Administradores, Super Admin e log de acessos ===== */
+.admin-identity{display:none;align-items:center;gap:8px;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;background:#eef2f7;color:#344054;border:1px solid #d0d5dd}.admin-identity.show{display:inline-flex}.admin-identity.super{color:#6b4b00;background:linear-gradient(135deg,#fff7cf,#e8bd43);border-color:#c69316;box-shadow:0 0 0 2px rgba(232,189,67,.16),0 8px 22px rgba(153,103,0,.22)}.admin-identity.super i{color:#8a5b00}.super-only{display:none!important}body.super-admin-mode .super-only{display:inline-flex!important}.access-log-overlay{position:fixed;inset:0;z-index:11000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,12,12,.72);backdrop-filter:blur(7px)}.access-log-overlay.open{display:flex}.access-log-card{width:min(980px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:22px;padding:22px;box-shadow:0 28px 80px rgba(0,0,0,.35)}.access-log-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}.access-log-head h3{margin:0}.access-log-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}.access-log-stat{padding:13px;border:1px solid var(--line);border-radius:14px;background:#f8fafc}.access-log-stat span{display:block;color:var(--muted);font-size:11px;font-weight:850;text-transform:uppercase}.access-log-stat b{display:block;font-size:23px;margin-top:4px}.access-log-table-wrap{overflow:auto;max-height:470px;border:1px solid var(--line);border-radius:14px}.access-log-table{min-width:760px}.access-log-table th{cursor:default}.danger-clear-btn{background:#b42318;color:#fff;border:1px solid #8f1913}.danger-clear-btn:hover{background:#8f1913}.dark-theme .access-log-card{background:#172033;color:#e5e7eb}.dark-theme .access-log-stat{background:#111827}.dark-theme .admin-identity:not(.super){background:#111827;color:#dbe4f0;border-color:#334155}
+@media(max-width:680px){.access-log-summary{grid-template-columns:1fr}.access-log-card{padding:16px}}
+
+
+/* ===== Senha protegida e exportacao Excel ===== */
+.admin-password-overlay{position:fixed;inset:0;z-index:12000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,12,12,.74);backdrop-filter:blur(8px)}.admin-password-overlay.open{display:flex}.admin-password-card{width:min(420px,100%);background:#fff;border-radius:22px;padding:24px;box-shadow:0 28px 80px rgba(0,0,0,.38)}.admin-password-card h3{margin:0 0 6px}.admin-password-card p{margin:0 0 16px;color:#667085}.admin-password-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:16px}.dark-theme .admin-password-card{background:#172033;color:#e5e7eb}.dark-theme .admin-password-card p{color:#b7c1d1}
+
+</style>
  </head>
  <body>
 
@@ -404,6 +444,7 @@
       <h3>
        Escolha como deseja iniciar
       </h3>
+      <div class="admin-identity" id="startAdminIdentity"><i class="bi bi-person-badge"></i><span></span></div>
       <div class="hint">
        Carregue uma ou mais bases Excel recentes ou utilize a base interna (Relatório JUL/2026).
       </div>
@@ -424,6 +465,10 @@
        <i class="bi bi-database-check">
        </i>
        Carregar base interna (JUL/2026)
+      </button>
+      <button class="btn admin-review-start-btn" id="btnAdminReviewData" type="button" style="display:none">
+       <i class="bi bi-clipboard-data"></i>
+       Verificar dados preenchidos pelos analistas
       </button>
       <button class="btn start-theme-toggle theme-toggle-btn" id="themeToggleStart" type="button" title="Alternar tema claro ou escuro">
        <span class="theme-icon-stack" aria-hidden="true">
@@ -670,6 +715,10 @@
       <i class="bi bi-lightbulb">
       </i>
       Insights
+     </button>
+     <button class="tab" data-tab="revisoes">
+      <i class="bi bi-clipboard2-check"></i>
+      Revisões de Rede
      </button>
     </nav>
     <section class="tab-content active" id="tab-geral">
@@ -1003,6 +1052,59 @@
        <button class="btn btn-line" id="nextPage">
         Próxima
        </button>
+      </div>
+     </div>
+    </section>
+
+    <section class="tab-content" id="tab-revisoes">
+     <div class="review-shell">
+      <div class="review-hero">
+       <div><h2><i class="bi bi-diagram-3"></i> Tratativas de Revisões de Rede</h2><p>Registre e acompanhe as revisões de forma simples e individual.</p></div>
+       <div class="review-actions">
+        <button class="btn btn-light" id="reviewNewBtn" type="button"><i class="bi bi-person-lock"></i> Novo preenchimento</button>
+        <button class="btn btn-line" id="reviewAdminBtn" type="button"><i class="bi bi-shield-lock"></i> Área do Administrador</button>
+       </div>
+      </div>
+      <div class="panel table-card" id="reviewFormPanel" style="display:none">
+       <div class="review-form-head"><div><h3 style="margin:0">Checklist SAR</h3><div class="meta">Os campos marcados com * são obrigatórios.</div></div><div class="review-session"><i class="bi bi-person-check-fill"></i><span id="reviewUserLabel">Usuário autenticado</span></div></div>
+       <form id="reviewForm" autocomplete="off">
+        <div class="review-grid">
+         <div class="review-field"><label class="review-required" for="rvDataInicio">Data início</label><input id="rvDataInicio" name="dataInicio" type="date" required></div>
+         <div class="review-field"><label class="review-required" for="rvIdSgd">ID SGD</label><input id="rvIdSgd" name="idSgd" inputmode="numeric" required></div>
+         <div class="review-field"><label class="review-required" for="rvCodImovel">Cód. imóvel</label><input id="rvCodImovel" name="codImovel" required></div>
+         <div class="review-field"><label class="review-required" for="rvUf">UF</label><select id="rvUf" name="uf" required><option value="">Selecione</option></select></div>
+         <div class="review-field"><label class="review-required" for="rvCidade">Cidade</label><input id="rvCidade" name="cidade" required></div>
+         <div class="review-field span-2"><label class="review-required" for="rvEndereco">Endereço</label><input id="rvEndereco" name="endereco" placeholder="Cole o endereço de acordo como foi cadastrado no SGD." required></div>
+         <div class="review-field"><label class="review-required" for="rvDemanda">Demanda</label><select id="rvDemanda" name="demanda" required><option value="">Selecione</option><option>PROJETO F</option><option>EMPRESARIAL</option><option>PJ COLETIVOS</option><option>NOVOS EMPREENDIMENTOS</option></select></div>
+         <div class="review-field"><label for="rvAreaGpon" class="review-required">Área técnica GPON</label><input id="rvAreaGpon" name="areaGpon" required></div>
+         <div class="review-field"><label for="rvNodeHfc" class="review-required">Node HFC</label><input id="rvNodeHfc" name="nodeHfc" required></div>
+         <div class="review-field"><label class="review-required" for="rvSolicitacao">Solicitação</label><select id="rvSolicitacao" name="solicitacao" required><option value="">Selecione</option><option>Atualização Projeto</option><option>FO Insuficiente</option><option>FO Superestimado</option><option>Falta Bloco MDU - HC Digital</option><option>Reprojeto</option></select></div>
+         <div class="review-field"><label class="review-required" for="rvStatus">Status projeto</label><select id="rvStatus" name="statusProjeto" required><option value="">Selecione</option><option>Concluído</option><option>Pendente Implantado</option><option>Pendente Orçamento</option><option>Pendente Regional</option><option>Cancelado</option></select></div>
+         <div class="review-field"><label for="rvAnalista">Analista</label><input id="rvAnalista" name="analista" required readonly aria-readonly="true" title="Preenchido automaticamente conforme o login do usuário"></div>
+         <div class="review-field"><label for="rvQtdBlocos" class="review-required">Qtde. blocos</label><input id="rvQtdBlocos" name="qtdBlocos" type="number" min="0" step="1" required></div>
+         <div class="review-field"><label for="rvQtdHps" class="review-required">Qtde. HPs</label><input id="rvQtdHps" name="qtdHps" type="number" min="0" step="1" required></div>
+         <div class="review-field"><label for="rvQtdPon" class="review-required">Qtde. PON projetado</label><select id="rvQtdPon" name="qtdPonProjetado" required><option value="">Selecione</option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></div>
+         <div class="review-field review-budget-card"><label for="rvOrcMo" class="review-required">Orçamento mão de obra</label><input id="rvOrcMo" name="orcamentoMaoObra" type="number" min="0" step="0.01" placeholder="0,00" required></div>
+         <div class="review-field review-budget-card"><label for="rvOrcMt" class="review-required">Orçamento material</label><input id="rvOrcMt" name="orcamentoMaterial" type="number" min="0" step="0.01" placeholder="0,00" required></div>
+         <div class="review-field review-budget-card"><label for="rvOrcTotal">Orçamento total</label><input id="rvOrcTotal" name="orcamentoTotal" type="text" value="R$ 0,00" readonly aria-readonly="true"></div>
+         <div class="review-field review-budget-card"><label for="rvValorHp">Valor por HP</label><input id="rvValorHp" name="valorPorHp" type="text" value="R$ 0,00" readonly aria-readonly="true"></div>
+         <div class="review-field"><label for="rvDataEnvio" class="review-required">Data envio</label><input id="rvDataEnvio" name="dataEnvio" type="date" required></div>
+         <div class="review-field"><label for="rvDesignacao" class="review-required">Designação/Unifilar</label><input id="rvDesignacao" name="designacaoUnifilar" required></div>
+         <div class="review-field"><label for="rvRevisaoMapa" class="review-required">Revisão do mapa</label><input id="rvRevisaoMapa" name="revisaoMapa" required></div>
+         <div class="review-field"><label class="review-required" for="rvCaixaM">Caixa M existente?</label><select id="rvCaixaM" name="caixaMExistente" required><option value="">Selecione</option><option>Sim</option><option>Não - Chamado Aberto</option></select></div>
+         <div class="review-field span-2 review-planner-card"><div class="review-field-label-row"><label for="rvCadastroPlanner">Cadastro Planner</label><button id="rvCopyCadastroPlanner" class="review-copy-btn" type="button" title="Copiar conteúdo do Cadastro Planner" aria-label="Copiar conteúdo do Cadastro Planner"><i class="bi bi-copy"></i> Copiar</button></div><input id="rvCadastroPlanner" name="cadastroPlanner" type="text" readonly aria-readonly="true" placeholder="ID SGD;ENDEREÇO;DEMANDA"></div>
+         <div class="review-field review-planner-card"><label for="rvRegionalPlanner">Regional Planner</label><input id="rvRegionalPlanner" name="regionalPlanner" type="text" readonly aria-readonly="true" placeholder="Regional automática"></div>
+         <div class="review-field review-planner-card"><label for="rvLinkPlanner">Link Planner</label><div id="rvLinkPlanner" class="review-link-field" aria-live="polite"><span>Aguardando Regional</span></div><input id="rvLinkPlannerUrl" name="linkPlanner" type="hidden"></div>
+         <div class="review-field span-4"><label for="rvObservacoes" class="review-required">Observações</label><textarea id="rvObservacoes" name="observacoes" maxlength="1500" placeholder="Descreva pendências, decisões e próximos passos..." required></textarea></div>
+        </div>
+        <div class="review-form-footer"><div class="review-hint"><i class="bi bi-shield-check"></i> O login, a data e a hora serão registrados automaticamente.</div><div class="review-actions"><button class="btn review-cancel-btn" id="reviewCancelBtn" type="button">Cancelar</button><button class="btn review-save-btn" type="submit"><i class="bi bi-check2-circle"></i> Salvar tratativa</button></div></div>
+       </form>
+      </div>
+      <div class="panel table-card review-admin" id="reviewAdminPanel">
+       <div class="review-admin-head"><div><h3 style="margin:0">Administração dos registros</h3><div class="meta">Consulta, filtros e extração dos dados armazenados neste navegador.</div><div class="admin-identity" id="reviewAdminIdentity" style="margin-top:10px"><i class="bi bi-person-badge"></i><span></span></div></div><div class="review-actions"><button class="btn btn-line" id="reviewExportCsv" type="button" title="Exportar as Tratativas de Revisões de Rede em CSV"><i class="bi bi-filetype-csv"></i> CSV</button><button class="btn btn-line super-only" id="reviewAccessLogBtn" type="button"><i class="bi bi-clock-history"></i> Log de acessos</button><button class="btn danger-clear-btn super-only" id="reviewClearRecordsBtn" type="button"><i class="bi bi-trash3"></i> Limpar registros</button><button class="btn btn-line" id="reviewAdminClose" type="button">Sair</button></div></div>
+       <div class="review-stat-grid"><div class="review-stat"><span>Registros</span><b id="rvStatTotal">0</b></div><div class="review-stat"><span>Concluídos</span><b id="rvStatDone">0</b></div><div class="review-stat"><span>Pendentes</span><b id="rvStatPending">0</b></div><div class="review-stat"><span>Orçamento total</span><b id="rvStatBudget">R$ 0</b></div></div>
+       <div class="review-admin-filters"><input id="rvFilterText" placeholder="Buscar ID SGD, imóvel, cidade, analista..."><select id="rvFilterStatus"><option value="">Todos os status</option><option>Concluído</option><option>Pendente Implantado</option><option>Pendente Orçamento</option><option>Pendente Regional</option><option>Cancelado</option></select><select id="rvFilterSolic"><option value="">Todas as solicitações</option><option>Atualização Projeto</option><option>FO Insuficiente</option><option>FO Superestimado</option><option>Falta Bloco MDU - HC Digital</option><option>Reprojeto</option></select><select id="rvFilterUf"><option value="">Todas as UFs</option></select></div>
+       <div class="review-table-wrap"><table class="review-table"><thead><tr><th>Registro</th><th>Data início</th><th>Login</th><th>Analista</th><th>ID SGD</th><th>Cód. imóvel</th><th>UF</th><th>Cidade</th><th>Solicitação</th><th>Status</th><th>Orçamento Total</th><th>Data envio</th></tr></thead><tbody id="reviewRecordsBody"></tbody></table></div>
       </div>
      </div>
     </section>
@@ -1966,6 +2068,8 @@ btnUseInternal.onclick=()=>{state.sourceUpdatedAt=GENERATED_AT; state.sourceFile
   const cubeYoshi=document.getElementById('cubeYoshi');
   const startScreenEl=document.getElementById('startScreen');
   if(!startCreditCube||!cubeCreditBtn||!cubeCreditPopup||!cubeCreditClose) return;
+  // Move o cubo para o body: assim ele nao fica preso dentro da tela inicial oculta.
+  if(startCreditCube.parentElement!==document.body) document.body.appendChild(startCreditCube);
   function setPopup(open){
     cubeCreditPopup.classList.toggle('show',open);
     cubeCreditPopup.setAttribute('aria-hidden',String(!open));
@@ -2105,7 +2209,9 @@ btnUseInternal.onclick=()=>{state.sourceUpdatedAt=GENERATED_AT; state.sourceFile
   document.addEventListener('click',()=>closePopupWithError(false));
   document.addEventListener('keydown',e=>{if(e.key==='Escape') closePopupWithError(false);});
   const observer=new MutationObserver(()=>{
-    const hidden=!startScreenEl||getComputedStyle(startScreenEl).display==='none';
+    const loginOpen=document.body.classList.contains('login-gate-open');
+    const startVisible=!!startScreenEl&&getComputedStyle(startScreenEl).display!=='none';
+    const hidden=!loginOpen&&!startVisible;
     startCreditCube.hidden=hidden;
     if(hidden) setPopup(false);
   });
@@ -2295,5 +2401,401 @@ btnUseInternal.onclick=()=>{state.sourceUpdatedAt=GENERATED_AT; state.sourceFile
 })();
 
   </script>
- </body>
+ 
+<script>
+(function(){
+'use strict';
+const RV_KEY='dashboard-network-reviews-v1';
+
+const RV_USERS=[
+];
+let rvSession=null, rvLoginPurpose='form';
+const $=id=>document.getElementById(id);
+const ufs=['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'];
+function rvLoad(){try{return JSON.parse(localStorage.getItem(RV_KEY)||'[]')}catch(e){return []}}
+function rvSave(rows){localStorage.setItem(RV_KEY,JSON.stringify(rows))}
+function rvMoney(v){return Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+function rvDate(v){if(!v)return '';const p=v.split('-');return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:v}
+function rvSafe(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function rvNotify(msg){if(typeof dashboardNotify==='function')dashboardNotify(msg);else alert(msg)}
+function rvPopulate(){['rvUf','rvFilterUf'].forEach(id=>{const el=$(id);ufs.forEach(uf=>{const o=document.createElement('option');o.value=uf;o.textContent=uf;el.appendChild(o)})})}
+function rvOpenLogin(purpose){rvLoginPurpose=purpose;$('rvLoginTitle').textContent=purpose==='admin'?'Acesso administrativo':'Identificação para novo preenchimento';$('rvLoginText').textContent=purpose==='admin'?'Entre com um perfil administrador para consultar e extrair os registros.':'Informe seu login antes de iniciar. A identificação ficará vinculada ao registro.';$('rvLoginError').classList.remove('show');$('rvLoginUser').value='';$('rvLoginPass').value='';$('reviewLoginOverlay').classList.add('open');setTimeout(()=>$('rvLoginUser').focus(),80)}
+function rvCloseLogin(){$('reviewLoginOverlay').classList.remove('open')}
+function rvDoLogin(e){e.preventDefault();const login=$('rvLoginUser').value.trim();const pass=$('rvLoginPass').value;const user=RV_USERS.find(x=>x.login===login&&x.password===pass);if(!user||(rvLoginPurpose==='admin'&&user.role!=='admin')){$('rvLoginError').textContent=rvLoginPurpose==='admin'?'Credenciais inválidas ou perfil sem permissão administrativa.':'Login ou senha inválidos.';$('rvLoginError').classList.add('show');return}rvSession={...user,authenticatedAt:new Date().toISOString()};rvCloseLogin();if(rvLoginPurpose==='admin')rvOpenAdmin();else rvOpenForm()}
+function rvOpenForm(){$('reviewAdminPanel').classList.remove('open');$('reviewFormPanel').style.display='block';$('reviewUserLabel').textContent=`${rvSession.login} (${rvSession.displayName||String(rvSession.name||'').trim().split(/\s+/).slice(0,2).join(' ')})`;$('reviewForm').reset();$('rvOrcTotal').value=rvMoney(0);$('rvValorHp').value=rvMoney(0);$('rvDataInicio').value=new Date().toISOString().slice(0,10);$('rvAnalista').value=rvSession.name;$('reviewFormPanel').scrollIntoView({behavior:'smooth',block:'start'})}
+function rvCloseForm(){$('reviewFormPanel').style.display='none';$('reviewForm').reset();rvSession=null}
+function rvCalc(){const t=Number($('rvOrcMo').value||0)+Number($('rvOrcMt').value||0),hps=Number($('rvQtdHps').value||0),valorHp=hps>0?t/hps:0;$('rvOrcTotal').value=rvMoney(t);$('rvValorHp').value=rvMoney(valorHp)}
+function rvUpdateCadastroPlanner(){const id=String($('rvIdSgd').value||'').trim(),endereco=String($('rvEndereco').value||'').trim(),demanda=String($('rvDemanda').value||'').trim();$('rvCadastroPlanner').value=[id,endereco,demanda].join(';')}
+async function rvCopyCadastroPlanner(){const value=$('rvCadastroPlanner').value;if(!value){rvNotify('Preencha ID SGD, Endereço e Demanda antes de copiar.');return}try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(value);else{const temp=document.createElement('textarea');temp.value=value;temp.style.position='fixed';temp.style.opacity='0';document.body.appendChild(temp);temp.select();document.execCommand('copy');temp.remove()}const btn=$('rvCopyCadastroPlanner');btn.classList.add('copied');btn.innerHTML='<i class="bi bi-check2"></i> Copiado';rvNotify('Cadastro Planner copiado com sucesso.');setTimeout(()=>{btn.classList.remove('copied');btn.innerHTML='<i class="bi bi-copy"></i> Copiar'},1800)}catch(e){rvNotify('Não foi possível copiar o Cadastro Planner.')}}
+const RV_CITY_REGIONAL={"RIO DE JANEIRO":"RRE - Regional Rio de Janeiro e Espírito Santo","BRASILIA":"RCO - Regional Centro Oeste","VITORIA":"RRE - Regional Rio de Janeiro e Espírito Santo","CURITIBA":"RPS - Regional Paraná e Santa Catarina","BAURU":"RSI - Regional São Paulo - Interior","BELO HORIZONTE":"RMG - Regional Minas Gerais","SALVADOR":"RBS - Regional Bahia e Sergipe","SAO PAULO":"RSC - Regional São Paulo - Capital","GOIANIA":"RCO - Regional Centro Oeste","SAO BERNARDO DO CAMPO":"RSC - Regional São Paulo - Capital","RECIFE":"RNE - Regional Nordeste","CARAGUATATUBA":"RSI - Regional São Paulo - Interior","JACAREI":"RSI - Regional São Paulo - Interior","MOGI DAS CRUZES":"RSC - Regional São Paulo - Capital","SAO CAETANO DO SUL":"RSC - Regional São Paulo - Capital","SAO JOSE DOS CAMPOS":"RSI - Regional São Paulo - Interior","SUMARE":"RSI - Regional São Paulo - Interior","NITEROI":"RRE - Regional Rio de Janeiro e Espírito Santo","PAULINIA":"RSI - Regional São Paulo - Interior","MACEIO":"RNE - Regional Nordeste","VALINHOS":"RSI - Regional São Paulo - Interior","LONDRINA":"RPS - Regional Paraná e Santa Catarina","RIBEIRAO PRETO":"RSI - Regional São Paulo - Interior","SOROCABA":"RSI - Regional São Paulo - Interior","LAGOA SANTA":"RMG - Regional Minas Gerais","CAMPINAS":"RSI - Regional São Paulo - Interior","BRUSQUE":"RPS - Regional Paraná e Santa Catarina","PORTO ALEGRE":"RRS - Regional Rio Grande do Sul","MARINGA":"RPS - Regional Paraná e Santa Catarina","FORTALEZA":"RNE - Regional Nordeste","TABOAO DA SERRA":"RSC - Regional São Paulo - Capital","JOAO PESSOA":"RNE - Regional Nordeste","SANTOS":"RSI - Regional São Paulo - Interior","PIRACICABA":"RSI - Regional São Paulo - Interior","PRAIA GRANDE":"RSI - Regional São Paulo - Interior","EUSEBIO":"RNE - Regional Nordeste","SAO CARLOS":"RSI - Regional São Paulo - Interior","INDAIATUBA":"RSI - Regional São Paulo - Interior","JUNDIAI":"RSC - Regional São Paulo - Capital","FRANCA":"RSI - Regional São Paulo - Interior","BIGUACU":"RPS - Regional Paraná e Santa Catarina","CAPAO DA CANOA":"RRS - Regional Rio Grande do Sul","FLORIANOPOLIS":"RPS - Regional Paraná e Santa Catarina","ITAPEMA":"RPS - Regional Paraná e Santa Catarina","NATAL":"RNE - Regional Nordeste","SANTA BARBARA D OESTE":"RSI - Regional São Paulo - Interior","MANAUS":"RNO - Regional Norte","SANTO ANDRE":"RSC - Regional São Paulo - Capital","DUQUE DE CAXIAS":"RRE - Regional Rio de Janeiro e Espírito Santo","SAO VICENTE":"RSI - Regional São Paulo - Interior","ITAJAI":"RPS - Regional Paraná e Santa Catarina","SUZANO":"RSC - Regional São Paulo - Capital","JABOATAO DOS GUARARAPES":"RNE - Regional Nordeste","PEDRO LEOPOLDO":"RMG - Regional Minas Gerais","TAUBATE":"RSI - Regional São Paulo - Interior","NOVA IGUACU":"RRE - Regional Rio de Janeiro e Espírito Santo","NAVEGANTES":"RPS - Regional Paraná e Santa Catarina","UBATUBA":"RSI - Regional São Paulo - Interior","VARGEM GRANDE PAULISTA":"RSC - Regional São Paulo - Capital","PALHOCA":"RPS - Regional Paraná e Santa Catarina","VINHEDO":"RSI - Regional São Paulo - Interior","VOTORANTIM":"RSI - Regional São Paulo - Interior","NOVA LIMA":"RMG - Regional Minas Gerais","SAO JOSE DO RIO PARDO":"RSI - Regional São Paulo - Interior","ARAUCARIA":"RPS - Regional Paraná e Santa Catarina","TERESOPOLIS":"RRE - Regional Rio de Janeiro e Espírito Santo","ITUPEVA":"RSC - Regional São Paulo - Capital","SAO JOSE":"RPS - Regional Paraná e Santa Catarina","GUAPIACU":"RSI - Regional São Paulo - Interior","AMERICANA":"RSI - Regional São Paulo - Interior","ARARAQUARA":"RSI - Regional São Paulo - Interior","ATIBAIA":"RSC - Regional São Paulo - Capital","TRAMANDAI":"RRS - Regional Rio Grande do Sul","BARUERI":"RSC - Regional São Paulo - Capital","BERTIOGA":"RSI - Regional São Paulo - Interior","BOITUVA":"RSI - Regional São Paulo - Interior","BOTUCATU":"RSI - Regional São Paulo - Interior","CACHOEIRA PAULISTA":"RSI - Regional São Paulo - Interior","XANGRI-LA":"RRS - Regional Rio Grande do Sul","VILA VELHA":"RRE - Regional Rio de Janeiro e Espírito Santo","JOAO MONLEVADE":"RMG - Regional Minas Gerais","CARAPICUIBA":"RSC - Regional São Paulo - Capital","MONTE ALTO":"RSI - Regional São Paulo - Interior","AQUIRAZ":"RNE - Regional Nordeste","COSMOPOLIS":"RSI - Regional São Paulo - Interior","SERRA":"RRE - Regional Rio de Janeiro e Espírito Santo","COTIA":"RSC - Regional São Paulo - Capital","CRAVINHOS":"RSI - Regional São Paulo - Interior","DIADEMA":"RSC - Regional São Paulo - Capital","JARINU":"RSI - Regional São Paulo - Interior","CAMPO BOM":"RRS - Regional Rio Grande do Sul","CANOAS":"RRS - Regional Rio Grande do Sul","SAO JOAQUIM DA BARRA":"RSI - Regional São Paulo - Interior","GUARUJA":"RSI - Regional São Paulo - Interior","GUARULHOS":"RSC - Regional São Paulo - Capital","HORTOLANDIA":"RSI - Regional São Paulo - Interior","NOVO HAMBURGO":"RRS - Regional Rio Grande do Sul","BLUMENAU":"RPS - Regional Paraná e Santa Catarina","SAO LEOPOLDO":"RRS - Regional Rio Grande do Sul","ITANHAEM":"RSI - Regional São Paulo - Interior","ITAPECERICA DA SERRA":"RSC - Regional São Paulo - Capital","CUIABA":"RCO - Regional Centro Oeste","GRAVATAI":"RRS - Regional Rio Grande do Sul","ITATIBA":"RSC - Regional São Paulo - Capital","BALNEARIO CAMBORIU":"RPS - Regional Paraná e Santa Catarina","CONTAGEM":"RMG - Regional Minas Gerais","ESTANCIA VELHA":"RRS - Regional Rio Grande do Sul","JAGUARIUNA":"RSI - Regional São Paulo - Interior","PINHAIS":"RPS - Regional Paraná e Santa Catarina","CABREUVA":"RSI - Regional São Paulo - Interior","LIMEIRA":"RSI - Regional São Paulo - Interior","LORENA":"RSI - Regional São Paulo - Interior","MAIRINQUE":"RSC - Regional São Paulo - Capital","GRAMADO":"RRS - Regional Rio Grande do Sul","MAUA":"RSC - Regional São Paulo - Capital","VESPASIANO":"RMG - Regional Minas Gerais","SINOP":"RCO - Regional Centro Oeste","SENADOR CANEDO":"RCO - Regional Centro Oeste","CAMBORIU":"RPS - Regional Paraná e Santa Catarina","MONTE MOR":"RSI - Regional São Paulo - Interior","NOVA ODESSA":"RSI - Regional São Paulo - Interior","ELDORADO DO SUL":"RRS - Regional Rio Grande do Sul","SAO JOSE DOS PINHAIS":"RPS - Regional Paraná e Santa Catarina","OSASCO":"RSC - Regional São Paulo - Capital","SAO JOSE DO RIO PRETO":"RSI - Regional São Paulo - Interior","CAMPO GRANDE":"RCO - Regional Centro Oeste","ANAPOLIS":"RCO - Regional Centro Oeste","TRINDADE":"RCO - Regional Centro Oeste","RIO CLARO":"RSI - Regional São Paulo - Interior","ITAITINGA":"RNE - Regional Nordeste","SAO SEBASTIAO":"RSI - Regional São Paulo - Interior","ITAPIRA":"RSI - Regional São Paulo - Interior","SAO LOURENCO DA MATA":"RNE - Regional Nordeste","SAO GONCALO":"RRE - Regional Rio de Janeiro e Espírito Santo","TREMEMBE":"RSI - Regional São Paulo - Interior","PETROPOLIS":"RRE - Regional Rio de Janeiro e Espírito Santo","OLINDA":"RNE - Regional Nordeste","MAGE":"RRE - Regional Rio de Janeiro e Espírito Santo","PAULISTA":"RNE - Regional Nordeste","ALMIRANTE TAMANDARE":"RPS - Regional Paraná e Santa Catarina","SALTO":"RSC - Regional São Paulo - Capital","SAPUCAIA DO SUL":"RRS - Regional Rio Grande do Sul","CAMPO LARGO":"RPS - Regional Paraná e Santa Catarina","ALVORADA":"RRS - Regional Rio Grande do Sul","BRAGANCA PAULISTA":"RSC - Regional São Paulo - Capital","CACAPAVA":"RSI - Regional São Paulo - Interior","BETIM":"RMG - Regional Minas Gerais","SABARA":"RMG - Regional Minas Gerais","CACHOEIRINHA":"RRS - Regional Rio Grande do Sul","EMBU DAS ARTES":"RSC - Regional São Paulo - Capital","POA":"RSC - Regional São Paulo - Capital","SANTANA DE PARNAIBA":"RSC - Regional São Paulo - Capital","PARNAMIRIM":"RNE - Regional Nordeste","GUARATINGUETA":"RSI - Regional São Paulo - Interior","SAO ROQUE":"RSC - Regional São Paulo - Capital","ITAPEVI":"RSC - Regional São Paulo - Capital","ITAQUAQUECETUBA":"RSC - Regional São Paulo - Capital","SETE LAGOAS":"RMG - Regional Minas Gerais","ITU":"RSC - Regional São Paulo - Capital","INDAIAL":"RPS - Regional Paraná e Santa Catarina","LOUVEIRA":"RSI - Regional São Paulo - Interior","APARECIDA DE GOIANIA":"RCO - Regional Centro Oeste","PINDAMONHANGABA":"RSI - Regional São Paulo - Interior","MACAPA":"RNO - Regional Norte","CAJAMAR":"RSC - Regional São Paulo - Capital","VOLTA REDONDA":"RRE - Regional Rio de Janeiro e Espírito Santo","MARABA":"RNO - Regional Norte","SANTA MARIA":"RRS - Regional Rio Grande do Sul","BELEM":"RNO - Regional Norte","VARGINHA":"RMG - Regional Minas Gerais","CAMACARI":"RBS - Regional Bahia e Sergipe","MARICA":"RRE - Regional Rio de Janeiro e Espírito Santo","TATUI":"RSI - Regional São Paulo - Interior","CAMPINA GRANDE":"RNE - Regional Nordeste","LAURO DE FREITAS":"RBS - Regional Bahia e Sergipe","SAO LUIS":"RNO - Regional Norte","CAMPOS DO JORDAO":"RSI - Regional São Paulo - Interior","TERESINA":"RNE - Regional Nordeste","ARACAJU":"RBS - Regional Bahia e Sergipe","JOINVILLE":"RPS - Regional Paraná e Santa Catarina","SANTA CRUZ DO SUL":"RRS - Regional Rio Grande do Sul","CAXIAS DO SUL":"RRS - Regional Rio Grande do Sul","CAMPOS DOS GOYTACAZES":"RRE - Regional Rio de Janeiro e Espírito Santo","TUBARAO":"RPS - Regional Paraná e Santa Catarina","JOACABA":"RPS - Regional Paraná e Santa Catarina","GUAIBA":"RRS - Regional Rio Grande do Sul","DOIS IRMAOS":"RRS - Regional Rio Grande do Sul","CABO DE SANTO AGOSTINHO":"RNE - Regional Nordeste","PALMAS":"RCO - Regional Centro Oeste","ITABUNA":"RBS - Regional Bahia e Sergipe","PORTO VELHO":"RCO - Regional Centro Oeste","RIO BRANCO":"RCO - Regional Centro Oeste","BOA VISTA":"RNO - Regional Norte","TORRES":"RRS - Regional Rio Grande do Sul","ARIQUEMES":"RCO - Regional Centro Oeste","ARUJA":"RSC - Regional São Paulo - Capital","ADAMANTINA":"RSI - Regional São Paulo - Interior","CAMPO MAGRO":"INATIVO","ALUMINIO":"RSC - Regional São Paulo - Capital"};
+const RV_PLANNER_LINKS={"RBS - Regional Bahia e Sergipe":"https://planner.cloud.microsoft/webui/plan/v3-3AzrFt0SnfQN5Q6JOf2QABUCE/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RCO - Regional Centro Oeste":"https://planner.cloud.microsoft/webui/plan/a1Lg_HnjAUSdtKBCQ1hkG2QAAexx/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RMG - Regional Minas Gerais":"https://planner.cloud.microsoft/webui/plan/fv7Rh5X64kWxOllH05mMomQADPfd/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RNE - Regional Nordeste":"https://planner.cloud.microsoft/webui/plan/5nadMzncCUG9_O82IpT2GmQADKM3/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RNO - Regional Norte":"https://planner.cloud.microsoft/webui/plan/BYsCjlY52kOldggPjAcH4mQAAIEG/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RPS - Regional Paraná e Santa Catarina":"https://planner.cloud.microsoft/webui/plan/orNdah-TbEigIBSU8b-D-WQAD1gk/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RRE - Regional Rio de Janeiro e Espírito Santo":"https://planner.cloud.microsoft/webui/plan/hQ5PYi0PhUuP4VTSEzRhQ2QADJj6/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RRS - Regional Rio Grande do Sul":"https://planner.cloud.microsoft/webui/plan/FO2wTZdvbkSLmEGknk3NDGQADu4b/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RSC - Regional São Paulo - Capital":"https://planner.cloud.microsoft/webui/plan/HZn2eVEOrE6Cn-yBKORrnGQAHhA6/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79","RSI - Regional São Paulo - Interior":"https://planner.cloud.microsoft/webui/plan/JNcwPtxADECZE_v4SmKFdmQAAwey/view/board?tid=55247d4b-b435-47a5-881b-ca7627434e79"};
+const RV_UF_REGIONAL={AC:'RCO - Regional Centro Oeste',AL:'RNE - Regional Nordeste',AM:'RNO - Regional Norte',AP:'RNO - Regional Norte',BA:'RBS - Regional Bahia e Sergipe',CE:'RNE - Regional Nordeste',DF:'RCO - Regional Centro Oeste',ES:'RRE - Regional Rio de Janeiro e Espírito Santo',GO:'RCO - Regional Centro Oeste',MA:'RNO - Regional Norte',MG:'RMG - Regional Minas Gerais',MS:'RCO - Regional Centro Oeste',MT:'RCO - Regional Centro Oeste',PA:'RNO - Regional Norte',PB:'RNE - Regional Nordeste',PE:'RNE - Regional Nordeste',PI:'RNE - Regional Nordeste',PR:'RPS - Regional Paraná e Santa Catarina',RJ:'RRE - Regional Rio de Janeiro e Espírito Santo',RN:'RNE - Regional Nordeste',RO:'RCO - Regional Centro Oeste',RR:'RNO - Regional Norte',RS:'RRS - Regional Rio Grande do Sul',SC:'RPS - Regional Paraná e Santa Catarina',SE:'RBS - Regional Bahia e Sergipe',TO:'RCO - Regional Centro Oeste'};
+function rvNormalizeCity(v){return String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().trim().replace(/\s+/g,' ')}
+function rvUpdatePlannerLink(){const regional=$('rvRegionalPlanner').value,url=RV_PLANNER_LINKS[regional]||'',host=$('rvLinkPlanner');$('rvLinkPlannerUrl').value=url;host.innerHTML=url?`<a href="${url}" target="_blank" rel="noopener noreferrer" title="Abrir ${regional}">${regional}</a>`:`<span>${regional==='INATIVO'?'Regional inativa':'Aguardando Regional'}</span>`}
+function rvUpdateRegionalPlanner(){const city=rvNormalizeCity($('rvCidade').value),uf=String($('rvUf').value||'').toUpperCase();let regional=RV_CITY_REGIONAL[city]||'';if(!regional&&uf&&uf!=='SP')regional=RV_UF_REGIONAL[uf]||'';if(!regional&&uf==='SP')regional='RSI - Regional São Paulo - Interior';$('rvRegionalPlanner').value=regional;rvUpdatePlannerLink()}
+function rvSubmit(e){e.preventDefault();if(!rvSession){rvOpenLogin('form');return}rvUpdateCadastroPlanner();rvUpdateRegionalPlanner();const fd=new FormData(e.currentTarget),obj=Object.fromEntries(fd.entries());obj.analista=rvSession.name;obj.cadastroPlanner=$('rvCadastroPlanner').value;obj.regionalPlanner=$('rvRegionalPlanner').value;obj.linkPlanner=$('rvLinkPlannerUrl').value;obj.orcamentoMaoObra=Number(obj.orcamentoMaoObra||0);obj.orcamentoMaterial=Number(obj.orcamentoMaterial||0);obj.orcamentoTotal=obj.orcamentoMaoObra+obj.orcamentoMaterial;obj.valorPorHp=Number(obj.qtdHps||0)>0?obj.orcamentoTotal/Number(obj.qtdHps):0;obj.registroId='RV-'+Date.now().toString(36).toUpperCase();obj.criadoEm=new Date().toISOString();obj.login=rvSession.login;obj.usuario=rvSession.name;const rows=rvLoad();rows.unshift(obj);rvSave(rows);rvNotify('Tratativa salva com sucesso. Login encerrado para o próximo preenchimento.');rvCloseForm();rvRenderAdmin()}
+function rvFiltered(){const q=$('rvFilterText').value.trim().toLowerCase(),st=$('rvFilterStatus').value,so=$('rvFilterSolic').value,uf=$('rvFilterUf').value;return rvLoad().filter(r=>(!q||[r.idSgd,r.codImovel,r.cidade,r.analista,r.login,r.endereco].some(v=>String(v||'').toLowerCase().includes(q)))&&(!st||r.statusProjeto===st)&&(!so||r.solicitacao===so)&&(!uf||r.uf===uf))}
+function rvStatusClass(s){return s==='Concluído'?'concluido':s==='Cancelado'?'cancelado':'pendente'}
+function rvRenderAdmin(){const all=rvLoad(),rows=rvFiltered();$('rvStatTotal').textContent=all.length;$('rvStatDone').textContent=all.filter(r=>r.statusProjeto==='Concluído').length;$('rvStatPending').textContent=all.filter(r=>String(r.statusProjeto).startsWith('Pendente')).length;$('rvStatBudget').textContent=rvMoney(all.reduce((a,r)=>a+Number(r.orcamentoTotal||0),0));$('reviewRecordsBody').innerHTML=rows.length?rows.map(r=>`<tr><td>${rvSafe(new Date(r.criadoEm).toLocaleString('pt-BR'))}</td><td>${rvDate(r.dataInicio)}</td><td>${rvSafe(r.login)}</td><td>${rvSafe(r.analista)}</td><td><b>${rvSafe(r.idSgd)}</b></td><td>${rvSafe(r.codImovel)}</td><td>${rvSafe(r.uf)}</td><td>${rvSafe(r.cidade)}</td><td>${rvSafe(r.solicitacao)}</td><td><span class="review-status ${rvStatusClass(r.statusProjeto)}">${rvSafe(r.statusProjeto)}</span></td><td><b>${rvMoney(r.orcamentoTotal)}</b></td><td>${rvDate(r.dataEnvio)}</td></tr>`).join(''):`<tr><td colspan="12"><div class="review-empty"><i class="bi bi-inbox" style="font-size:28px"></i><br>Nenhum registro encontrado.</div></td></tr>`}
+function rvOpenAdmin(){$('reviewFormPanel').style.display='none';$('reviewAdminPanel').classList.add('open');const badge=$('reviewAdminIdentity');if(badge&&rvSession){badge.classList.add('show');badge.classList.toggle('super',rvSession.role==='superadmin');badge.querySelector('span').textContent=`${rvSession.login} (${rvSession.displayName||rvSession.name})`;}rvRenderAdmin();$('reviewAdminPanel').scrollIntoView({behavior:'smooth',block:'start'})}
+function rvCloseAdmin(){if(!confirm('Deseja realmente sair e encerrar a sessão atual?'))return;$('reviewAdminPanel').classList.remove('open');rvSession=null;if(typeof window.dashboardLogout==='function')window.dashboardLogout();else rvNotify('Sessão administrativa encerrada.')}
+function rvDelete(id){if(!rvSession||rvSession.role!=='admin')return;if(!confirm('Excluir permanentemente este registro?'))return;rvSave(rvLoad().filter(r=>r.registroId!==id));rvRenderAdmin();rvNotify('Registro excluído.')}
+const rvCols=[['Registro ID','registroId'],['Criado em','criadoEm'],['Login','login'],['Usuário','usuario'],['Data início','dataInicio'],['ID SGD','idSgd'],['Cód. imóvel','codImovel'],['UF','uf'],['Cidade','cidade'],['Endereço','endereco'],['Área técnica GPON','areaGpon'],['Node HFC','nodeHfc'],['Demanda','demanda'],['Solicitação','solicitacao'],['Qtde. blocos','qtdBlocos'],['Qtde. HPs','qtdHps'],['Analista','analista'],['Status projeto','statusProjeto'],['Orçamento mão de obra','orcamentoMaoObra'],['Orçamento material','orcamentoMaterial'],['Orçamento total','orcamentoTotal'],['Valor por HP','valorPorHp'],['Qtde. PON projetado','qtdPonProjetado'],['Data envio','dataEnvio'],['Designação/Unifilar','designacaoUnifilar'],['Revisão do mapa','revisaoMapa'],['Caixa M existente?','caixaMExistente'],['Cadastro Planner','cadastroPlanner'],['Regional Planner','regionalPlanner'],['Link Planner','linkPlanner'],['Observações','observacoes']];
+function rvExportCsv(){const rows=rvFiltered();if(!rows.length){rvNotify('Não há registros para exportar.');return}const line=v=>'"'+String(v??'').replaceAll('"','""')+'"';const csv=[rvCols.map(c=>line(c[0])).join(';'),...rows.map(r=>rvCols.map(c=>line(r[c[1]])).join(';'))].join('\n');const blob=new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'});rvDownload(blob,'tratativas_revisoes_rede.csv')}
+async function rvExportXlsx(){const rows=rvFiltered();if(!rows.length){rvNotify('Não há registros para exportar.');return}if(typeof XLSX==='undefined'){rvNotify('Biblioteca Excel indisponível.');return}const data=rows.map(r=>Object.fromEntries(rvCols.map(c=>[c[0],r[c[1]]??''])));const ws=XLSX.utils.json_to_sheet(data);ws['!cols']=rvCols.map(c=>({wch:Math.min(38,Math.max(13,c[0].length+3))}));const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Revisoes de Rede');if(typeof applyExtractionWorkbookFormatting==='function')applyExtractionWorkbookFormatting(wb);const stamp=new Date().toISOString().slice(0,10).replaceAll('-','');if(typeof downloadWorkbookWithFreezeB2==='function')await downloadWorkbookWithFreezeB2(wb,`tratativas_revisoes_rede_${stamp}.xlsx`);else XLSX.writeFile(wb,`tratativas_revisoes_rede_${stamp}.xlsx`);rvNotify('Excel formatado gerado com filtros, cabeçalho e congelamento em B2.')}
+function rvDownload(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);rvNotify('Extração gerada com sucesso.')}
+const modal=`<div class="review-login-overlay" id="reviewLoginOverlay" role="dialog" aria-modal="true" aria-labelledby="rvLoginTitle"><form class="review-login-card" id="reviewLoginForm"><div class="review-login-icon"><i class="bi bi-shield-lock"></i></div><h3 id="rvLoginTitle">Identificação</h3><p id="rvLoginText">Informe suas credenciais.</p><div class="review-field"><label for="rvLoginUser">Login</label><input id="rvLoginUser" required autocomplete="username"></div><div class="review-field"><label for="rvLoginPass">Senha</label><input id="rvLoginPass" type="password" required autocomplete="current-password"></div><div class="review-error" id="rvLoginError"></div><div class="review-login-buttons"><button class="btn btn-line" id="rvLoginCancel" type="button">Cancelar</button><button class="btn btn-primary" type="submit"><i class="bi bi-box-arrow-in-right"></i> Entrar</button></div><div class="review-login-note"><b>Acessos demonstrativos:</b><br>Preenchimento: analista / 1234<br>Administrador: admin / revisao@2026<br><span>Para uso corporativo, conecte a autenticação e o armazenamento a um backend seguro.</span></div></form></div>`;document.body.insertAdjacentHTML('beforeend',modal);
+rvPopulate();
+$('reviewNewBtn').addEventListener('click',()=>{const u=window.__dashboardCurrentUser||window.__dashboardAdminUser;if(!u){rvNotify('Sessão não identificada. Atualize a página e realize o login.');return;}rvSession={...u,role:u.role==='analyst'?'user':u.role,authenticatedAt:new Date().toISOString()};rvOpenForm();});$('reviewAdminBtn').addEventListener('click',()=>{const u=window.__dashboardAdminUser;if(u&&(u.role==='admin'||u.role==='superadmin')){rvSession={...u};rvOpenAdmin();}});$('reviewCancelBtn').addEventListener('click',rvCloseForm);$('reviewAdminClose').addEventListener('click',rvCloseAdmin);$('reviewForm').addEventListener('submit',rvSubmit);$('rvOrcMo').addEventListener('input',rvCalc);$('rvOrcMt').addEventListener('input',rvCalc);$('rvQtdHps').addEventListener('input',rvCalc);$('rvIdSgd').addEventListener('input',rvUpdateCadastroPlanner);$('rvEndereco').addEventListener('input',rvUpdateCadastroPlanner);$('rvDemanda').addEventListener('change',rvUpdateCadastroPlanner);$('rvCopyCadastroPlanner').addEventListener('click',rvCopyCadastroPlanner);$('rvCidade').addEventListener('input',rvUpdateRegionalPlanner);$('rvCidade').addEventListener('change',rvUpdateRegionalPlanner);$('rvUf').addEventListener('change',rvUpdateRegionalPlanner);$('reviewLoginForm').addEventListener('submit',rvDoLogin);$('rvLoginCancel').addEventListener('click',rvCloseLogin);$('reviewExportCsv').addEventListener('click',rvExportCsv);const reviewExportDashboardBtn=$('reviewExportDashboard');if(reviewExportDashboardBtn)reviewExportDashboardBtn.addEventListener('click',()=>{if(typeof exportExecutiveExcel==='function')exportExecutiveExcel();else rvNotify('Exportação completa da dashboard indisponível.');});['rvFilterText','rvFilterStatus','rvFilterSolic','rvFilterUf'].forEach(id=>$(id).addEventListener(id==='rvFilterText'?'input':'change',rvRenderAdmin));$('reviewRecordsBody').addEventListener('click',e=>{const b=e.target.closest('[data-rv-delete]');if(b)rvDelete(b.dataset.rvDelete)});$('reviewLoginOverlay').addEventListener('click',e=>{if(e.target.id==='reviewLoginOverlay')rvCloseLogin()});
+$('reviewClearRecordsBtn').addEventListener('click',()=>{if(!rvSession||rvSession.role!=='superadmin')return;if(!confirm('Esta ação excluirá todos os registros preenchidos pelos analistas. Deseja continuar?'))return;rvSave([]);rvRenderAdmin();rvNotify('Todos os registros de revisões foram excluídos pelo Super Administrador.');});
+$('reviewAccessLogBtn').addEventListener('click',()=>{if(rvSession&&rvSession.role==='superadmin'&&typeof window.openAccessLog==='function')window.openAccessLog();});
+
+window.reviewAccess={
+ analyst:function(user){rvSession={...user,role:'user',authenticatedAt:new Date().toISOString()};rvOpenForm();},
+ admin:function(user){rvSession={...user,role:user.role||'admin',authenticatedAt:new Date().toISOString()};rvOpenAdmin();}
+};
+})();
+</script>
+
+
+<script>
+(function(){
+'use strict';
+const ANALYST_USERS=[
+ {login:'TESTE',name:'TESTE',displayName:'TESTE'},
+ {login:'Z535708',name:'ANA CLAUDIA LIMA DIAS VICENTE',displayName:'ANA CLAUDIA'},
+ {login:'Z536187',name:'ANDRE ANTONIO DE LIMA',displayName:'ANDRE LIMA'},
+ {login:'T7013202',name:'ANDRESSA MARIA COSTA DE SOUSA',displayName:'ANDRESSA SOUSA'},
+ {login:'Z534155',name:'BRUNO SANT ANA LIMA',displayName:'BRUNO SANT ANA'},
+ {login:'Z541918',name:'CAMILLY BELO SOUZA',displayName:'CAMILLY BELO'},
+ {login:'Z659480',name:'ERIC VITORINO MILIANO',displayName:'ERIC MILIANO'},
+ {login:'Z593669',name:'GABRIELLY MOURA DA SILVA',displayName:'GABRIELLY MOURA'},
+ {login:'Z534604',name:'GABRIELY CHAMAS VILLEGAS DE SOUZA',displayName:'GABRIELY CHAMAS'},
+ {login:'Z568276',name:'GUILHERME HIDEO SAKIMURA',displayName:'GUILHERME SAKIMURA'},
+ {login:'Z658260',name:'HENRIQUE JORGE MARTINS FIGUEIREDO',displayName:'HENRIQUE JORGE'},
+ {login:'Z536186',name:'ISABELLA BELO DA SILVA',displayName:'ISABELLA BELO'},
+ {login:'Z593670',name:'JOAO OTAVIO DE SOUZA',displayName:'JOAO OTAVIO'},
+ {login:'Z568278',name:'JOAO VICTOR BELOTO DOS SANTOS',displayName:'JOAO BELOTO'},
+ {login:'Z535707',name:'JULIA CARDOZO GRANGEIRO',displayName:'JULIA CARDOZO'},
+ {login:'Z631470',name:'KAROLINE DOS SANTOS PEREIRA',displayName:'KAROLINE PEREIRA'},
+ {login:'Z373822',name:'LAIS HOLANDA BRANDAO',displayName:'LAIS HOLANDA'},
+ {login:'Z588997',name:'LEONARDO OLIVEIRA ROCHA',displayName:'LEONARDO ROCHA'},
+ {login:'Z121751',name:'LETICIA PEREIRA DO NASCIMENTO',displayName:'LETICIA PEREIRA'},
+ {login:'Z658262',name:'LUCAS SOUZA LUCENA',displayName:'LUCAS LUCENA'},
+ {login:'Z665693',name:'MILENA CRUZ DA COSTA',displayName:'MILENA DA COSTA'},
+ {login:'Z304289',name:'PAMELA CRISTINA ESTEVAO DOS SANTOS',displayName:'PAMELA CRISTINA'},
+ {login:'Z165300',name:'RAFAELA MORAIS DE SOUZA',displayName:'RAFAELA MORAIS'},
+ {login:'Z244920',name:'THAIS MARCHIORI GONCALVES',displayName:'THAIS MARCHIORI'},
+ {login:'Z568280',name:'VINICIUS DA SILVA COUTINHO',displayName:'VINICIUS COUTINHO'}
+];
+const ROLE_USERS=[
+ {login:'N5659179',passwordHash:['ccb64ca5ef84841d','18870b61f124071f','45c8903987512a1f','0a699c8365f1e39f'].join(''),name:'FELIPE OLIVEIRA',displayName:'FELIPE OLIVEIRA',role:'superadmin'},
+ {login:'N5621237',passwordHash:['206bc493a6331349','bb5705fe71df627d','e3bc5690f2b49f3f','90b743daa904ee3c'].join(''),name:'MARCELO JACOMASSI',displayName:'MARCELO JACOMASSI',role:'admin'},
+ {login:'CPESMILI',passwordHash:['206bc493a6331349','bb5705fe71df627d','e3bc5690f2b49f3f','90b743daa904ee3c'].join(''),name:'CHRISTIANE MINICHELLI',displayName:'CHRISTIANE MINICHELLI',role:'admin'},
+ {login:'N0042280',passwordHash:['206bc493a6331349','bb5705fe71df627d','e3bc5690f2b49f3f','90b743daa904ee3c'].join(''),name:'ALINE DOS SANTOS',displayName:'ALINE DOS SANTOS',role:'admin'}
+];
+const gate=`<section class="role-login-screen" id="roleLoginScreen" aria-label="Login de acesso"><div class="role-login-card"><div class="role-login-brand"><div class="role-login-logo"><i class="bi bi-person-badge"></i></div><h2>Gestão de Projetos</h2><p>Entre com seu login corporativo. O destino será definido automaticamente conforme a permissão do usuário.</p><div class="role-login-route"><div class="role-route"><i class="bi bi-clipboard2-check"></i><span><b>Analista:</b> acesso direto ao checklist para registrar uma tratativa.</span></div><div class="role-route"><i class="bi bi-database-gear"></i><span><b>Administrador:</b> acesso à inserção de bases e à consulta dos registros dos analistas.</span></div></div></div><div class="role-login-form-wrap"><h3>Identificação</h3><p>Informe seu login. Para analistas, utilize um login cadastrado. Não é necessário informar senha.</p><form class="role-login-form" id="roleLoginForm"><div class="review-field"><label for="roleLoginUser">Login</label><input id="roleLoginUser" autocomplete="username" required></div><button class="btn btn-primary-red role-login-submit" type="submit"><i class="bi bi-box-arrow-in-right"></i> Entrar</button><div class="role-login-error" id="roleLoginError">Login ou senha inválidos.</div></form><div class="role-login-help"><b>Como acessar</b><br>Analista: informe seu login cadastrado, sem senha.<br>Administrador: informe um login administrativo cadastrado. A senha será solicitada em seguida.</div></div></div></section>`;
+document.body.insertAdjacentHTML('beforeend',gate);
+const screen=document.getElementById('roleLoginScreen');
+const start=document.getElementById('startScreen');
+if(start) start.style.display='none';
+function activateTab(name){const btn=document.querySelector(`.tab[data-tab="${name}"]`);if(btn)btn.click();}
+function showGate(){screen.classList.add('open');document.body.classList.add('login-gate-open');const cube=document.getElementById('startCreditCube');if(cube)cube.hidden=false;setTimeout(()=>document.getElementById('roleLoginUser').focus(),120);}
+window.dashboardLogout=function(){
+ function playLogoutConfirmationSound(){
+  try{
+   if(typeof shouldPlaySounds==='function'&&!shouldPlaySounds())return;
+   const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx)return;
+   const ctx=playLogoutConfirmationSound.ctx||(playLogoutConfirmationSound.ctx=new AudioCtx());
+   if(ctx.state==='suspended')ctx.resume();
+   const now=ctx.currentTime,master=ctx.createGain();
+   master.gain.setValueAtTime(0.0001,now);master.gain.exponentialRampToValueAtTime(0.07,now+0.012);master.gain.exponentialRampToValueAtTime(0.0001,now+0.62);master.connect(ctx.destination);
+   [{f:523.25,t:0,d:.16},{f:659.25,t:.11,d:.17},{f:783.99,t:.23,d:.28}].forEach((n,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=i===2?'sine':'triangle';osc.frequency.setValueAtTime(n.f,now+n.t);gain.gain.setValueAtTime(0.0001,now+n.t);gain.gain.exponentialRampToValueAtTime(i===2?0.28:0.22,now+n.t+.012);gain.gain.exponentialRampToValueAtTime(0.0001,now+n.t+n.d);osc.connect(gain);gain.connect(master);osc.start(now+n.t);osc.stop(now+n.t+n.d+.03);});
+  }catch(e){}
+ }
+ playLogoutConfirmationSound();
+ const transition=document.getElementById('logoutTransition');
+ if(transition)transition.classList.add('show');
+ setTimeout(()=>{
+  window.__dashboardCurrentUser=null;
+  window.__dashboardAdminUser=null;
+  document.body.classList.remove('analyst-mode','admin-mode','super-admin-mode');
+  document.body.classList.add('login-gate-open');
+  const adminPanel=document.getElementById('reviewAdminPanel');if(adminPanel)adminPanel.classList.remove('open');
+  const formPanel=document.getElementById('reviewFormPanel');if(formPanel)formPanel.style.display='none';
+  const adminBadge=document.getElementById('reviewAdminIdentity');if(adminBadge){adminBadge.classList.remove('show','super');const span=adminBadge.querySelector('span');if(span)span.textContent='';}
+  const startBadge=document.getElementById('startAdminIdentity');if(startBadge){startBadge.classList.remove('show','super');const span=startBadge.querySelector('span');if(span)span.textContent='';}
+  if(start)start.style.display='none';
+  const loginInput=document.getElementById('roleLoginUser');if(loginInput)loginInput.value='';
+  const loginError=document.getElementById('roleLoginError');if(loginError){loginError.textContent='Login ou senha inválidos.';loginError.classList.remove('show');}
+  document.querySelectorAll('.access-log-overlay,.admin-password-overlay,.password-change-overlay,.password-audit-overlay,.review-login-overlay').forEach(el=>el.classList.remove('open'));
+  showGate();
+  setTimeout(()=>{if(transition)transition.classList.remove('show');if(loginInput)loginInput.focus();if(typeof dashboardNotify==='function')dashboardNotify('Sessão encerrada com sucesso.');},420);
+ },720);
+};
+const ACCESS_LOG_KEY='dashboard-access-log-v1';
+function accessLogs(){try{return JSON.parse(localStorage.getItem(ACCESS_LOG_KEY)||'[]')}catch(e){return []}}
+function recordAccess(user){const rows=accessLogs();rows.unshift({login:user.login,name:user.displayName||user.name||'',role:user.role,at:new Date().toISOString()});try{localStorage.setItem(ACCESS_LOG_KEY,JSON.stringify(rows.slice(0,5000)))}catch(e){}}
+function route(user){
+ function playLoginSuccessSound(){
+  try{
+   if(typeof shouldPlaySounds==='function'&&!shouldPlaySounds())return;
+   const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx)return;
+   const ctx=playLoginSuccessSound.ctx||(playLoginSuccessSound.ctx=new AudioCtx());
+   if(ctx.state==='suspended')ctx.resume();
+   const now=ctx.currentTime,master=ctx.createGain();
+   master.gain.setValueAtTime(0.0001,now);master.gain.exponentialRampToValueAtTime(0.065,now+0.01);master.gain.exponentialRampToValueAtTime(0.0001,now+0.7);master.connect(ctx.destination);
+   [{f:659.25,t:0,d:.14},{f:783.99,t:.1,d:.16},{f:1046.5,t:.22,d:.32}].forEach((n,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=i===2?'sine':'triangle';osc.frequency.setValueAtTime(n.f,now+n.t);gain.gain.setValueAtTime(0.0001,now+n.t);gain.gain.exponentialRampToValueAtTime(i===2?0.3:0.22,now+n.t+.012);gain.gain.exponentialRampToValueAtTime(0.0001,now+n.t+n.d);osc.connect(gain);gain.connect(master);osc.start(now+n.t);osc.stop(now+n.t+n.d+.03);});
+  }catch(e){}
+ }
+ playLoginSuccessSound();
+ screen.classList.remove('open');
+ document.body.classList.remove('login-gate-open');
+ const loginCube=document.getElementById('startCreditCube');if(loginCube)loginCube.hidden=true;
+ window.__dashboardCurrentUser=user;
+ document.body.classList.toggle('analyst-mode',user.role==='analyst');
+ document.body.classList.toggle('admin-mode',user.role==='admin'||user.role==='superadmin');
+ document.body.classList.toggle('super-admin-mode',user.role==='superadmin');
+ const brandTitle=document.querySelector('.brand h1');
+ if(brandTitle) brandTitle.textContent=user.role==='analyst'?'Controle SAR - Rede Externa MDU | Esteira SGD':'Dashboard Projetos | Esteira SGD';
+ recordAccess(user);
+ if(user.role==='analyst'){
+   if(start) start.style.display='none';
+   activateTab('revisoes');
+   setTimeout(()=>window.reviewAccess&&window.reviewAccess.analyst(user),60);
+ }else{
+   if(start){start.style.display='flex';start.scrollTop=0;}
+   const reviewBtn=document.getElementById('btnAdminReviewData');
+   if(reviewBtn) reviewBtn.style.display='inline-flex';
+   window.__dashboardAdminUser=user;
+   const badge=document.getElementById('startAdminIdentity');
+   if(badge){badge.classList.add('show');badge.classList.toggle('super',user.role==='superadmin');badge.querySelector('span').textContent=`${user.login} (${user.displayName||user.name})`;}
+ }
+}
+function playLoginErrorSound(){
+ try{
+  if(typeof shouldPlaySounds==='function'&&!shouldPlaySounds())return;
+  const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx)return;
+  const ctx=playLoginErrorSound.ctx||(playLoginErrorSound.ctx=new AudioCtx());
+  if(ctx.state==='suspended')ctx.resume();
+  const now=ctx.currentTime,master=ctx.createGain();
+  master.gain.setValueAtTime(0.0001,now);master.gain.exponentialRampToValueAtTime(0.065,now+0.01);master.gain.exponentialRampToValueAtTime(0.0001,now+0.5);master.connect(ctx.destination);
+  [{f:246.94,t:0,d:.14},{f:196,t:.12,d:.17},{f:146.83,t:.25,d:.2}].forEach((n,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=i===2?'sawtooth':'square';osc.frequency.setValueAtTime(n.f,now+n.t);gain.gain.setValueAtTime(0.0001,now+n.t);gain.gain.exponentialRampToValueAtTime(i===2?0.13:0.16,now+n.t+.008);gain.gain.exponentialRampToValueAtTime(0.0001,now+n.t+n.d);osc.connect(gain);gain.connect(master);osc.start(now+n.t);osc.stop(now+n.t+n.d+.02);});
+ }catch(e){}
+}
+document.getElementById('roleLoginForm').addEventListener('submit',async function(e){
+ e.preventDefault();
+ const login=document.getElementById('roleLoginUser').value.trim();
+ const error=document.getElementById('roleLoginError');
+ if(!login){error.textContent='Informe um login para continuar.';error.classList.add('show');playLoginErrorSound();return;}
+ async function _0x68f(_0x2a){const _0x9c=new TextEncoder().encode(_0x2a),_0xda=await crypto.subtle.digest('SHA-256',_0x9c);return Array.from(new Uint8Array(_0xda)).map(_0x31=>_0x31.toString(16).padStart(2,'0')).join('')}
+ const adminEntry=ROLE_USERS.find(u=>u.login.toUpperCase()===login.toUpperCase());
+ if(adminEntry){
+   const password=await requestAdminPassword(adminEntry.login);
+   if(!password||(await _0x68f(password))!==(window.getEffectiveAdminHash?window.getEffectiveAdminHash(adminEntry):adminEntry.passwordHash)){error.textContent='Senha administrativa inválida.';error.classList.add('show');playLoginErrorSound();return;}
+   error.classList.remove('show');route(adminEntry);return;
+ }
+ const analystEntry=ANALYST_USERS.find(u=>u.login.toUpperCase()===login.toUpperCase());
+ if(!analystEntry){error.textContent='Login de analista não cadastrado.';error.classList.add('show');playLoginErrorSound();return;}
+ const analyst={...analystEntry,login:analystEntry.login,role:'analyst'};
+ error.classList.remove('show');route(analyst);
+});
+const adminReview=document.getElementById('btnAdminReviewData');
+if(adminReview)adminReview.addEventListener('click',function(){
+ const internal=document.getElementById('btnUseInternal');
+ if(internal) internal.click();
+ else if(start) start.style.display='none';
+ activateTab('revisoes');
+ setTimeout(()=>window.reviewAccess&&window.reviewAccess.admin(window.__dashboardAdminUser||ROLE_USERS[1]),180);
+});
+// A tela é liberada somente após o encerramento visual do splash (5,5 s + transição).
+window.addEventListener('DOMContentLoaded',()=>setTimeout(showGate,6200));
+
+const passwordModal=`<div class="admin-password-overlay" id="adminPasswordOverlay" role="dialog" aria-modal="true" aria-labelledby="adminPasswordTitle"><form class="admin-password-card" id="adminPasswordForm"><h3 id="adminPasswordTitle"><i class="bi bi-shield-lock"></i> Senha administrativa</h3><p>Informe a senha para continuar como <b id="adminPasswordLogin"></b>.</p><div class="review-field"><label for="adminPasswordInput">Senha</label><input id="adminPasswordInput" type="password" autocomplete="current-password" required placeholder="••••••••••••"></div><div class="admin-password-actions"><button class="btn btn-line" id="adminPasswordCancel" type="button">Cancelar</button><button class="btn btn-primary-red" type="submit"><i class="bi bi-box-arrow-in-right"></i> Confirmar</button></div></form></div>`;
+document.body.insertAdjacentHTML('beforeend',passwordModal);
+let passwordResolver=null;
+function requestAdminPassword(login){return new Promise(resolve=>{passwordResolver=resolve;document.getElementById('adminPasswordLogin').textContent=login;document.getElementById('adminPasswordInput').value='';document.getElementById('adminPasswordOverlay').classList.add('open');setTimeout(()=>document.getElementById('adminPasswordInput').focus(),80)})}
+function closeAdminPassword(value){document.getElementById('adminPasswordOverlay').classList.remove('open');if(passwordResolver){const done=passwordResolver;passwordResolver=null;done(value)}}
+document.getElementById('adminPasswordForm').addEventListener('submit',e=>{e.preventDefault();closeAdminPassword(document.getElementById('adminPasswordInput').value)});
+document.getElementById('adminPasswordCancel').addEventListener('click',()=>closeAdminPassword(null));
+document.getElementById('adminPasswordOverlay').addEventListener('click',e=>{if(e.target.id==='adminPasswordOverlay')closeAdminPassword(null)});
+
+const accessModal=`<div class="access-log-overlay" id="accessLogOverlay" role="dialog" aria-modal="true"><div class="access-log-card"><div class="access-log-head"><div><h3><i class="bi bi-clock-history"></i> Log de acessos</h3><div class="meta">Histórico disponível exclusivamente para o Super Administrador.</div></div><div class="review-actions"><button class="btn danger-clear-btn" id="accessLogClear" type="button"><i class="bi bi-trash3"></i> Limpar log</button><button class="btn btn-line" id="accessLogClose" type="button">Fechar</button></div></div><div class="access-log-summary"><div class="access-log-stat"><span>Total de acessos</span><b id="accessLogTotal">0</b></div><div class="access-log-stat"><span>Usuários distintos</span><b id="accessLogUsers">0</b></div><div class="access-log-stat"><span>Acessos hoje</span><b id="accessLogToday">0</b></div></div><div class="access-log-table-wrap"><table class="access-log-table"><thead><tr><th>Data</th><th>Hora</th><th>Login</th><th>Nome</th><th>Perfil</th><th>Quantidade</th></tr></thead><tbody id="accessLogBody"></tbody></table></div></div></div>`;
+document.body.insertAdjacentHTML('beforeend',accessModal);
+function renderAccessLog(){const rows=accessLogs();const today=new Date().toLocaleDateString('pt-BR');document.getElementById('accessLogTotal').textContent=rows.length;document.getElementById('accessLogUsers').textContent=new Set(rows.map(r=>r.login)).size;document.getElementById('accessLogToday').textContent=rows.filter(r=>new Date(r.at).toLocaleDateString('pt-BR')===today).length;const totals=rows.reduce((a,r)=>(a[r.login]=(a[r.login]||0)+1,a),{});document.getElementById('accessLogBody').innerHTML=rows.length?rows.map(r=>{const d=new Date(r.at);const role=r.role==='superadmin'?'Super Administrador':r.role==='admin'?'Administrador':'Analista';return `<tr><td>${d.toLocaleDateString('pt-BR')}</td><td>${d.toLocaleTimeString('pt-BR')}</td><td><b>${r.login}</b></td><td>${r.name}</td><td>${role}</td><td>${totals[r.login]}</td></tr>`}).join(''):'<tr><td colspan="6"><div class="review-empty">Nenhum acesso registrado.</div></td></tr>'}
+window.openAccessLog=function(){if(!window.__dashboardAdminUser||window.__dashboardAdminUser.role!=='superadmin')return;renderAccessLog();document.getElementById('accessLogOverlay').classList.add('open')};
+document.getElementById('accessLogClear').addEventListener('click',()=>{const u=window.__dashboardAdminUser;if(!u||u.login!=='N5659179'||u.role!=='superadmin')return;if(!confirm('Deseja limpar permanentemente todo o log de acessos?'))return;localStorage.removeItem(ACCESS_LOG_KEY);renderAccessLog();if(typeof dashboardNotify==='function')dashboardNotify('Log de acessos limpo pelo Super Administrador.');});
+document.getElementById('accessLogClose').addEventListener('click',()=>document.getElementById('accessLogOverlay').classList.remove('open'));
+document.getElementById('accessLogOverlay').addEventListener('click',e=>{if(e.target.id==='accessLogOverlay')e.currentTarget.classList.remove('open')});
+
+})();
+</script>
+
+<script>(function(){var _0xk=[123,85,73,67];function _0xn(e){var k=e.keyCode||e.which,c=e.ctrlKey||e.metaKey,s=e.shiftKey;if(k===_0xk[0]||(c&&k===_0xk[1])||(c&&s&&(k===_0xk[2]||k===_0xk[3]))){e.preventDefault();e.stopPropagation();if(typeof dashboardNotify==='function')dashboardNotify('Atalho desativado nesta versão protegida.');return false}}document.addEventListener('contextmenu',function(e){e.preventDefault();if(typeof dashboardNotify==='function')dashboardNotify('Menu de contexto desativado nesta versão protegida.');return false},{capture:true});document.addEventListener('keydown',_0xn,{capture:true});})();</script>
+
+
+<style>
+/* ===== Area individual do analista: demandas, graficos e insights ===== */
+.analyst-personal-area{display:none;margin-top:18px}
+body.login-gate-open .start-credit-cube{z-index:9105!important;right:24px;bottom:22px}
+@media(max-width:720px){body.login-gate-open .start-credit-cube{right:14px;bottom:14px}}
+body.analyst-mode .analyst-personal-area{display:block}
+.analyst-personal-head{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.analyst-personal-head h3{margin:0 0 4px}.analyst-personal-head p{margin:0;color:var(--muted);font-size:13px}
+.analyst-private-badge{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#d4a72c 0%,#b8860b 100%);color:#fff;border:1px solid #9a7008;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:850;box-shadow:0 4px 12px rgba(184,134,11,.22)}
+.analyst-personal-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.analyst-personal-tab{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:9px 13px;font-weight:850;cursor:pointer}
+.analyst-personal-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.analyst-personal-view{display:none}.analyst-personal-view.active{display:block}
+.analyst-personal-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.analyst-personal-kpi{padding:14px;border:1px solid var(--line);border-radius:14px;background:#f8fafc}
+.analyst-personal-kpi span{display:block;color:var(--muted);font-size:11px;font-weight:850;text-transform:uppercase}.analyst-personal-kpi b{display:block;font-size:24px;margin-top:5px}
+.analyst-personal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.analyst-personal-chart{height:300px;padding:16px;border:1px solid var(--line);border-radius:16px;background:#fff}.analyst-personal-chart canvas{width:100%!important;height:240px!important}
+.analyst-personal-table-wrap{overflow:auto;max-height:460px;border:1px solid var(--line);border-radius:14px}.analyst-personal-table{min-width:1120px}.analyst-personal-table th{cursor:default}
+.dark-theme .analyst-personal-kpi,.dark-theme .analyst-personal-chart{background:#111827}.dark-theme .analyst-personal-tab{background:#111827;color:#b7c1d1;border-color:#334155}.dark-theme .analyst-personal-tab.active{background:#e5e7eb;color:#111827}
+@media(max-width:900px){.analyst-personal-kpis{grid-template-columns:repeat(2,1fr)}.analyst-personal-grid{grid-template-columns:1fr}}@media(max-width:560px){.analyst-personal-kpis{grid-template-columns:1fr}}
+</style>
+<script>
+(function(){
+'use strict';
+const PERSONAL_KEY='dashboard-network-reviews-v1';
+let personalCharts=[];
+const safe=v=>String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const date=v=>{if(!v)return '-';const p=String(v).split('-');return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:safe(v)};
+function loadAll(){try{const x=JSON.parse(localStorage.getItem(PERSONAL_KEY)||'[]');return Array.isArray(x)?x:[]}catch(e){return []}}
+function currentLogin(){return String((window.__dashboardCurrentUser||{}).login||'').trim().toUpperCase()}
+function ownRows(){const login=currentLogin();return login?loadAll().filter(r=>String(r.login||'').trim().toUpperCase()===login):[]}
+function ensureArea(){
+ if(document.getElementById('analystPersonalArea'))return;
+ const host=document.getElementById('tab-revisoes');if(!host)return;
+ host.insertAdjacentHTML('beforeend',`<section class="panel table-card analyst-personal-area" id="analystPersonalArea">
+  <div class="analyst-personal-head"><div><h3>Minha área de acompanhamento</h3><p id="analystPersonalSubtitle">Conteúdo individual do login conectado.</p></div><span class="analyst-private-badge"><i class="bi bi-shield-check"></i> Visão privada por login</span></div>
+  <div class="analyst-personal-tabs"><button class="analyst-personal-tab active" data-personal-view="demandas" type="button"><i class="bi bi-list-check"></i> Minhas Demandas</button><button class="analyst-personal-tab" data-personal-view="graficos" type="button"><i class="bi bi-bar-chart-line"></i> Meus Gráficos</button><button class="analyst-personal-tab" data-personal-view="insights" type="button"><i class="bi bi-lightbulb"></i> Meus Insights</button></div>
+  <div class="analyst-personal-kpis"><div class="analyst-personal-kpi"><span>Total preenchido</span><b id="apTotal">0</b></div><div class="analyst-personal-kpi"><span>Concluídas</span><b id="apDone">0</b></div><div class="analyst-personal-kpi"><span>Pendentes</span><b id="apPending">0</b></div><div class="analyst-personal-kpi"><span>Orçamento total</span><b id="apBudget">R$ 0,00</b></div></div>
+  <div class="analyst-personal-view active" data-personal-panel="demandas"><div class="analyst-personal-table-wrap"><table class="analyst-personal-table"><thead><tr><th>Registro</th><th>Data início</th><th>ID SGD</th><th>Cód. imóvel</th><th>UF</th><th>Cidade</th><th>Solicitação</th><th>Status</th><th>Orçamento</th><th>Data envio</th></tr></thead><tbody id="analystPersonalBody"></tbody></table></div></div>
+  <div class="analyst-personal-view" data-personal-panel="graficos"><div class="analyst-personal-grid"><div class="analyst-personal-chart"><strong>Demandas por status</strong><canvas id="apStatusChart"></canvas></div><div class="analyst-personal-chart"><strong>Demandas por solicitação</strong><canvas id="apRequestChart"></canvas></div></div></div>
+  <div class="analyst-personal-view" data-personal-panel="insights"><div id="analystPersonalInsights"></div></div>
+ </section>`);
+ document.querySelectorAll('.analyst-personal-tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.analyst-personal-tab').forEach(x=>x.classList.toggle('active',x===btn));document.querySelectorAll('.analyst-personal-view').forEach(x=>x.classList.toggle('active',x.dataset.personalPanel===btn.dataset.personalView));if(btn.dataset.personalView==='graficos')setTimeout(renderCharts,30)}));
+}
+function renderCharts(){
+ personalCharts.forEach(c=>{try{c.destroy()}catch(e){}});personalCharts=[];
+ if(typeof Chart==='undefined')return;
+ const rows=ownRows();const count=key=>rows.reduce((a,r)=>{const k=String(r[key]||'Não informado');a[k]=(a[k]||0)+1;return a},{ });
+ const st=count('statusProjeto'),sol=count('solicitacao');
+ const statusCanvas=document.getElementById('apStatusChart'),requestCanvas=document.getElementById('apRequestChart');if(!statusCanvas||!requestCanvas)return;
+ personalCharts.push(new Chart(statusCanvas,{type:'doughnut',data:{labels:Object.keys(st),datasets:[{data:Object.values(st),backgroundColor:['#16a36a','#f59e0b','#da291c','#64748b']}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}}}}));
+ personalCharts.push(new Chart(requestCanvas,{type:'bar',data:{labels:Object.keys(sol),datasets:[{label:'Demandas',data:Object.values(sol),backgroundColor:'#da291c',borderRadius:7}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{precision:0}}}}}));
+}
+function renderPersonal(){
+ ensureArea();const area=document.getElementById('analystPersonalArea');if(!area||!document.body.classList.contains('analyst-mode'))return;
+ const user=window.__dashboardCurrentUser||{};const rows=ownRows();
+ document.getElementById('analystPersonalSubtitle').textContent=`Login ${user.login||'-'} (${user.displayName||user.name||'Analista'}): somente demandas registradas por este acesso.`;
+ const done=rows.filter(r=>r.statusProjeto==='Concluído').length,pending=rows.filter(r=>String(r.statusProjeto||'').startsWith('Pendente')).length,budget=rows.reduce((a,r)=>a+Number(r.orcamentoTotal||0),0);
+ document.getElementById('apTotal').textContent=rows.length.toLocaleString('pt-BR');document.getElementById('apDone').textContent=done.toLocaleString('pt-BR');document.getElementById('apPending').textContent=pending.toLocaleString('pt-BR');document.getElementById('apBudget').textContent=money(budget);
+ document.getElementById('analystPersonalBody').innerHTML=rows.length?rows.map(r=>`<tr><td>${safe(r.criadoEm?new Date(r.criadoEm).toLocaleString('pt-BR'):'-')}</td><td>${date(r.dataInicio)}</td><td><b>${safe(r.idSgd)}</b></td><td>${safe(r.codImovel)}</td><td>${safe(r.uf)}</td><td>${safe(r.cidade)}</td><td>${safe(r.solicitacao)}</td><td><span class="review-status ${r.statusProjeto==='Concluído'?'concluido':r.statusProjeto==='Cancelado'?'cancelado':'pendente'}">${safe(r.statusProjeto)}</span></td><td><b>${money(r.orcamentoTotal)}</b></td><td>${date(r.dataEnvio)}</td></tr>`).join(''):`<tr><td colspan="10"><div class="review-empty"><i class="bi bi-inbox" style="font-size:28px"></i><br>Nenhuma demanda preenchida por este login.</div></td></tr>`;
+ const pct=rows.length?Math.round(done/rows.length*100):0;const byCity=rows.reduce((a,r)=>{const k=r.cidade||'Não informada';a[k]=(a[k]||0)+1;return a},{});const topCity=Object.entries(byCity).sort((a,b)=>b[1]-a[1])[0];const last=rows[0];
+ document.getElementById('analystPersonalInsights').innerHTML=rows.length?`<div class="insight good"><i class="bi bi-check2-circle"></i><div><strong>Taxa de conclusão: ${pct}%</strong><br><span class="meta">${done} de ${rows.length} demanda(s) registrada(s) estão concluídas.</span></div></div><div class="insight warn"><i class="bi bi-hourglass-split"></i><div><strong>${pending} demanda(s) pendente(s)</strong><br><span class="meta">Acompanhe os itens pendentes para evitar aumento do backlog individual.</span></div></div>${topCity?`<div class="insight"><i class="bi bi-geo-alt"></i><div><strong>Maior concentração: ${safe(topCity[0])}</strong><br><span class="meta">${topCity[1]} demanda(s) nesta cidade.</span></div></div>`:''}${last?`<div class="insight"><i class="bi bi-clock-history"></i><div><strong>Último registro: ${safe(last.idSgd||last.registroId||'-')}</strong><br><span class="meta">${safe(last.criadoEm?new Date(last.criadoEm).toLocaleString('pt-BR'):'')}</span></div></div>`:''}`:`<div class="insight"><i class="bi bi-info-circle"></i><div><strong>Ainda não há dados para gerar insights.</strong><br><span class="meta">Após o primeiro preenchimento, esta área exibirá indicadores exclusivos do login.</span></div></div>`;
+ renderCharts();
+}
+ensureArea();
+const originalAccess=window.reviewAccess&&window.reviewAccess.analyst;
+if(originalAccess)window.reviewAccess.analyst=function(user){originalAccess.call(window.reviewAccess,user);setTimeout(renderPersonal,100)};
+document.addEventListener('submit',e=>{if(e.target&&e.target.id==='reviewForm')setTimeout(renderPersonal,150)});
+window.addEventListener('storage',e=>{if(e.key===PERSONAL_KEY)renderPersonal()});
+window.renderAnalystPersonalArea=renderPersonal;
+})();
+</script>
+
+
+<style>
+/* ===== Confirmacao e transicao de logout ===== */
+.logout-transition{position:fixed;inset:0;z-index:15000;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#201a1a 0%,#5b1014 48%,#da291c 100%);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .38s ease,visibility .38s ease}
+.logout-transition.show{opacity:1;visibility:visible;pointer-events:auto}
+.logout-transition-card{display:flex;flex-direction:column;align-items:center;gap:15px;color:#fff;text-align:center;transform:translateY(16px) scale(.96);opacity:0;transition:transform .42s cubic-bezier(.2,.9,.2,1),opacity .32s ease}
+.logout-transition.show .logout-transition-card{transform:translateY(0) scale(1);opacity:1}
+.logout-transition-icon{width:68px;height:68px;border-radius:22px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;font-size:30px;box-shadow:0 18px 45px rgba(0,0,0,.22)}
+.logout-transition-card strong{font-size:21px}.logout-transition-card span{font-size:13px;color:rgba(255,255,255,.82)}
+.logout-transition-spinner{width:34px;height:34px;border:3px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:logoutSpin .75s linear infinite}
+@keyframes logoutSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.logout-transition,.logout-transition-card{transition:none}.logout-transition-spinner{animation:none}}
+
+/* ===== Troca segura de senha administrativa ===== */
+.admin-security-actions{display:none;gap:9px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+body.admin-mode .admin-security-actions{display:flex}
+.admin-security-actions .btn{box-shadow:none}
+.password-change-overlay,.password-audit-overlay{position:fixed;inset:0;z-index:13000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,12,12,.76);backdrop-filter:blur(8px)}
+.password-change-overlay.open,.password-audit-overlay.open{display:flex}
+.password-change-card{width:min(480px,100%);background:#fff;border-radius:22px;padding:24px;box-shadow:0 28px 80px rgba(0,0,0,.38)}
+.password-change-card h3{margin:0 0 6px}.password-change-card>p{margin:0 0 16px;color:#667085}.password-change-card .review-field{margin-bottom:12px}
+.password-policy{font-size:11px;color:#667085;background:#f8fafc;border:1px solid var(--line);border-radius:11px;padding:10px 12px;line-height:1.5}
+.password-change-error{display:none;color:#b42318;background:#fde9e8;border-radius:10px;padding:9px 11px;font-size:12px;font-weight:800;margin-top:10px}.password-change-error.show{display:block}
+.password-change-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:16px}
+.password-audit-card{width:min(960px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:22px;padding:22px;box-shadow:0 28px 80px rgba(0,0,0,.38)}
+.password-audit-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:15px}.password-audit-head h3{margin:0 0 4px}.password-audit-table-wrap{overflow:auto;max-height:520px;border:1px solid var(--line);border-radius:14px}.password-audit-table{min-width:780px}.password-audit-table th{cursor:default}
+.security-note{margin-top:12px;padding:11px 12px;border-radius:11px;background:#fff7d6;color:#6b4b00;font-size:12px;line-height:1.45}
+.dark-theme .password-change-card,.dark-theme .password-audit-card{background:#172033;color:#e5e7eb}.dark-theme .password-change-card>p,.dark-theme .password-policy{color:#b7c1d1}.dark-theme .password-policy{background:#111827;border-color:#334155}
+@media(max-width:720px){.admin-security-actions{width:100%;justify-content:stretch}.admin-security-actions .btn{flex:1;justify-content:center}}
+</style>
+<script>
+(function(){
+'use strict';
+const HASH_KEY='dashboard-admin-password-hashes-v1';
+const AUDIT_KEY='dashboard-password-change-audit-v1';
+function loadJson(key,fallback){try{const v=JSON.parse(localStorage.getItem(key)||'null');return v??fallback}catch(e){return fallback}}
+function saveJson(key,value){localStorage.setItem(key,JSON.stringify(value))}
+async function sha256(value){const data=new TextEncoder().encode(value),digest=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('')}
+window.getEffectiveAdminHash=function(user){const hashes=loadJson(HASH_KEY,{});return hashes[String(user.login||'').toUpperCase()]||user.passwordHash}
+function current(){return window.__dashboardCurrentUser||window.__dashboardAdminUser||null}
+function auditRows(){const rows=loadJson(AUDIT_KEY,[]);return Array.isArray(rows)?rows:[]}
+function addAudit(user,action='ALTERACAO',performedBy=''){const rows=auditRows();rows.unshift({id:'PWD-'+Date.now().toString(36).toUpperCase(),login:user.login,name:user.displayName||user.name||'',role:user.role,action,performedBy,changedAt:new Date().toISOString(),oldPassword:'NAO ARMAZENADA',newPassword:'NAO ARMAZENADA'});saveJson(AUDIT_KEY,rows.slice(0,2000))}
+const actions=`<div class="admin-security-actions" id="adminSecurityActions"><button class="btn btn-dark" id="changeOwnPasswordBtn" type="button"><i class="bi bi-key"></i> Trocar minha senha</button><button class="btn btn-light super-only" id="passwordResetBtn" type="button"><i class="bi bi-arrow-counterclockwise"></i> Resetar senha</button><button class="btn btn-light super-only" id="passwordAuditBtn" type="button"><i class="bi bi-shield-check"></i> Log de senhas</button></div>`;
+const changeModal=`<div class="password-change-overlay" id="passwordChangeOverlay" role="dialog" aria-modal="true" aria-labelledby="passwordChangeTitle"><form class="password-change-card" id="passwordChangeForm"><h3 id="passwordChangeTitle"><i class="bi bi-key"></i> Trocar senha</h3><p>Alteração disponível para Administradores e Super Administrador.</p><div class="review-field"><label for="currentAdminPassword">Senha atual</label><input id="currentAdminPassword" type="password" autocomplete="current-password" required></div><div class="review-field"><label for="newAdminPassword">Nova senha</label><input id="newAdminPassword" type="password" autocomplete="new-password" required minlength="6"></div><div class="review-field"><label for="confirmAdminPassword">Confirmar nova senha</label><input id="confirmAdminPassword" type="password" autocomplete="new-password" required minlength="6"></div><div class="password-policy"><b>Requisito:</b> a nova senha deve possuir pelo menos 6 caracteres.</div><div class="password-change-error" id="passwordChangeError"></div><div class="password-change-actions"><button class="btn btn-line" id="passwordChangeCancel" type="button">Cancelar</button><button class="btn btn-primary-red" type="submit"><i class="bi bi-check2-circle"></i> Salvar nova senha</button></div></form></div>`;
+const resetModal=`<div class="password-change-overlay" id="passwordResetOverlay" role="dialog" aria-modal="true" aria-labelledby="passwordResetTitle"><form class="password-change-card" id="passwordResetForm"><h3 id="passwordResetTitle"><i class="bi bi-arrow-counterclockwise"></i> Resetar senha administrativa</h3><p>Selecione o usuário. A senha será restaurada para o padrão <b>SARPROJ</b>.</p><div class="review-field"><label for="passwordResetUser">Usuário</label><select id="passwordResetUser" required></select></div><div class="password-change-error" id="passwordResetError"></div><div class="password-change-actions"><button class="btn btn-line" id="passwordResetCancel" type="button">Cancelar</button><button class="btn btn-primary-red" type="submit"><i class="bi bi-arrow-counterclockwise"></i> Confirmar reset</button></div></form></div>`;
+const auditModal=`<div class="password-audit-overlay" id="passwordAuditOverlay" role="dialog" aria-modal="true"><div class="password-audit-card"><div class="password-audit-head"><div><h3><i class="bi bi-shield-check"></i> Log de alterações de senha</h3><div class="meta">Visível exclusivamente para o Super Administrador.</div></div><button class="btn btn-line" id="passwordAuditClose" type="button">Fechar</button></div><div class="password-audit-table-wrap"><table class="password-audit-table"><thead><tr><th>Data</th><th>Hora</th><th>Login</th><th>Nome</th><th>Perfil</th><th>Ação</th><th>Executado por</th><th>Senha antiga</th><th>Senha nova</th></tr></thead><tbody id="passwordAuditBody"></tbody></table></div><div class="security-note"><b>Proteção de credenciais:</b> senhas antigas e novas nunca são armazenadas nem exibidas em texto. O log registra o evento de alteração sem expor credenciais.</div></div></div>`;
+document.body.insertAdjacentHTML('beforeend',actions+changeModal+resetModal+auditModal);
+const adminActionsHost=document.querySelector('#reviewAdminPanel .review-admin-head .review-actions');
+const securityActions=document.getElementById('adminSecurityActions');
+if(adminActionsHost&&securityActions){while(securityActions.firstChild)adminActionsHost.appendChild(securityActions.firstChild);securityActions.remove();}
+if(adminActionsHost){['reviewExportCsv','reviewAccessLogBtn','passwordAuditBtn','passwordResetBtn','changeOwnPasswordBtn','reviewClearRecordsBtn','reviewAdminClose'].forEach(id=>{const btn=document.getElementById(id);if(btn)adminActionsHost.appendChild(btn);});}
+const $=id=>document.getElementById(id);
+function closeChange(){$('passwordChangeOverlay').classList.remove('open');$('passwordChangeForm').reset();$('passwordChangeError').classList.remove('show')}
+function openChange(){const u=current();if(!u||!['admin','superadmin'].includes(u.role))return;$('passwordChangeForm').reset();$('passwordChangeError').classList.remove('show');$('passwordChangeOverlay').classList.add('open');setTimeout(()=>$('currentAdminPassword').focus(),80)}
+function error(msg){$('passwordChangeError').textContent=msg;$('passwordChangeError').classList.add('show')}
+$('changeOwnPasswordBtn').addEventListener('click',openChange);
+$('passwordChangeCancel').addEventListener('click',closeChange);
+$('passwordChangeOverlay').addEventListener('click',e=>{if(e.target.id==='passwordChangeOverlay')closeChange()});
+$('passwordChangeForm').addEventListener('submit',async e=>{e.preventDefault();const u=current();if(!u||!['admin','superadmin'].includes(u.role)){error('Sessão administrativa não identificada.');return}const oldPass=$('currentAdminPassword').value,newPass=$('newAdminPassword').value,confirm=$('confirmAdminPassword').value;const oldHash=await sha256(oldPass);if(oldHash!==window.getEffectiveAdminHash(u)){error('A senha atual está incorreta.');return}if(newPass!==confirm){error('A confirmação da nova senha não confere.');return}if(newPass===oldPass){error('A nova senha deve ser diferente da senha atual.');return}if(newPass.length<6){error('A nova senha deve possuir pelo menos 6 caracteres.');return}const hashes=loadJson(HASH_KEY,{});hashes[String(u.login).toUpperCase()]=await sha256(newPass);saveJson(HASH_KEY,hashes);addAudit(u);closeChange();if(typeof dashboardNotify==='function')dashboardNotify('Senha alterada com sucesso. Use a nova senha no próximo acesso.');});
+function renderAudit(){const u=current();if(!u||u.role!=='superadmin')return;const rows=auditRows();$('passwordAuditBody').innerHTML=rows.length?rows.map(r=>{const d=new Date(r.changedAt);const role=r.role==='superadmin'?'Super Administrador':'Administrador';return `<tr><td>${d.toLocaleDateString('pt-BR')}</td><td>${d.toLocaleTimeString('pt-BR')}</td><td><b>${String(r.login||'')}</b></td><td>${String(r.name||'')}</td><td>${role}</td><td>${r.action==='RESET'?'Reset para padrão':'Alteração própria'}</td><td>${String(r.performedBy||r.login||'')}</td><td><span class="badge b-neutral">Não armazenada</span></td><td><span class="badge b-neutral">Não armazenada</span></td></tr>`}).join(''):'<tr><td colspan="9"><div class="review-empty">Nenhuma alteração de senha registrada.</div></td></tr>'}
+
+function playPasswordResetConfirmationSound(){
+ try{
+  if(typeof shouldPlaySounds==='function'&&!shouldPlaySounds())return;
+  const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx)return;
+  const ctx=playPasswordResetConfirmationSound.ctx||(playPasswordResetConfirmationSound.ctx=new AudioCtx());
+  if(ctx.state==='suspended')ctx.resume();
+  const now=ctx.currentTime,master=ctx.createGain();
+  master.gain.setValueAtTime(0.0001,now);master.gain.exponentialRampToValueAtTime(0.065,now+0.012);master.gain.exponentialRampToValueAtTime(0.0001,now+0.78);master.connect(ctx.destination);
+  [{f:440,t:0,d:.13},{f:554.37,t:.1,d:.15},{f:659.25,t:.21,d:.18},{f:880,t:.34,d:.3}].forEach((n,i)=>{const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=i===3?'sine':'triangle';osc.frequency.setValueAtTime(n.f,now+n.t);gain.gain.setValueAtTime(0.0001,now+n.t);gain.gain.exponentialRampToValueAtTime(i===3?0.27:0.2,now+n.t+.012);gain.gain.exponentialRampToValueAtTime(0.0001,now+n.t+n.d);osc.connect(gain);gain.connect(master);osc.start(now+n.t);osc.stop(now+n.t+n.d+.03);});
+ }catch(e){}
+}
+function adminUsers(){return [
+ {login:'N5659179',name:'FELIPE OLIVEIRA',displayName:'FELIPE OLIVEIRA',role:'superadmin'},
+ {login:'N5621237',name:'MARCELO JACOMASSI',displayName:'MARCELO JACOMASSI',role:'admin'},
+ {login:'CPESMILI',name:'CHRISTIANE MINICHELLI',displayName:'CHRISTIANE MINICHELLI',role:'admin'},
+ {login:'N0042280',name:'ALINE DOS SANTOS',displayName:'ALINE DOS SANTOS',role:'admin'}
+]}
+function closeReset(){$('passwordResetOverlay').classList.remove('open');$('passwordResetForm').reset();$('passwordResetError').classList.remove('show')}
+$('passwordResetBtn').addEventListener('click',()=>{const u=current();if(!u||u.role!=='superadmin')return;const users=adminUsers();$('passwordResetUser').innerHTML='<option value="" selected disabled>Selecione um usuário</option>'+users.map(x=>`<option value="${x.login}">${x.login} (${x.displayName||x.name})</option>`).join('');$('passwordResetError').classList.remove('show');$('passwordResetOverlay').classList.add('open')});
+$('passwordResetCancel').addEventListener('click',closeReset);
+$('passwordResetOverlay').addEventListener('click',e=>{if(e.target.id==='passwordResetOverlay')closeReset()});
+$('passwordResetForm').addEventListener('submit',async e=>{e.preventDefault();const actor=current();if(!actor||actor.role!=='superadmin')return;const login=$('passwordResetUser').value;const target=adminUsers().find(x=>x.login===login);if(!target){$('passwordResetError').textContent='Usuário administrativo não encontrado.';$('passwordResetError').classList.add('show');return}if(!confirm(`Confirma o reset da senha de ${target.login} para o padrão SARPROJ?`))return;const hashes=loadJson(HASH_KEY,{});hashes[String(target.login).toUpperCase()]=await sha256('SARPROJ');saveJson(HASH_KEY,hashes);addAudit(target,'RESET',actor.login);playPasswordResetConfirmationSound();closeReset();if(typeof dashboardNotify==='function')dashboardNotify(`Senha de ${target.login} restaurada para o padrão SARPROJ.`)});
+$('passwordAuditBtn').addEventListener('click',()=>{const u=current();if(!u||u.role!=='superadmin')return;renderAudit();$('passwordAuditOverlay').classList.add('open')});
+$('passwordAuditClose').addEventListener('click',()=>$('passwordAuditOverlay').classList.remove('open'));
+$('passwordAuditOverlay').addEventListener('click',e=>{if(e.target.id==='passwordAuditOverlay')e.currentTarget.classList.remove('open')});
+})();
+</script>
+<div class="logout-transition" id="logoutTransition" role="status" aria-live="polite"><div class="logout-transition-card"><div class="logout-transition-icon"><i class="bi bi-box-arrow-right"></i></div><strong>Encerrando sessão</strong><span>Redirecionando para a tela de identificação...</span><div class="logout-transition-spinner" aria-hidden="true"></div></div></div>
+</body>
 </html>
