@@ -263,6 +263,14 @@ body.analyst-mode .review-hero{margin-top:0}
 /* ===== Senha protegida e exportacao Excel ===== */
 .admin-password-overlay{position:fixed;inset:0;z-index:12000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,12,12,.74);backdrop-filter:blur(8px)}.admin-password-overlay.open{display:flex}.admin-password-card{width:min(420px,100%);background:#fff;border-radius:22px;padding:24px;box-shadow:0 28px 80px rgba(0,0,0,.38)}.admin-password-card h3{margin:0 0 6px}.admin-password-card p{margin:0 0 16px;color:#667085}.admin-password-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:16px}.dark-theme .admin-password-card{background:#172033;color:#e5e7eb}.dark-theme .admin-password-card p{color:#b7c1d1}
 
+
+/* ===== Dashboard Planner interna ===== */
+.role-login-screen{display:none!important}
+.language-bottom-wrap{margin-top:6px;padding-top:14px;border-top:1px solid var(--line)}.language-bottom-wrap .language-toggle{margin:0}
+.planner-start-btn{margin-top:22px;width:100%;justify-content:flex-start;gap:12px;text-align:left;padding:14px 16px;border-radius:16px;background:#6b4eff;color:#fff;border:1px solid rgba(255,255,255,.35);box-shadow:0 12px 25px rgba(42,25,125,.25)}.planner-start-btn:hover{background:#593ee8;transform:translateY(-1px)}.planner-start-btn i{font-size:24px}.planner-start-btn span{display:grid;gap:2px}.planner-start-btn small{font-size:11px;opacity:.85;font-weight:600}
+#plannerDashboard{display:none;position:fixed;inset:0;z-index:8500;overflow:auto;background:#f4f6fb;color:#172033;padding:0 0 32px}body.planner-mode #plannerDashboard{display:block}.planner-hero{background:linear-gradient(135deg,#37257c,#6b4eff 55%,#8f7bff);color:#fff;padding:22px 28px;position:sticky;top:0;z-index:5;box-shadow:0 8px 24px rgba(49,35,111,.2)}.planner-hero-row{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.planner-hero h1{margin:0;font-size:24px}.planner-hero p{margin:5px 0 0;opacity:.82}.planner-actions{display:flex;gap:9px;flex-wrap:wrap}.planner-btn{border:1px solid rgba(255,255,255,.45);border-radius:11px;padding:10px 13px;background:rgba(255,255,255,.14);color:#fff;font:inherit;font-weight:800;cursor:pointer}.planner-btn:hover{background:rgba(255,255,255,.24)}.planner-shell{padding:20px 28px;display:grid;gap:16px}.planner-meta{font-size:12px;color:#667085}.planner-kpis{display:grid;grid-template-columns:repeat(6,minmax(130px,1fr));gap:12px}.planner-kpi{background:#fff;border:1px solid #e2e6ef;border-radius:17px;padding:15px;box-shadow:0 7px 20px rgba(30,41,59,.06)}.planner-kpi span{display:block;font-size:11px;text-transform:uppercase;font-weight:850;color:#667085}.planner-kpi b{display:block;font-size:26px;margin-top:5px;color:#37257c}.planner-filters{background:#fff;border:1px solid #e2e6ef;border-radius:17px;padding:15px;display:grid;grid-template-columns:repeat(7,minmax(130px,1fr));gap:10px}.planner-filter label{display:block;font-size:10px;text-transform:uppercase;font-weight:850;color:#667085;margin-bottom:5px}.planner-filter select,.planner-search{width:100%;border:1px solid #d9deea;border-radius:10px;padding:9px;background:#fff;color:#172033}.planner-charts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.planner-chart-card{background:#fff;border:1px solid #e2e6ef;border-radius:17px;padding:15px;min-height:300px}.planner-chart-card h3{margin:0 0 10px;font-size:15px}.planner-chart-box{height:240px;position:relative}.planner-table-card{background:#fff;border:1px solid #e2e6ef;border-radius:17px;overflow:hidden}.planner-table-head{padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.planner-table-wrap{overflow:auto;max-height:520px;border-top:1px solid #e2e6ef}.planner-table{width:100%;min-width:1450px;border-collapse:collapse;font-size:12px}.planner-table th{position:sticky;top:0;background:#37257c;color:#fff;text-align:left;padding:10px;z-index:1}.planner-table td{padding:9px 10px;border-bottom:1px solid #edf0f5;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.planner-table tr:hover td{background:#f7f5ff}.planner-status{display:inline-flex;border-radius:999px;padding:4px 8px;font-size:10px;font-weight:850;background:#eee}.planner-status.concluido{background:#e7f7ef;color:#087843}.planner-status.andamento{background:#e8efff;color:#2456a6}.planner-status.paralisado{background:#fde9e8;color:#b42318}.planner-status.nao{background:#fff3d6;color:#8a5900}.planner-empty{padding:40px;text-align:center;color:#667085}.planner-error{display:none;background:#fde9e8;color:#b42318;border-radius:12px;padding:12px;font-weight:750}.planner-error.show{display:block}@media(max-width:1150px){.planner-kpis{grid-template-columns:repeat(3,1fr)}.planner-filters{grid-template-columns:repeat(3,1fr)}.planner-charts{grid-template-columns:1fr}}@media(max-width:650px){.planner-shell,.planner-hero{padding:16px}.planner-kpis,.planner-filters{grid-template-columns:1fr 1fr}}
+
+.upload-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.return-bases-btn{background:#fff;color:var(--red);border-color:#f0b8b3}.return-bases-btn:hover{background:#fff5f4;border-color:var(--red)}
 </style>
  </head>
  <body>
@@ -439,6 +447,8 @@ body.analyst-mode .review-hero{margin-top:0}
         </span>
        </div>
       </div>
+      <button class="btn planner-start-btn" id="btnStartPlanner" type="button"><i class="bi bi-kanban"></i><span><b>Inserir Base Excel Planner</b><small>Dashboard de Demandas e Vistorias</small></span></button>
+      <input accept=".xlsx,.xls" hidden id="plannerFileInput" type="file">
      </div>
      <div class="start-actions">
       <h3>
@@ -461,10 +471,6 @@ body.analyst-mode .review-hero{margin-top:0}
        </i>
        Carregar base interna (JUL/2026)
       </button>
-      <button class="btn admin-review-start-btn" id="btnAdminReviewData" type="button" style="display:none">
-       <i class="bi bi-clipboard-data"></i>
-       Verificar dados preenchidos pelos analistas
-      </button>
       <button class="btn start-theme-toggle theme-toggle-btn" id="themeToggleStart" type="button" title="Alternar tema claro ou escuro">
        <span class="theme-icon-stack" aria-hidden="true">
         <i class="bi bi-moon-stars theme-icon theme-icon-moon"></i>
@@ -478,6 +484,7 @@ body.analyst-mode .review-hero{margin-top:0}
        </strong>
        após o carregamento, você ainda poderá substituir a base pelo botão “Nova(s) Base(s) de Dados” no topo do dashboard.
       </div>
+      <div class="language-bottom-wrap"><div class="role-login-language-label">Selecionar idioma</div><div class="language-toggle" role="group" aria-label="Selecionar idioma"><button class="btn language-btn active" type="button" data-lang="pt-BR" aria-pressed="true">PT-BR</button><button class="btn language-btn" type="button" data-lang="es-MX" aria-pressed="false">ES-MX</button><button class="btn language-btn" type="button" data-lang="en-US" aria-pressed="false">EN-US</button><button class="btn language-btn" type="button" data-lang="fr-FR" aria-pressed="false">FR-FR</button></div></div>
      </div>
     </div>
 
@@ -588,12 +595,16 @@ body.analyst-mode .review-hero{margin-top:0}
        </div>
       </div>
      </div>
-     <div>
+     <div class="upload-actions">
       <input accept=".xlsx,.xls" hidden="" id="fileInput" multiple="" type="file"/>
       <button class="btn btn-line" onclick="document.getElementById('fileInput').click()">
        <i class="bi bi-upload">
        </i>
        Nova(s) Base(s) de Dados
+      </button>
+      <button class="btn btn-line return-bases-btn" id="returnBasesSgdBtn" type="button">
+       <i class="bi bi-arrow-left"></i>
+       Retornar às bases
       </button>
      </div>
     </section>
@@ -2569,12 +2580,12 @@ const ROLE_USERS=[
  {login:'CPESMILI',passwordHash:['206bc493a6331349','bb5705fe71df627d','e3bc5690f2b49f3f','90b743daa904ee3c'].join(''),name:'CHRISTIANE MINICHELLI',displayName:'CHRISTIANE MINICHELLI',role:'admin'},
  {login:'N0042280',passwordHash:['206bc493a6331349','bb5705fe71df627d','e3bc5690f2b49f3f','90b743daa904ee3c'].join(''),name:'ALINE DOS SANTOS',displayName:'ALINE DOS SANTOS',role:'admin'}
 ];
-const gate=`<section class="role-login-screen" id="roleLoginScreen" aria-label="Login de acesso"><div class="role-login-card"><div class="role-login-brand"><div class="role-login-logo"><i class="bi bi-person-badge"></i></div><h2>Gestão de Projetos</h2><p>Entre com seu login corporativo. O destino será definido automaticamente conforme a permissão do usuário.</p><div class="role-login-route"><div class="role-route"><i class="bi bi-clipboard2-check"></i><span><b>Analista:</b> acesso direto ao checklist para registrar uma tratativa.</span></div><div class="role-route"><i class="bi bi-database-gear"></i><span><b>Administrador:</b> acesso à inserção de bases e à consulta dos registros dos analistas.</span></div></div></div><div class="role-login-form-wrap"><h3>Identificação</h3><p>Informe seu login. Para analistas, utilize um login cadastrado. Não é necessário informar senha.</p><div class="role-login-language-label">Selecionar idioma</div><div class="language-toggle" role="group" aria-label="Selecionar idioma"><button class="btn language-btn active" type="button" data-lang="pt-BR" aria-pressed="true">PT-BR</button><button class="btn language-btn" type="button" data-lang="es-MX" aria-pressed="false">ES-MX</button><button class="btn language-btn" type="button" data-lang="en-US" aria-pressed="false">EN-US</button><button class="btn language-btn" type="button" data-lang="fr-FR" aria-pressed="false">FR-FR</button></div><form class="role-login-form" id="roleLoginForm"><div class="review-field"><label for="roleLoginUser">Login</label><input id="roleLoginUser" autocomplete="username" required></div><button class="btn btn-primary-red role-login-submit" type="submit"><i class="bi bi-box-arrow-in-right"></i> Entrar</button><div class="role-login-error" id="roleLoginError">Login ou senha inválidos.</div></form><div class="role-login-help"><b>Como acessar</b><br>Analista: informe seu login cadastrado, sem senha.<br>Administrador: informe um login administrativo cadastrado. A senha será solicitada em seguida.</div></div></div></section>`;
+const gate=`<section class="role-login-screen" id="roleLoginScreen" aria-label="Login de acesso"><div class="role-login-card"><div class="role-login-brand"><div class="role-login-logo"><i class="bi bi-person-badge"></i></div><h2>Gestão de Projetos</h2><p>Entre com seu login corporativo. O destino será definido automaticamente conforme a permissão do usuário.</p><div class="role-login-route"><div class="role-route"><i class="bi bi-clipboard2-check"></i><span><b>Analista:</b> acesso direto ao checklist para registrar uma tratativa.</span></div><div class="role-route"><i class="bi bi-database-gear"></i><span><b>Administrador:</b> acesso à inserção de bases e à consulta dos registros dos analistas.</span></div></div></div><div class="role-login-form-wrap"><h3>Identificação</h3><p>Informe seu login. Para analistas, utilize um login cadastrado. Não é necessário informar senha.</p><form class="role-login-form" id="roleLoginForm"><div class="review-field"><label for="roleLoginUser">Login</label><input id="roleLoginUser" autocomplete="username" required></div><button class="btn btn-primary-red role-login-submit" type="submit"><i class="bi bi-box-arrow-in-right"></i> Entrar</button><div class="role-login-error" id="roleLoginError">Login ou senha inválidos.</div></form><div class="role-login-help"><b>Como acessar</b><br>Analista: informe seu login cadastrado, sem senha.<br>Administrador: informe um login administrativo cadastrado. A senha será solicitada em seguida.</div></div></div></section>`;
 document.body.insertAdjacentHTML('beforeend',gate);
 if(typeof window.setLanguage==='function')window.setLanguage(window.DASHBOARD_LANG||'pt-BR',true);
 const screen=document.getElementById('roleLoginScreen');
 const start=document.getElementById('startScreen');
-if(start) start.style.display='none';
+if(start) start.style.display='flex';
 function activateTab(name){const btn=document.querySelector(`.tab[data-tab="${name}"]`);if(btn)btn.click();}
 function showGate(){screen.classList.add('open');document.body.classList.add('login-gate-open');const cube=document.getElementById('startCreditCube');if(cube)cube.hidden=false;setTimeout(()=>document.getElementById('roleLoginUser').focus(),120);}
 window.dashboardLogout=function(){
@@ -2688,7 +2699,7 @@ if(adminReview)adminReview.addEventListener('click',function(){
  setTimeout(()=>window.reviewAccess&&window.reviewAccess.admin(window.__dashboardAdminUser||ROLE_USERS[1]),180);
 });
 // A tela é liberada somente após o encerramento visual do splash (5,5 s + transição).
-window.addEventListener('DOMContentLoaded',()=>setTimeout(showGate,6200));
+window.addEventListener('DOMContentLoaded',()=>{if(start){start.style.display='flex';start.scrollTop=0;}document.body.classList.remove('login-gate-open');});
 
 const passwordModal=`<div class="admin-password-overlay" id="adminPasswordOverlay" role="dialog" aria-modal="true" aria-labelledby="adminPasswordTitle"><form class="admin-password-card" id="adminPasswordForm"><h3 id="adminPasswordTitle"><i class="bi bi-shield-lock"></i> Senha administrativa</h3><p>Informe a senha para continuar como <b id="adminPasswordLogin"></b>.</p><div class="review-field"><label for="adminPasswordInput">Senha</label><input id="adminPasswordInput" type="password" autocomplete="current-password" required placeholder="••••••••••••"></div><div class="admin-password-actions"><button class="btn btn-line" id="adminPasswordCancel" type="button">Cancelar</button><button class="btn btn-primary-red" type="submit"><i class="bi bi-box-arrow-in-right"></i> Confirmar</button></div></form></div>`;
 document.body.insertAdjacentHTML('beforeend',passwordModal);
@@ -2880,5 +2891,51 @@ $('passwordAuditOverlay').addEventListener('click',e=>{if(e.target.id==='passwor
 })();
 </script>
 <div class="logout-transition" id="logoutTransition" role="status" aria-live="polite"><div class="logout-transition-card"><div class="logout-transition-icon"><i class="bi bi-box-arrow-right"></i></div><strong>Encerrando sessão</strong><span>Redirecionando para a tela de identificação...</span><div class="logout-transition-spinner" aria-hidden="true"></div></div></div>
+
+<section id="plannerDashboard" aria-label="Dashboard Planner">
+ <header class="planner-hero"><div class="planner-hero-row"><div><h1><i class="bi bi-kanban"></i> Dashboard Planner | Demandas e Vistorias</h1><p>Indicadores atualizados exclusivamente pela aba BASE_DEMANDAS</p></div><div class="planner-actions"><button class="planner-btn" id="plannerUpdateBtn"><i class="bi bi-arrow-repeat"></i> Atualizar Base Planner</button><button class="planner-btn" id="plannerBackBtn"><i class="bi bi-arrow-left"></i> Voltar às bases</button></div></div></header>
+ <div class="planner-shell"><div class="planner-meta" id="plannerMeta">Nenhuma base Planner carregada.</div><div class="planner-error" id="plannerError"></div>
+  <div class="planner-kpis"><div class="planner-kpi"><span>Total de demandas</span><b id="pkTotal">0</b></div><div class="planner-kpi"><span>Concluído</span><b id="pkDone">0</b></div><div class="planner-kpi"><span>Em andamento</span><b id="pkProgress">0</b></div><div class="planner-kpi"><span>Não iniciado</span><b id="pkNotStarted">0</b></div><div class="planner-kpi"><span>Paralisado</span><b id="pkStopped">0</b></div><div class="planner-kpi"><span>Acima de 24h</span><b id="pkSla">0</b></div></div>
+  <div class="planner-filters" id="plannerFilters"></div>
+  <div class="planner-charts"><div class="planner-chart-card"><h3>Status das demandas</h3><div class="planner-chart-box"><canvas id="plannerStatusChart"></canvas></div></div><div class="planner-chart-card"><h3>Demandas por responsável</h3><div class="planner-chart-box"><canvas id="plannerOwnerChart"></canvas></div></div><div class="planner-chart-card"><h3>Principais cidades</h3><div class="planner-chart-box"><canvas id="plannerCityChart"></canvas></div></div></div>
+  <div class="planner-table-card"><div class="planner-table-head"><div><b>Consulta da BASE_DEMANDAS</b><div class="planner-meta" id="plannerCount">0 registros</div></div><input class="planner-search" id="plannerSearch" placeholder="Pesquisar ID, cidade, cliente ou endereço" style="max-width:420px"></div><div class="planner-table-wrap"><table class="planner-table"><thead id="plannerThead"></thead><tbody id="plannerTbody"></tbody></table></div></div>
+ </div>
+</section>
+
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id), filters=['FILA','CIDADE','TIPO_DEMANDA','TECNOLOGIA','RESPONSAVEL','PROJETO','STATUS'];
+const cols=['IDDEMANDA','IDVISTORIA','FILA','CIDADE','TIPO_DEMANDA','TECNOLOGIA','NOME_CLIENTE','ENDERECO','RESPONSAVEL','DATA_INICIO','DATA_FIM','TEMPO_HORAS','STATUS','ANOTACOES'];
+let rows=[],charts={};
+function norm(v){return String(v??'').trim()} function up(v){return norm(v).toUpperCase()} function esc(v){return norm(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function openPicker(){ $('plannerFileInput').click() }
+$('btnStartPlanner').addEventListener('click',openPicker); $('plannerUpdateBtn').addEventListener('click',openPicker);
+$('plannerBackBtn').addEventListener('click',()=>{document.body.classList.remove('planner-mode');const st=$('startScreen');if(st){st.style.display='flex';st.scrollTop=0}});
+$('plannerFileInput').addEventListener('change',async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;await load(f);e.target.value=''});
+async function load(file){const err=$('plannerError');err.classList.remove('show');try{if(typeof XLSX==='undefined')throw new Error('Biblioteca de leitura Excel indisponível.');const wb=XLSX.read(new Uint8Array(await file.arrayBuffer()),{type:'array',cellDates:true});if(!wb.SheetNames.includes('BASE_DEMANDAS'))throw new Error('A aba BASE_DEMANDAS não foi encontrada no arquivo selecionado.');rows=XLSX.utils.sheet_to_json(wb.Sheets.BASE_DEMANDAS,{defval:'',raw:true}).filter(r=>Object.values(r).some(v=>norm(v)!==''));if(!rows.length)throw new Error('A aba BASE_DEMANDAS não possui registros.');buildFilters();document.body.classList.add('planner-mode');const st=$('startScreen');if(st)st.style.display='none';$('plannerMeta').textContent=`Base Planner: ${file.name} | ${rows.length.toLocaleString('pt-BR')} registros | Atualizada em ${new Date().toLocaleString('pt-BR')}`;render()}catch(ex){err.textContent=ex.message||'Não foi possível processar o arquivo.';err.classList.add('show');document.body.classList.add('planner-mode')}}
+function buildFilters(){$('plannerFilters').innerHTML=filters.map(k=>`<div class="planner-filter"><label>${k.replaceAll('_',' ')}</label><select data-pf="${k}"><option value="">Todos</option>${[...new Set(rows.map(r=>norm(r[k])).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR')).map(v=>`<option>${esc(v)}</option>`).join('')}</select></div>`).join('');document.querySelectorAll('[data-pf]').forEach(x=>x.addEventListener('change',render))}
+function selected(){const q=up($('plannerSearch').value);return rows.filter(r=>filters.every(k=>{const el=document.querySelector(`[data-pf="${k}"]`);return !el||!el.value||norm(r[k])===el.value})&&(!q||['IDDEMANDA','IDVISTORIA','CIDADE','NOME_CLIENTE','ENDERECO','RESPONSAVEL'].some(k=>up(r[k]).includes(q))))}
+function count(list,key){const m={};list.forEach(r=>{const v=norm(r[key])||'Não informado';m[v]=(m[v]||0)+1});return m}
+function render(){const list=selected(),sts=list.map(r=>up(r.STATUS));$('pkTotal').textContent=list.length.toLocaleString('pt-BR');$('pkDone').textContent=sts.filter(x=>x==='CONCLUÍDO'||x==='CONCLUIDO').length;$('pkProgress').textContent=sts.filter(x=>x==='EM ANDAMENTO').length;$('pkNotStarted').textContent=sts.filter(x=>x==='NÃO INICIADO'||x==='NAO INICIADO').length;$('pkStopped').textContent=sts.filter(x=>x==='PARALISADO').length;$('pkSla').textContent=list.filter(r=>Number(r.TEMPO_HORAS)>24).length;$('plannerCount').textContent=`${list.length.toLocaleString('pt-BR')} registro(s) exibido(s)`;renderTable(list);draw('plannerStatusChart',count(list,'STATUS'),'doughnut');draw('plannerOwnerChart',top(count(list,'RESPONSAVEL'),10),'bar');draw('plannerCityChart',top(count(list,'CIDADE'),10),'bar')}
+function top(obj,n){return Object.fromEntries(Object.entries(obj).sort((a,b)=>b[1]-a[1]).slice(0,n))}
+function draw(id,obj,type){if(charts[id])charts[id].destroy();const labels=Object.keys(obj),data=Object.values(obj);charts[id]=new Chart($(id),{type,data:{labels,datasets:[{data,backgroundColor:['#6b4eff','#23a36d','#f2b233','#e35050','#2f80ed','#9b51e0','#56ccf2','#27ae60','#f2994a','#eb5757'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:type==='bar'?'y':undefined,plugins:{legend:{display:type==='doughnut',position:'bottom'}},scales:type==='bar'?{x:{beginAtZero:true,ticks:{precision:0}}}:undefined}})}
+function fmt(v){if(v instanceof Date&&!isNaN(v))return v.toLocaleString('pt-BR');return norm(v)}
+function renderTable(list){$('plannerThead').innerHTML='<tr>'+cols.map(c=>`<th>${c.replaceAll('_',' ')}</th>`).join('')+'</tr>';$('plannerTbody').innerHTML=list.length?list.map(r=>'<tr>'+cols.map(c=>{const val=fmt(r[c]);if(c==='STATUS'){const u=up(val),cl=u.includes('CONCLU')?'concluido':u.includes('ANDAMENTO')?'andamento':u.includes('PARALIS')?'paralisado':'nao';return `<td><span class="planner-status ${cl}">${esc(val||'Não informado')}</span></td>`}return `<td title="${esc(val)}">${esc(val)}</td>`}).join('')+'</tr>').join(''):'<tr><td colspan="14"><div class="planner-empty">Nenhum registro encontrado para os filtros selecionados.</div></td></tr>'}
+$('plannerSearch').addEventListener('input',render);
+})();
+</script>
+
+<script>
+(function(){
+ const btn=document.getElementById('returnBasesSgdBtn');
+ if(!btn)return;
+ btn.addEventListener('click',function(){
+  document.body.classList.remove('planner-mode');
+  const start=document.getElementById('startScreen');
+  if(start){start.style.display='flex';start.scrollTop=0;}
+ });
+})();
+</script>
 </body>
 </html>
