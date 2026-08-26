@@ -287,7 +287,23 @@ body.dark-theme .planner-status.nao{background:#3a2a10;color:#ffd36a}
 
 .upload-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.return-bases-btn{background:#fff;color:var(--red);border-color:#f0b8b3}.return-bases-btn:hover{background:#fff5f4;border-color:var(--red)}
 </style>
- </head>
+ 
+<style id="formsDashboardStyles">
+.forms-start-btn{margin-top:12px;width:100%;justify-content:flex-start;gap:12px;text-align:left;padding:14px 16px;border-radius:16px;background:#169447;color:#fff;border:1px solid rgba(255,255,255,.35);box-shadow:0 12px 25px rgba(13,110,55,.24)}
+.forms-start-btn:hover{background:#117a3a;transform:translateY(-1px)}.forms-start-btn i{font-size:24px}.forms-start-btn span{display:grid;gap:2px}.forms-start-btn small{font-size:11px;opacity:.88;font-weight:600}
+#formsDashboard{display:none;position:fixed;inset:0;z-index:8600;overflow:auto;background:#f4f6fb;color:#172033;padding:0 0 32px}body.forms-mode #formsDashboard{display:block}
+.forms-hero{background:linear-gradient(135deg,#075b2e,#169447 55%,#38b86b);color:#fff;padding:22px 28px;position:sticky;top:0;z-index:5;box-shadow:0 8px 24px rgba(7,91,46,.22)}
+.forms-hero-row{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.forms-hero h1{margin:0;font-size:24px}.forms-hero p{margin:5px 0 0;opacity:.85}.forms-actions{display:flex;gap:9px;flex-wrap:wrap}.forms-btn{border:1px solid rgba(255,255,255,.45);border-radius:11px;padding:10px 13px;background:rgba(255,255,255,.14);color:#fff;font:inherit;font-weight:800;cursor:pointer}.forms-btn:hover{background:rgba(255,255,255,.24)}
+.forms-shell{padding:20px 28px;display:grid;gap:16px}.forms-meta{font-size:12px;color:#667085}.forms-error{display:none;background:#fff0f0;border:1px solid #f6b5b5;color:#9f1c1c;padding:12px;border-radius:12px}.forms-error.show{display:block}
+.forms-kpis{display:grid;grid-template-columns:repeat(6,minmax(130px,1fr));gap:12px}.forms-kpi{background:#fff;border:1px solid #e2e6ef;border-radius:17px;padding:15px;box-shadow:0 7px 20px rgba(30,41,59,.06)}.forms-kpi span{display:block;font-size:11px;text-transform:uppercase;font-weight:850;color:#667085}.forms-kpi b{display:block;font-size:24px;margin-top:5px;color:#117a3a}
+.forms-filters{background:#fff;border:1px solid #e2e6ef;border-radius:17px;padding:15px;display:grid;grid-template-columns:repeat(6,minmax(130px,1fr));gap:10px}.forms-filter label{display:block;font-size:10px;text-transform:uppercase;font-weight:850;color:#667085;margin-bottom:5px}.forms-filter select,.forms-search{width:100%;border:1px solid #d9deea;border-radius:10px;padding:9px;background:#fff;color:#172033}
+.forms-charts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.forms-chart-card{background:#fff;border:1px solid #e2e6ef;border-radius:17px;padding:15px;min-height:300px}.forms-chart-card h3{margin:0 0 10px;font-size:15px}.forms-chart-box{height:240px;position:relative}
+.forms-table-card{background:#fff;border:1px solid #e2e6ef;border-radius:17px;overflow:hidden}.forms-table-head{padding:15px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.forms-table-wrap{overflow:auto;max-height:58vh}.forms-table{border-collapse:separate;border-spacing:0;width:max-content;min-width:100%;font-size:12px}.forms-table th{position:sticky;top:0;z-index:2;background:#117a3a;color:#fff;padding:10px;white-space:nowrap;text-align:left}.forms-table td{padding:9px 10px;border-bottom:1px solid #edf0f5;white-space:nowrap;max-width:360px;overflow:hidden;text-overflow:ellipsis}.forms-table tbody tr:hover{background:#f0fbf5}
+body.dark-theme #formsDashboard{background:#111827;color:#e5e7eb}body.dark-theme .forms-kpi,body.dark-theme .forms-filters,body.dark-theme .forms-chart-card,body.dark-theme .forms-table-card{background:#1f2937;border-color:#374151}body.dark-theme .forms-meta,body.dark-theme .forms-kpi span,body.dark-theme .forms-filter label{color:#aeb8c7}body.dark-theme .forms-kpi b{color:#54d48b}body.dark-theme .forms-filter select,body.dark-theme .forms-search{background:#111827;color:#e5e7eb;border-color:#4b5563}body.dark-theme .forms-table td{border-color:#374151}body.dark-theme .forms-table tbody tr:hover{background:#182c23}
+@media(max-width:1100px){.forms-kpis{grid-template-columns:repeat(3,1fr)}.forms-filters{grid-template-columns:repeat(3,1fr)}.forms-charts{grid-template-columns:1fr}}@media(max-width:650px){.forms-shell,.forms-hero{padding-left:14px;padding-right:14px}.forms-kpis,.forms-filters{grid-template-columns:1fr 1fr}}
+</style>
+
+</head>
  <body>
 
   <!-- Splash Screen Claro - Boas-vindas -->
@@ -464,6 +480,8 @@ body.dark-theme .planner-status.nao{background:#3a2a10;color:#ffd36a}
       </div>
       <button class="btn planner-start-btn" id="btnStartPlanner" type="button"><i class="bi bi-kanban"></i><span><b>Inserir Base Excel Planner</b><small>Dashboard de Demandas e Vistorias</small></span></button>
       <input accept=".xlsx,.xls" hidden id="plannerFileInput" type="file">
+      <button class="btn forms-start-btn" id="btnStartForms" type="button"><i class="bi bi-ui-checks-grid"></i><span><b>Inserir Base Excel Forms</b><small>Dashboard Checklist SAR</small></span></button>
+      <input accept=".xlsx,.xls" hidden id="formsFileInput" type="file">
      </div>
      <div class="start-actions">
       <h3>
@@ -1894,7 +1912,7 @@ async function exportAllChartsZip(){
       if(blob) zip.file(filename,blob);
     }
     zip.file('README.txt',`Exportação de gráficos do Dashboard SGD
-Versão do Dashboard: [v3.3b]
+Versão do Dashboard: [v3.3c]
 Total de gráficos: ${usedNames.size}
 Gerado em: ${new Date().toLocaleString('pt-BR')}
 Desenvolvido por Felipe Oliveira
@@ -2959,5 +2977,44 @@ $('plannerSearch').addEventListener('input',render);
  });
 })();
 </script>
+
+<section id="formsDashboard" aria-label="Dashboard Checklist SAR">
+ <header class="forms-hero"><div class="forms-hero-row"><div><h1><i class="bi bi-ui-checks-grid"></i> Dashboard Checklist SAR</h1><p>Tratativas de Revisões de Rede Externa MDU</p></div><div class="forms-actions"><button class="forms-btn" id="formsUpdateBtn"><i class="bi bi-arrow-repeat"></i> Atualizar base</button><button class="forms-btn" id="formsThemeBtn"><i class="bi bi-moon-stars"></i> Tema</button><button class="forms-btn" id="formsExportBtn"><i class="bi bi-file-earmark-excel"></i> Exportar Excel</button><button class="forms-btn" id="formsBackBtn"><i class="bi bi-arrow-left"></i> Voltar</button></div></div></header>
+ <div class="forms-shell"><div class="forms-meta" id="formsMeta">Selecione uma base Excel do Forms para iniciar.</div><div class="forms-error" id="formsError"></div>
+  <div class="forms-kpis"><div class="forms-kpi"><span>Total de registros</span><b id="formsKpiTotal">0</b></div><div class="forms-kpi"><span>Concluídos</span><b id="formsKpiDone">0</b></div><div class="forms-kpi"><span>Em andamento</span><b id="formsKpiOpen">0</b></div><div class="forms-kpi"><span>UFs</span><b id="formsKpiUf">0</b></div><div class="forms-kpi"><span>Cidades</span><b id="formsKpiCities">0</b></div><div class="forms-kpi"><span>Orçamento total</span><b id="formsKpiBudget">R$ 0</b></div></div>
+  <div class="forms-filters" id="formsFilters"></div>
+  <div class="forms-charts"><div class="forms-chart-card"><h3>Tipo Demanda</h3><div class="forms-chart-box"><canvas id="formsTypeChart"></canvas></div></div><div class="forms-chart-card"><h3>Tipo Solicitação</h3><div class="forms-chart-box"><canvas id="formsRequestChart"></canvas></div></div><div class="forms-chart-card"><h3>Status Projeto</h3><div class="forms-chart-box"><canvas id="formsStatusChart"></canvas></div></div></div>
+  <div class="forms-table-card"><div class="forms-table-head"><div><b>Consulta Checklist SAR</b><div class="forms-meta" id="formsCount"></div></div><input class="forms-search" id="formsSearch" placeholder="Pesquisar em todos os campos" style="max-width:420px"></div><div class="forms-table-wrap"><table class="forms-table"><thead id="formsThead"></thead><tbody id="formsTbody"></tbody></table></div></div>
+ </div>
+</section>
+
+
+<script id="formsDashboardScript">
+(function(){
+ const $=id=>document.getElementById(id), norm=v=>String(v??'').trim(), up=v=>norm(v).toLocaleUpperCase('pt-BR');
+ let rows=[], headers=[], charts=[];
+ const aliases={uf:['UF'],cidade:['Cidade'],tipo:['Tipo Demanda'],solicitacao:['Tipo Solicitação'],status:['Status Projeto'],nome:['Nome'],orcamento:['Orçamento Total']};
+ const getKey=a=>headers.find(h=>aliases[a].some(x=>up(h)===up(x)))||'';
+ const filters=[['uf','UF'],['cidade','Cidade'],['tipo','Tipo Demanda'],['solicitacao','Tipo Solicitação'],['status','Status Projeto'],['nome','Responsável']];
+ const displayOrder=['Data Início','ID SGD','Nome','Email','UF','Cidade','Endereço','Cód. Imóvel (GED)','Qtde. Blocos','Qtde. HPs','Área Técnica GPON','Node HFC','Tipo Demanda','Tipo Solicitação','Status Projeto','Qtde. PON Projetado','Orçamento Mão de Obra','Orçamento Material','Orçamento Total','Valor por HP','Data Envio','Designação / Unifilar','Revisão do Mapa','Caixa M Existente?'];
+ function orderedHeaders(all){return displayOrder.map(name=>all.find(h=>up(h)===up(name))).filter(Boolean)}
+ function openPicker(){ $('formsFileInput').value=''; $('formsFileInput').click(); }
+ function show(){document.body.classList.add('forms-mode');const st=$('startScreen');if(st)st.style.display='none'}
+ function back(){document.body.classList.remove('forms-mode');const st=$('startScreen');if(st){st.style.display='flex';st.scrollTop=0}}
+ function currency(v){return Number(norm(v).replace(/\./g,'').replace(',','.'))||Number(v)||0}
+ function buildFilters(){const box=$('formsFilters');box.innerHTML='';filters.forEach(([a,label])=>{const k=getKey(a);if(!k)return;const vals=[...new Set(rows.map(r=>norm(r[k])).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR',{numeric:true}));const d=document.createElement('div');d.className='forms-filter';d.innerHTML=`<label>${label}</label><select data-ff="${a}"><option value="">Todos</option>${vals.map(v=>`<option value="${String(v).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}">${String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;')}</option>`).join('')}</select>`;box.appendChild(d)});box.querySelectorAll('select').forEach(x=>x.addEventListener('change',render))}
+ function selected(){const q=up($('formsSearch').value);return rows.filter(r=>filters.every(([a])=>{const el=document.querySelector(`[data-ff="${a}"]`),k=getKey(a);return !el||!el.value||norm(r[k])===el.value})&&(!q||headers.some(k=>up(r[k]).includes(q))))}
+ function counts(data,key){const m={};data.forEach(r=>{const v=norm(r[key])||'Não informado';m[v]=(m[v]||0)+1});return Object.entries(m).sort((a,b)=>b[1]-a[1])}
+ function draw(id,labels,values,colors){const c=$(id);const old=charts.findIndex(x=>x.id===id);if(old>=0){charts[old].chart.destroy();charts.splice(old,1)};if(typeof Chart==='undefined')return;const chart=new Chart(c,{type:'doughnut',data:{labels,datasets:[{data:values,backgroundColor:colors,borderWidth:1}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:12}}}}});charts.push({id,chart})}
+ function render(){const data=selected(),sk=getKey('status'),uk=getKey('uf'),tk=getKey('tipo'),bk=getKey('orcamento');$('formsKpiTotal').textContent=data.length.toLocaleString('pt-BR');const done=data.filter(r=>/CONCLU|FINALIZ/.test(up(r[sk]))).length;$('formsKpiDone').textContent=done.toLocaleString('pt-BR');$('formsKpiOpen').textContent=(data.length-done).toLocaleString('pt-BR');$('formsKpiUf').textContent=new Set(data.map(r=>norm(r[uk])).filter(Boolean)).size;$('formsKpiCities').textContent=new Set(data.map(r=>norm(r[getKey('cidade')])).filter(Boolean)).size;$('formsKpiBudget').textContent=(bk?data.reduce((a,r)=>a+currency(r[bk]),0):0).toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+ const sc=counts(data,sk),tc=counts(data,tk),rc=counts(data,getKey('solicitacao'));const sgdChartColors=['#0097A7','#F5822A','#6AA84F','#F04438','#6B4EFF','#F4B740','#3B82F6','#14B8A6','#8B5CF6','#94A3B8'];draw('formsTypeChart',tc.map(x=>x[0]),tc.map(x=>x[1]),sgdChartColors);draw('formsRequestChart',rc.map(x=>x[0]),rc.map(x=>x[1]),sgdChartColors);draw('formsStatusChart',sc.map(x=>x[0]),sc.map(x=>x[1]),sgdChartColors);
+ $('formsThead').innerHTML='<tr>'+headers.map(h=>`<th>${String(h).replace(/&/g,'&amp;').replace(/</g,'&lt;')}</th>`).join('')+'</tr>';$('formsTbody').innerHTML=data.map(r=>'<tr>'+headers.map(h=>`<td title="${String(r[h]??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}">${formatCell(r[h],h)}</td>`).join('')+'</tr>').join('');$('formsCount').textContent=`${data.length.toLocaleString('pt-BR')} de ${rows.length.toLocaleString('pt-BR')} registros`}
+ function formatCell(v,h){if((up(h)===up('Data Início')||up(h)===up('Data Envio'))&&v instanceof Date&&!isNaN(v))return v.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'});if(v instanceof Date&&!isNaN(v))return v.toLocaleString('pt-BR');return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+ async function load(file){const err=$('formsError');err.classList.remove('show');try{if(typeof XLSX==='undefined')throw new Error('Biblioteca de leitura Excel indisponível.');const wb=XLSX.read(new Uint8Array(await file.arrayBuffer()),{type:'array',cellDates:true});const name=wb.SheetNames[0];if(!name)throw new Error('Nenhuma aba foi encontrada no arquivo.');rows=XLSX.utils.sheet_to_json(wb.Sheets[name],{defval:'',raw:true}).filter(r=>Object.values(r).some(v=>norm(v)!==''));if(!rows.length)throw new Error('A base selecionada não possui registros.');headers=orderedHeaders([...new Set(rows.flatMap(r=>Object.keys(r)))]);buildFilters();show();$('formsMeta').textContent=`Base Forms: ${file.name} | Aba: ${name} | ${rows.length.toLocaleString('pt-BR')} registros | Atualizada em ${new Date().toLocaleString('pt-BR')}`;render()}catch(ex){show();err.textContent=ex.message||'Não foi possível processar o arquivo.';err.classList.add('show')}}
+ async function exportExcel(){const data=selected();if(!data.length){if(typeof dashboardNotify==='function')dashboardNotify('Não há registros para exportar.');return}const ws=XLSX.utils.json_to_sheet(data,{header:headers});ws['!cols']=headers.map(h=>({wch:Math.min(45,Math.max(13,String(h).length+3))}));ws['!autofilter']={ref:ws['!ref']};ws['!rows']=[{hpt:24}];const style={font:{name:'Calibri',sz:11,bold:true,color:{rgb:'FFFFFFFF'}},fill:{patternType:'solid',fgColor:{rgb:'FF117A3A'}},alignment:{horizontal:'center',vertical:'center'},border:{bottom:{style:'thin',color:{rgb:'FF075B2E'}}}};headers.forEach((_,c)=>{const a=XLSX.utils.encode_cell({r:0,c});if(ws[a])ws[a].s=style});const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Checklist SAR');const n=new Date(),fn=`checklist_sar_${String(n.getDate()).padStart(2,'0')}-${String(n.getMonth()+1).padStart(2,'0')}-${n.getFullYear()}_${String(n.getHours()).padStart(2,'0')}-${String(n.getMinutes()).padStart(2,'0')}h.xlsx`;if(typeof downloadWorkbookWithFreezeB2==='function')await downloadWorkbookWithFreezeB2(wb,fn);else XLSX.writeFile(wb,fn);if(typeof dashboardNotify==='function')dashboardNotify('Checklist SAR exportado com sucesso.')}
+ $('btnStartForms').addEventListener('click',openPicker);$('formsUpdateBtn').addEventListener('click',openPicker);$('formsFileInput').addEventListener('change',e=>{if(e.target.files[0])load(e.target.files[0])});$('formsBackBtn').addEventListener('click',back);$('formsSearch').addEventListener('input',render);$('formsExportBtn').addEventListener('click',exportExcel);$('formsThemeBtn').addEventListener('click',()=>{document.body.classList.toggle('dark-theme');try{localStorage.setItem('dashboard-theme',document.body.classList.contains('dark-theme')?'dark':'light')}catch(e){}});
+})();
+</script>
+
 </body>
 </html>
