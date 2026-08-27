@@ -2920,7 +2920,7 @@ body.analyst-login-requested .role-login-screen{display:flex!important}
 body.analyst-mode #reviewAnalystHomeBtn{display:inline-flex;align-items:center;justify-content:center;gap:7px}
 
 
-/* Easter Egg 2205: Ilha dos ovos */
+/* Easter Egg 2205: Ilha Dino */
 #secretDinoGame{position:fixed;inset:0;z-index:2147483647;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(8,12,18,.92);backdrop-filter:blur(10px)}
 #secretDinoGame.is-open{display:flex}#secretDinoGame .secret-game-card{width:min(960px,100%);padding:18px;border:1px solid rgba(255,255,255,.18);border-radius:22px;color:#f8fafc;background:linear-gradient(145deg,#171c26,#0d1118);box-shadow:0 30px 80px rgba(0,0,0,.45)}
 .secret-game-head,.secret-game-foot{display:flex;align-items:center;justify-content:space-between;gap:14px}.secret-game-head{margin-bottom:12px}.secret-game-title{font-size:1rem;font-weight:800}.secret-game-score{font-variant-numeric:tabular-nums;color:#d1d5db}.secret-game-close{width:38px;height:38px;border:0;border-radius:12px;color:#fff;background:rgba(255,255,255,.1);cursor:pointer}.secret-game-close:hover{background:#DA291C}
@@ -3087,8 +3087,8 @@ $('plannerSearch').addEventListener('input',render);
 
 
 <div id="secretDinoGame" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Minijogo secreto">
- <div class="secret-game-card"><div class="secret-game-head"><div><div class="secret-game-title">Ilha dos ovos: corrida secreta!</div><div class="secret-game-score">Pontos: <b id="secretGameScore">00000</b> &nbsp; Recorde: <b id="secretGameBest">00000</b> &nbsp; Ovos: <b id="secretGameEggs">0</b> &nbsp; Frutas: <b id="secretGameFruits">0</b></div></div><button class="secret-game-close" id="secretGameClose" type="button" aria-label="Fechar">&#10005;</button></div>
- <canvas id="secretGameCanvas" width="920" height="300"></canvas><div class="secret-game-foot"><span>Colete ovos e frutas, desviando de canos, plantas e troncos. Espaço, ↑ ou toque para saltar. ESC fecha.</span><div class="secret-game-actions"><button class="secret-game-action" id="secretGameSound" type="button">Som: ligado</button><button class="secret-game-action" id="secretGameRestart" type="button">Iniciar / reiniciar</button></div></div></div>
+ <div class="secret-game-card"><div class="secret-game-head"><div><div class="secret-game-title">Ilha Dino: corrida secreta!</div><div class="secret-game-score">Pontos: <b id="secretGameScore">00000</b> &nbsp; Recorde: <b id="secretGameBest">00000</b> &nbsp; Ovos: <b id="secretGameEggs">0</b> &nbsp; Frutas: <b id="secretGameFruits">0</b></div></div><button class="secret-game-close" id="secretGameClose" type="button" aria-label="Fechar">&#10005;</button></div>
+ <canvas id="secretGameCanvas" width="920" height="300"></canvas><div class="secret-game-foot"><span>Colete ovos e frutas, desviando de canos, plantas e outros obstáculos. Espaço, ↑ ou toque para saltar. ESC fecha.</span><div class="secret-game-actions"><button class="secret-game-action" id="secretGameSound" type="button">Som: ligado</button><button class="secret-game-action" id="secretGameRestart" type="button">Iniciar / reiniciar</button></div></div></div>
 </div>
 <script>
 (function(){'use strict';
