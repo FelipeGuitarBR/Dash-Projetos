@@ -30,6 +30,14 @@
     .real-time-clock .clock-date{font-size:12px;opacity:.86;margin-top:2px}
 
     main{padding:0 28px 28px}.panel{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(229,231,235,.8)}.upload-panel{margin-top:-18px;position:relative;z-index:2;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.upload-title{display:flex;gap:12px;align-items:center}.upload-icon{width:42px;height:42px;border-radius:14px;background:#FFF0EF;color:var(--red);display:grid;place-items:center;font-size:22px}.meta{color:var(--muted);font-size:12px;margin-top:4px}.filters{margin-top:18px;padding:18px 30px;overflow-x:auto}.filter-grid{display:grid;grid-template-columns:170px 230px 240px 170px 280px minmax(310px,1fr);gap:14px;width:100%;min-width:1440px;margin:0 auto;align-items:start}.field label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:var(--muted);margin-bottom:6px;text-align:center}.filter-grid .field select,.filter-grid .field input{text-align:center}.view-actions-inline{justify-content:center;flex-wrap:nowrap;min-width:max-content;padding:0 12px}.filter-grid .field{min-width:0}.filter-grid .field:nth-child(3){min-width:240px}.filter-grid .field:nth-child(6){min-width:310px}.filter-grid .field:nth-child(12){padding-left:8px;padding-right:8px}.field select,.field input{width:100%;border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px;color:var(--ink);outline:none}.field select[multiple]{height:96px}.field input:focus,.field select:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(218,41,28,.12)}
+
+    /* Atalho do filtro Regional: seleciona todas as regionais, exceto RRS */
+    .regional-select-actions{display:flex;justify-content:center;margin-top:7px}
+    .regional-select-all-btn{width:100%;min-height:30px;border:1px solid #FFD4D0;border-radius:9px;background:#FFF7F6;color:var(--red);padding:6px 8px;font-size:10px;font-weight:850;line-height:1.2;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:5px;transition:.18s ease}
+    .regional-select-all-btn:hover{background:#FFF0EF;border-color:var(--red);transform:translateY(-1px)}
+    .regional-select-all-btn:focus-visible{outline:3px solid rgba(218,41,28,.28);outline-offset:2px}
+    body.dark-theme .regional-select-all-btn{background:#2A1518;color:#FFB4AE;border-color:#502227}
+    body.dark-theme .regional-select-all-btn:hover{background:#35191D;border-color:#FF827A}
     .kpis{display:grid;grid-template-columns:repeat(6,minmax(150px,1fr));gap:14px;margin:18px 0}.kpi{padding:18px;position:relative;overflow:hidden}.kpi:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent,var(--red))}.kpi-label{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}.kpi-value{font-size:28px;font-weight:800;margin-top:8px;letter-spacing:-.03em}.kpi-sub{color:var(--muted);font-size:12px;margin-top:4px}.tabs{display:flex;gap:8px;margin:18px 0;flex-wrap:wrap}.tab{padding:11px 15px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:800;color:var(--muted);cursor:pointer}.tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}.tab-content{display:none}.tab-content.active{display:block}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid-3{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px}.chart-card{padding:18px;min-height:360px}.chart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.chart-title{font-weight:850;font-size:15px}.chart-sub{color:var(--muted);font-size:12px}.chart-box{height:285px}.chart-box canvas{width:100%!important;height:100%!important}.table-card{padding:18px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}.search{position:relative;min-width:300px;max-width:520px;flex:1}.search i{position:absolute;left:12px;top:11px;color:var(--muted)}.search input{width:100%;padding:11px 12px 11px 36px;border:1px solid var(--line);border-radius:12px}.table-wrap{max-height:620px;overflow:auto;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:separate;border-spacing:0;background:#fff}th{position:sticky;top:0;background:#242020;color:#fff;text-align:left;font-size:12px;padding:12px;white-space:nowrap;z-index:2;cursor:pointer}td{padding:11px 12px;border-bottom:1px solid #F0F1F3;vertical-align:middle;white-space:nowrap}#demandTable th{padding:12px 7px}#demandTable td{padding:11px 7px}#demandTable th,#demandTable td{text-align:center}#demandTable th:nth-child(4),#demandTable td:nth-child(4){width:195px;max-width:195px;overflow:hidden;text-overflow:ellipsis}#demandTable th:nth-child(5),#demandTable td:nth-child(5){width:230px;max-width:230px;overflow:hidden;text-overflow:ellipsis}#demandTable th:nth-child(6),#demandTable td:nth-child(6){width:300px;max-width:300px;overflow:hidden;text-overflow:ellipsis}tbody tr:hover{background:#FFF7F6}.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:850}.b-ok{background:#E7F7EF;color:#087843}.b-wait{background:#FFF4DA;color:#9A5F00}.b-bad{background:#FDE9E8;color:#B42318}.b-neutral{background:#EEF2F7;color:#475569}.pill{background:#F3F4F6;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:800}.insight{padding:14px;border-radius:14px;margin-bottom:10px;background:#fff;border:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}.insight i{font-size:20px}.insight.good{border-left:5px solid var(--green)}.insight.warn{border-left:5px solid var(--orange)}.insight.risk{border-left:5px solid var(--red)}.analyst-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.analyst-list{max-height:650px;overflow:auto}.analyst-row{display:grid;grid-template-columns:1fr 90px 90px 90px 80px;gap:8px;align-items:center;padding:12px;border-bottom:1px solid var(--line);cursor:pointer}.analyst-row:hover,.analyst-row.active{background:#FFF7F6}.detail-box{padding:18px}.detail-name{font-size:19px;font-weight:850;margin-bottom:8px}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}.mini{background:#F8FAFC;border:1px solid var(--line);border-radius:14px;padding:12px}.mini b{display:block;font-size:18px}.pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:12px;color:var(--muted)}.pager .btn{display:inline-flex}.loading{position:fixed;inset:0;background:rgba(255,255,255,.85);display:none;align-items:center;justify-content:center;z-index:99}.spinner{width:42px;height:42px;border-radius:50%;border:4px solid #FFD9D6;border-top-color:var(--red);animation:spin .9s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
 
     .start-screen{position:fixed;inset:0;z-index:120;background:linear-gradient(135deg,var(--red) 0%,var(--red-dark) 56%,#5b1014 100%);display:flex;align-items:center;justify-content:center;padding:28px;color:#fff;overflow:auto}
@@ -318,7 +326,7 @@ body.dark-theme #formsDashboard{background:#111827;color:#e5e7eb}body.dark-theme
   </div>
   <script>
    (function(){
-     var splashDuration=5500;
+     var splashDuration=5000;
      var fadeDuration=650;
      var claroOpeningSoundPlayed=false;
      var claroAudioCtx=null;
@@ -669,8 +677,15 @@ body.dark-theme #formsDashboard{background:#111827;color:#e5e7eb}body.dark-theme
        <label>
         Regional
        </label>
-       <select id="fRegional" multiple="">
+       <select id="fRegional" multiple="" aria-describedby="regionalSelectionHint">
        </select>
+       <div class="regional-select-actions">
+        <button class="regional-select-all-btn" id="btnSelectRegionalsExceptRRS" type="button" title="Selecionar todas as regionais, exceto RRS" aria-label="Selecionar todas as regionais, exceto RRS">
+         <i class="bi bi-check2-all" aria-hidden="true"></i>
+         <span>Retirar RRS</span>
+        </button>
+       </div>
+       <span class="sr-only" id="regionalSelectionHint">Atalho para selecionar todas as opções de regional, mantendo RRS desmarcada.</span>
       </div>
       <div class="field">
        <label>
@@ -2042,6 +2057,19 @@ document.querySelectorAll('.tab').forEach((b,idx,arr)=>{
   b.onkeydown=e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault(); const next=e.key==='ArrowRight'?(idx+1)%arr.length:(idx-1+arr.length)%arr.length; arr[next].focus(); arr[next].click();} if(e.key==='Home'){e.preventDefault(); arr[0].focus(); arr[0].click();} if(e.key==='End'){e.preventDefault(); arr[arr.length-1].focus(); arr[arr.length-1].click();}};
 });
 Object.keys(filterMap).forEach(id=>document.getElementById(id).onchange=applyFilters);
+const btnSelectRegionalsExceptRRS=document.getElementById('btnSelectRegionalsExceptRRS');
+if(btnSelectRegionalsExceptRRS) btnSelectRegionalsExceptRRS.onclick=()=>{
+  const regionalSelect=document.getElementById('fRegional');
+  if(!regionalSelect)return;
+  let selectedCount=0;
+  Array.from(regionalSelect.options).forEach(option=>{
+    const regionalCode=String(option.value||option.textContent||'').trim().toUpperCase().split(/\s|-/)[0];
+    option.selected=regionalCode!=='RRS';
+    if(option.selected)selectedCount++;
+  });
+  applyFilters();
+  dashboardNotify(`${selectedCount} regional(is) selecionada(s). RRS foi mantida fora da seleção.`);
+};
 const debouncedApplyFilters=debounce(applyFilters,300);
 [fInicio,fFim,fSla].forEach(el=>el.oninput=debouncedApplyFilters);
 searchTable.oninput=debounce(()=>{state.page=1;renderTable();},250);
